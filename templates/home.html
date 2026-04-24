@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-home">
+  <div class="hero">
+    <h1>{{ site.site_description }}</h1>
+    <p>Compare features, pricing, and honest reviews for {{ entity_count }} email marketing platforms.</p>
+  </div>
+
+  <section class="section">
+    <h2>Popular comparisons</h2>
+    <div class="card-grid">
+      {% for c in featured_compares %}
+      <a href="{{ site.base_url }}/compare/{{ c.slug }}/" class="card">
+        <span class="card-title">{{ c.title }}</span>
+      </a>
+      {% endfor %}
+    </div>
+    <p><a href="{{ site.base_url }}/compare/">See all comparisons &rarr;</a></p>
+  </section>
+
+  <section class="section">
+    <h2>Find alternatives</h2>
+    <div class="card-grid">
+      {% for e in entities %}
+      <a href="{{ site.base_url }}/alternatives/{{ e.slug }}-alternatives/" class="card">
+        <span class="card-title">Best {{ e.name }} alternatives</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>All tools reviewed</h2>
+    <div class="tool-list">
+      {% for e in entities %}
+      <a href="{{ site.base_url }}/tools/{{ e.slug }}/" class="tool-row">
+        <span class="tool-name">{{ e.name }}</span>
+        <span class="tool-tagline">{{ e.tagline }}</span>
+        <span class="tool-price">From ${{ e.paid_from_usd }}/mo</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+{% endblock %}

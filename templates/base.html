@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.site_name }}</title>
+  <meta name="description" content="{{ page.meta_description }}">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.meta_description }}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{ site.base_url }}/{{ page.url_path }}">
+  <link rel="canonical" href="{{ site.base_url }}/{{ page.url_path }}">
+  {% if site.gsc_verification %}
+  <meta name="google-site-verification" content="{{ site.gsc_verification }}">
+  {% endif %}
+  <script type="application/ld+json">{{ page.schema_json | safe }}</script>
+  <link rel="stylesheet" href="{{ site.base_url }}/static/style.css">
+  {% if site.ga4_id %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4_id }}"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','{{ site.ga4_id }}');</script>
+  {% endif %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="{{ site.base_url }}/" class="logo">{{ site.site_name }}</a>
+      <nav>
+        <a href="{{ site.base_url }}/compare/">Compare Tools</a>
+        <a href="{{ site.base_url }}/alternatives/">Alternatives</a>
+        <a href="{{ site.base_url }}/tools/">All Tools</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="disclosure">{{ site.affiliate_disclosure }}</p>
+      <p>&copy; 2025 {{ site.site_name }}. Built with the <a href="https://github.com/aiopentec">aiopentec</a> PSEO engine.</p>
+    </div>
+  </footer>
+</body>
+</html>

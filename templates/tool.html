@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="page-tool">
+  <div class="breadcrumb"><a href="{{ site.base_url }}/">Home</a> &rsaquo; <a href="{{ site.base_url }}/tools/">Tools</a> &rsaquo; {{ entity.name }}</div>
+
+  <h1>{{ page.h1 }}</h1>
+
+  <div class="tool-meta">
+    <span class="badge badge-{{ entity.pricing_model }}">{{ entity.pricing_model | title }}</span>
+    {% if entity.free_tier %}<span class="badge badge-free">Free plan available</span>{% endif %}
+    <span class="badge">From ${{ entity.paid_from_usd }}/mo</span>
+    {% if entity.g2_rating %}<span class="badge">G2: {{ entity.g2_rating }}★</span>{% endif %}
+  </div>
+
+  <p class="intro">{{ page.intro }}</p>
+
+  <div class="verdict-box">
+    <strong>Our verdict:</strong> {{ page.verdict }}
+  </div>
+
+  <div class="pros-cons">
+    <div class="pros">
+      <h3>Pros</h3>
+      <ul>{% for p in page.pros %}<li>{{ p }}</li>{% endfor %}</ul>
+    </div>
+    <div class="cons">
+      <h3>Cons</h3>
+      <ul>{% for c in page.cons %}<li>{{ c }}</li>{% endfor %}</ul>
+    </div>
+  </div>
+
+  <h2>Pricing</h2>
+  <p>{{ page.pricing_summary }}</p>
+
+  <h2>Who is {{ entity.name }} best for?</h2>
+  <p>{{ page.best_for_detail }}</p>
+
+  <h2>Key features</h2>
+  <ul class="feature-list">
+    {% for f in entity.key_features %}<li>{{ f | title }}</li>{% endfor %}
+  </ul>
+
+  {% if page.faq %}
+  <h2>Frequently asked questions</h2>
+  <div class="faq" itemscope itemtype="https://schema.org/FAQPage">
+    {% for item in page.faq %}
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <h3 itemprop="name">{{ item.q }}</h3>
+      <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <p itemprop="text">{{ item.a }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="internal-links">
+    <h2>Compare {{ entity.name }} with other tools</h2>
+    <ul>
+      {% for related in related_pages %}
+      <li><a href="{{ site.base_url }}/compare/{{ related.slug }}/">{{ related.label }}</a></li>
+      {% endfor %}
+    </ul>
+    <p><a href="{{ site.base_url }}/alternatives/{{ entity.slug }}-alternatives/">See all {{ entity.name }} alternatives &rarr;</a></p>
+  </div>
+</article>
+{% endblock %}

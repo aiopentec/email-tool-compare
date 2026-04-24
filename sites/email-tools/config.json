@@ -1,0 +1,19 @@
+{
+  "site_id": "email-tools",
+  "site_name": "Email Tool Compare",
+  "site_description": "Unbiased comparisons and alternatives for email marketing tools",
+  "base_url": "https://aiopentec.github.io/email-tool-compare",
+  "repo_name": "email-tool-compare",
+  "niche": "email marketing tools",
+  "audience": "small business owners, creators, and marketers",
+  "primary_keyword_pattern": "{tool_a} vs {tool_b}",
+  "secondary_keyword_pattern": "{tool_a} alternatives",
+  "tertiary_keyword_pattern": "best {tool_a} alternative for {use_case}",
+  "affiliate_disclosure": "Some links on this site are affiliate links. We may earn a commission at no extra cost to you.",
+  "generate_pages": ["tool", "compare", "alternatives"],
+  "pages_per_run": 50,
+  "model": "claude-haiku-4-5-20251001",
+  "theme_color": "#2563eb",
+  "ga4_id": "",
+  "gsc_verification": ""
+}

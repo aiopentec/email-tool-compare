@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="page-compare">
+  <div class="breadcrumb"><a href="{{ site.base_url }}/">Home</a> &rsaquo; <a href="{{ site.base_url }}/compare/">Compare</a> &rsaquo; {{ entity_a.name }} vs {{ entity_b.name }}</div>
+
+  <h1>{{ page.h1 }}</h1>
+  <p class="intro">{{ page.intro }}</p>
+
+  <div class="quick-verdict">
+    <h2>Quick verdict</h2>
+    <div class="verdict-grid">
+      <div><span class="label">Overall winner</span><span class="winner">{{ page.quick_verdict.winner_overall }}</span></div>
+      <div><span class="label">Better pricing</span><span class="winner">{{ page.quick_verdict.winner_price }}</span></div>
+      <div><span class="label">More features</span><span class="winner">{{ page.quick_verdict.winner_features }}</span></div>
+      <div><span class="label">Better for beginners</span><span class="winner">{{ page.quick_verdict.winner_beginners }}</span></div>
+    </div>
+  </div>
+
+  <h2>Feature comparison</h2>
+  <div class="compare-table-wrap">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>{{ entity_a.name }}</th>
+          <th>{{ entity_b.name }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in page.comparison_table %}
+        <tr>
+          <td>{{ row.feature }}</td>
+          <td>{{ row.tool_a }}</td>
+          <td>{{ row.tool_b }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="choose-grid">
+    <div class="choose-box">
+      <h3>Choose {{ entity_a.name }} if...</h3>
+      <ul>{% for r in page.choose_a_if %}<li>{{ r }}</li>{% endfor %}</ul>
+      {% if entity_a.affiliate_program %}
+      <a href="#" class="cta-btn" rel="nofollow noopener">Try {{ entity_a.name }} &rarr;</a>
+      {% endif %}
+    </div>
+    <div class="choose-box">
+      <h3>Choose {{ entity_b.name }} if...</h3>
+      <ul>{% for r in page.choose_b_if %}<li>{{ r }}</li>{% endfor %}</ul>
+      {% if entity_b.affiliate_program %}
+      <a href="#" class="cta-btn" rel="nofollow noopener">Try {{ entity_b.name }} &rarr;</a>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if page.faq %}
+  <h2>Frequently asked questions</h2>
+  <div class="faq" itemscope itemtype="https://schema.org/FAQPage">
+    {% for item in page.faq %}
+    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+      <h3 itemprop="name">{{ item.q }}</h3>
+      <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+        <p itemprop="text">{{ item.a }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="internal-links">
+    <h2>Related comparisons</h2>
+    <ul>
+      {% for related in related_pages %}
+      <li><a href="{{ site.base_url }}/compare/{{ related.slug }}/">{{ related.label }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</article>
+{% endblock %}

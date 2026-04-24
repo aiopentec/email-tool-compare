@@ -1,0 +1,79 @@
+name: content-engine
+
+on:
+  schedule:
+    # Every Monday at 03:00 UTC — outside peak GitHub Actions hours
+    - cron: '0 3 * * 1'
+  workflow_dispatch:
+    inputs:
+      site:
+        description: 'Site to regenerate (leave blank for all)'
+        required: false
+        default: ''
+      limit:
+        description: 'Max pages per run'
+        required: false
+        default: '50'
+      demo:
+        description: 'Demo mode (no API calls)'
+        required: false
+        default: 'false'
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    strategy:
+      matrix:
+        site: [email-tools]      # ← add site IDs here as you build more
+      fail-fast: false           # one site failing doesn't stop the others
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0         # full history needed for gh-pages push
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install anthropic jinja2 pandas pyyaml
+
+      - name: Run content generator
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          SITE="${{ github.event.inputs.site || matrix.site }}"
+          LIMIT="${{ github.event.inputs.limit || '50' }}"
+          DEMO="${{ github.event.inputs.demo || 'false' }}"
+
+          if [ "$DEMO" = "true" ]; then
+            python scripts/generate.py --site "$SITE" --limit "$LIMIT" --demo
+          else
+            python scripts/generate.py --site "$SITE" --limit "$LIMIT"
+          fi
+
+      - name: Build static site
+        run: python scripts/build.py --site ${{ matrix.site }}
+
+      - name: Commit generated content
+        run: |
+          git config user.name "pseo-bot"
+          git config user.email "bot@aiopentec.github.io"
+          git add content/ sites/
+          git diff --staged --quiet || git commit -m "chore: auto-generate content $(date +%Y-%m-%d)"
+          git push
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/${{ matrix.site }}
+          # Uncomment below to use a custom domain:
+          # cname: yourdomain.com
