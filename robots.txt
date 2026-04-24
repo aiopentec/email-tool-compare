@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aiopentec.github.io/email-tool-compare/sitemap.xml
