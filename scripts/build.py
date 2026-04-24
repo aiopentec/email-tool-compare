@@ -206,6 +206,20 @@ def build(site_id):
             sitemap_urls.append({"url": full_url, "priority": "0.85", "changefreq": "monthly"})
             page_count += 1
 
+    # ── Compare index page
+        compare_index = dist_dir / "compare" / "index.html"
+        compare_links = "".join(
+            f'<li><a href="{site_cfg["base_url"]}/compare/{u["url"].split("/compare/")[1]}">{u["url"].split("/compare/")[1].replace("/","").replace("-vs-"," vs ").replace("-"," ").title()}</a></li>'
+            for u in sitemap_urls if "/compare/" in u["url"] and u["url"].count("/") > 4
+        )
+        compare_index.write_text(f'''<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+    <title>All Comparisons | {site_cfg["site_name"]}</title>
+    <link rel="stylesheet" href="{site_cfg["base_url"]}/static/style.css"></head>
+    <body><header class="site-header"><div class="container">
+    <a href="{site_cfg["base_url"]}/" class="logo">{site_cfg["site_name"]}</a></div></header>
+    <main class="container"><h1 style="margin:2rem 0 1rem">All Comparisons</h1>
+    <ul style="columns:2;gap:2rem">{compare_links}</ul></main></body></html>''', encoding="utf-8")
+    
     # ── Sitemap ─────────────────────────────────────────────────────────────────
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     sitemap_lines = ['<?xml version="1.0" encoding="UTF-8"?>',
