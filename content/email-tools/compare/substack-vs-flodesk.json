@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "substack-vs-flodesk",
+  "title": "Substack vs Flodesk (2025): Which Is Better?",
+  "meta_description": "Compare Substack and Flodesk email marketing tools. Learn pricing, features, and which platform suits your needs best.",
+  "h1": "Substack vs Flodesk: Detailed Comparison",
+  "intro": "Substack and Flodesk serve different niches within email marketing. Substack excels at newsletter monetization with a built-in audience, while Flodesk focuses on visually stunning email design for creative professionals. Your choice depends on whether you prioritize direct subscriber revenue or beautiful, brand-aligned campaigns.",
+  "quick_verdict": {
+    "winner_overall": "Flodesk",
+    "winner_price": "Substack",
+    "winner_features": "Flodesk",
+    "winner_beginners": "Substack",
+    "winner_ecommerce": "Flodesk"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting Price",
+      "tool_a": "Free",
+      "tool_b": "$38/month"
+    },
+    {
+      "feature": "Pricing Model",
+      "tool_a": "Revenue-share (10% of paid subscriptions)",
+      "tool_b": "Flat-rate monthly"
+    },
+    {
+      "feature": "Subscriber Limits",
+      "tool_a": "Unlimited on all plans",
+      "tool_b": "Unlimited subscribers"
+    },
+    {
+      "feature": "Built-in Monetization",
+      "tool_a": "Paid subscriptions, notes feed, recommendations",
+      "tool_b": "Checkout forms, link in bio"
+    },
+    {
+      "feature": "Design Focus",
+      "tool_a": "Minimal, content-first",
+      "tool_b": "Premium templates, visual-first"
+    }
+  ],
+  "choose_a_if": [
+    "You want to monetize newsletters directly from subscribers without upfront costs",
+    "You're a writer or content creator focused on building an audience community",
+    "You prefer a content-first platform with minimal design requirements"
+  ],
+  "choose_b_if": [
+    "You're a visual brand, designer, or photographer needing beautiful email templates",
+    "You want predictable flat-rate pricing without revenue-share arrangements",
+    "You need advanced features like workflows, checkout forms, and ecommerce integrations"
+  ],
+  "faq": [
+    {
+      "q": "Is Substack better than Flodesk?",
+      "a": "Neither is universally better\u2014they serve different purposes. Substack excels for writers monetizing content directly, while Flodesk is superior for visual brands and ecommerce. Choose based on your primary goal: subscriber revenue or beautiful campaign design."
+    },
+    {
+      "q": "Which is cheaper, Substack or Flodesk?",
+      "a": "Substack is free to start with no upfront costs, though you pay 10% of revenue from paid subscriptions. Flodesk requires a $38/month minimum investment. Substack is cheaper if you have no monetization, but Flodesk offers better value if you need advanced features without revenue concerns."
+    },
+    {
+      "q": "Can I switch from Flodesk to Substack?",
+      "a": "Yes, most email lists can be exported and imported between platforms. However, Substack's focus on paid subscriptions and Flodesk's design-centric approach mean migrating may require restructuring your strategy rather than a simple technical transfer."
+    }
+  ]
+}

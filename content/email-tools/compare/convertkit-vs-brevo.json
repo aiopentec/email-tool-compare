@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "convertkit-vs-brevo",
+  "title": "ConvertKit vs Brevo (2025): Which Is Better?",
+  "meta_description": "Compare ConvertKit and Brevo email marketing tools. See pricing, features, and which platform suits your needs.",
+  "h1": "ConvertKit vs Brevo: Detailed Comparison for 2025",
+  "intro": "ConvertKit and Brevo are both popular email marketing platforms, but they cater to different audiences and use cases. ConvertKit specializes in serving creators and course sellers with creator-focused features, while Brevo offers a broader all-in-one CRM suite with multi-channel capabilities. Understanding their strengths will help you choose the right platform for your business.",
+  "quick_verdict": {
+    "winner_overall": "Brevo",
+    "winner_price": "Brevo",
+    "winner_features": "Brevo",
+    "winner_beginners": "ConvertKit",
+    "winner_ecommerce": "ConvertKit"
+  },
+  "comparison_table": [
+    {
+      "feature": "Free Subscriber Limit",
+      "tool_a": "1,000 subscribers",
+      "tool_b": "100,000 subscribers"
+    },
+    {
+      "feature": "Paid Plan Starting Price",
+      "tool_a": "$29/month",
+      "tool_b": "$25/month"
+    },
+    {
+      "feature": "Best For",
+      "tool_a": "Creators, bloggers, course sellers",
+      "tool_b": "Transactional email, multi-channel marketing"
+    },
+    {
+      "feature": "Key Differentiator",
+      "tool_a": "Visual automations, landing pages, commerce features",
+      "tool_b": "SMS, WhatsApp, live chat, transactional API, CRM"
+    },
+    {
+      "feature": "G2 Rating",
+      "tool_a": "4.4/5",
+      "tool_b": "4.5/5"
+    }
+  ],
+  "choose_a_if": [
+    "You're a creator, blogger, or course seller who wants creator-focused features and landing pages",
+    "You need visual automation builders optimized for content creators",
+    "You prioritize ease of use for building sequences and subscriber tagging"
+  ],
+  "choose_b_if": [
+    "You need a generous free tier with up to 100,000 subscribers",
+    "You want multi-channel marketing including SMS, WhatsApp, and live chat",
+    "You need transactional email API or CRM functionality integrated with marketing"
+  ],
+  "faq": [
+    {
+      "q": "Is ConvertKit better than Brevo?",
+      "a": "It depends on your needs. ConvertKit is better for creators and course sellers who want specialized features like landing pages and visual automations. Brevo is better if you need multi-channel marketing (SMS, WhatsApp) and a larger free tier. Both are solid platforms with high ratings."
+    },
+    {
+      "q": "Which is cheaper, ConvertKit or Brevo?",
+      "a": "Brevo has a lower paid plan starting at $25/month compared to ConvertKit's $29/month. However, Brevo's free tier is much more generous with 100,000 free subscribers versus ConvertKit's 1,000. For most users, Brevo offers better value."
+    },
+    {
+      "q": "Can I switch from Brevo to ConvertKit?",
+      "a": "Yes, both platforms support email list exports in standard formats. Most email marketing platforms allow you to import subscriber lists, though you may lose some data fields during migration. Plan your switch carefully and test the import process before fully committing."
+    }
+  ]
+}

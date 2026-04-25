@@ -1,0 +1,86 @@
+{
+  "type": "compare",
+  "slug": "buttondown-vs-flodesk",
+  "title": "Buttondown vs Flodesk (2025): Which Is Better?",
+  "meta_description": "Compare Buttondown and Flodesk email marketing tools. Find the best fit for your newsletter, pricing, features, and use case.",
+  "h1": "Buttondown vs Flodesk: Detailed Comparison",
+  "intro": "Buttondown and Flodesk are two popular email marketing platforms with distinctly different approaches. Buttondown caters to developers and technical writers who value simplicity and markdown support, while Flodesk focuses on visual design and creator-friendly features. Choosing between them depends on whether you prioritize writing efficiency or design aesthetics.",
+  "quick_verdict": {
+    "winner_overall": "Flodesk",
+    "winner_price": "Buttondown",
+    "winner_features": "Flodesk",
+    "winner_beginners": "Flodesk",
+    "winner_ecommerce": "Flodesk"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting Price",
+      "tool_a": "$0 (free tier), $9/month paid",
+      "tool_b": "$38/month flat-rate"
+    },
+    {
+      "feature": "Free Tier",
+      "tool_a": "Yes, up to 100 subscribers",
+      "tool_b": "No free tier available"
+    },
+    {
+      "feature": "Subscriber Limits",
+      "tool_a": "100 on free, unlimited on paid",
+      "tool_b": "Unlimited subscribers at any tier"
+    },
+    {
+      "feature": "Writing Style",
+      "tool_a": "Markdown-focused, developer-friendly",
+      "tool_b": "Visual templates with drag-and-drop editor"
+    },
+    {
+      "feature": "Best For",
+      "tool_a": "Developers, technical writers, minimalists",
+      "tool_b": "Designers, visual brands, creators, e-commerce"
+    },
+    {
+      "feature": "Key Features",
+      "tool_a": "Markdown, API, automations, paid subscriptions",
+      "tool_b": "Templates, workflows, checkout forms, link in bio"
+    },
+    {
+      "feature": "Affiliate Program",
+      "tool_a": "No",
+      "tool_b": "Yes, 50% recurring commission"
+    },
+    {
+      "feature": "G2 Rating",
+      "tool_a": "4.8/5",
+      "tool_b": "4.8/5"
+    },
+    {
+      "feature": "Trustpilot Rating",
+      "tool_a": "4.7/5",
+      "tool_b": "4.7/5"
+    }
+  ],
+  "choose_a_if": [
+    "You're a developer or technical writer who prefers writing in markdown",
+    "You want to start completely free and only pay when growing beyond 100 subscribers",
+    "You need API access and advanced technical integrations for automation"
+  ],
+  "choose_b_if": [
+    "You prioritize beautiful, professional email designs and visual customization",
+    "You're building an e-commerce business and need checkout forms and link-in-bio features",
+    "You want unlimited subscribers from day one without worrying about tier restrictions"
+  ],
+  "faq": [
+    {
+      "q": "Is Buttondown better than Flodesk?",
+      "a": "Neither is universally better\u2014it depends on your needs. Buttondown excels for technical audiences who prefer markdown and want a free option, while Flodesk is superior for visual creators and e-commerce businesses seeking design-first tools. Both have identical 4.8/5 G2 ratings and 4.7/5 Trustpilot scores."
+    },
+    {
+      "q": "Which is cheaper, Buttondown or Flodesk?",
+      "a": "Buttondown is significantly cheaper, offering a free tier for up to 100 subscribers and starting at just $9/month for paid plans. Flodesk has no free tier and starts at $38/month flat-rate, but includes unlimited subscribers from the beginning. Buttondown wins on cost for small lists, while Flodesk offers better value for large subscriber bases."
+    },
+    {
+      "q": "Can I switch from Flodesk to Buttondown?",
+      "a": "Yes, most email marketing platforms including both Buttondown and Flodesk support subscriber list import/export functionality. However, you may lose design customizations and template formatting when moving from Flodesk's visual editor to Buttondown's markdown-based system. Check both platforms' documentation for specific migration steps."
+    }
+  ]
+}
