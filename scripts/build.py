@@ -277,6 +277,40 @@ def build(site_id):
             encoding="utf-8"
         )
 
+
+    # ── Tools index page
+    tools_content_dir = content_dir / "tools"
+    if tools_content_dir.exists():
+        tools_index = dist_dir / "tools" / "index.html"
+        base = site_cfg["base_url"]
+        name = site_cfg["site_name"]
+        entity_map_local = {e["slug"]: e for e in entities}
+        links = "".join(
+            "<li><a href='" + base + "/tools/" + p.stem + "/'>" +
+            entity_map_local.get(p.stem, {}).get("name", p.stem.replace("-", " ").title()) +
+            " — " +
+            entity_map_local.get(p.stem, {}).get("tagline", "") +
+            "</a></li>"
+            for p in sorted(tools_content_dir.glob("*.json"))
+        )
+        tools_index.write_text(
+            "<!DOCTYPE html><html lang=en><head><meta charset=UTF-8>"
+            "<title>All Email Marketing Tools | " + name + "</title>"
+            "<meta name='description' content='Reviews and comparisons of 18 email marketing platforms.'>"
+            "<link rel=stylesheet href='" + base + "/static/style.css'></head>"
+            "<body><header class=site-header><div class=container>"
+            "<a href='" + base + "/' class=logo>" + name + "</a>"
+            "<nav><a href='" + base + "/compare/'>Compare Tools</a> "
+            "<a href='" + base + "/alternatives/'>Alternatives</a> "
+            "<a href='" + base + "/tools/'>All Tools</a></nav>"
+            "</div></header><main class=container>"
+            "<h1 style='margin:2rem 0 0.5rem'>All Email Marketing Tools</h1>"
+            "<p style='color:#6b7280;margin-bottom:1.5rem'>Honest reviews of 18 platforms.</p>"
+            "<ul style='columns:2;padding-left:1.5rem;line-height:2.2'>" + links + "</ul>"
+            "</main></body></html>",
+            encoding="utf-8"
+        )
+
     # ── Sitemap ─────────────────────────────────────────────────────────────────
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     sitemap_lines = ['<?xml version="1.0" encoding="UTF-8"?>',
