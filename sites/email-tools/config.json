@@ -10,10 +10,14 @@
   "secondary_keyword_pattern": "{tool_a} alternatives",
   "tertiary_keyword_pattern": "best {tool_a} alternative for {use_case}",
   "affiliate_disclosure": "Some links on this site are affiliate links. We may earn a commission at no extra cost to you.",
-  "generate_pages": ["tool", "compare", "alternatives"],
+  "generate_pages": [
+    "tool",
+    "compare",
+    "alternatives"
+  ],
   "pages_per_run": 50,
   "model": "claude-haiku-4-5-20251001",
   "theme_color": "#2563eb",
   "ga4_id": "",
-  "gsc_verification": ""
+  "gsc_verification": "sgWLzv3yQVjDBJUjSqkzfFW2WDtfpWNMzQ-_pEw9sqQ"
 }
