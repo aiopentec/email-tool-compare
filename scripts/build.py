@@ -220,6 +220,63 @@ def build(site_id):
     <main class="container"><h1 style="margin:2rem 0 1rem">All Comparisons</h1>
     <ul style="columns:2;gap:2rem">{compare_links}</ul></main></body></html>''', encoding="utf-8")
     
+
+    # ── Compare index page
+    comp_dir = content_dir / "compare"
+    if comp_dir.exists():
+        comp_index = dist_dir / "compare" / "index.html"
+        base = site_cfg["base_url"]
+        name = site_cfg["site_name"]
+        links = "".join(
+            "<li><a href='" + base + "/compare/" + p.stem + "/'>" +
+            p.stem.replace("-vs-", " vs ").replace("-", " ").title() +
+            "</a></li>"
+            for p in sorted(comp_dir.glob("*.json"))
+        )
+        comp_index.write_text(
+            "<!DOCTYPE html><html lang=en><head><meta charset=UTF-8>"
+            "<title>All Comparisons | " + name + "</title>"
+            "<link rel=stylesheet href='" + base + "/static/style.css'></head>"
+            "<body><header class=site-header><div class=container>"
+            "<a href='" + base + "/' class=logo>" + name + "</a>"
+            "<nav><a href='" + base + "/compare/'>Compare Tools</a> "
+            "<a href='" + base + "/alternatives/'>Alternatives</a> "
+            "<a href='" + base + "/tools/'>All Tools</a></nav>"
+            "</div></header><main class=container>"
+            "<h1 style='margin:2rem 0 0.5rem'>All Comparisons</h1>"
+            "<ul style='columns:2;padding-left:1.5rem'>" + links + "</ul>"
+            "</main></body></html>",
+            encoding="utf-8"
+        )
+
+    # ── Alternatives index page
+    alt_dir = content_dir / "alternatives"
+    if alt_dir.exists():
+        alt_index = dist_dir / "alternatives" / "index.html"
+        base = site_cfg["base_url"]
+        name = site_cfg["site_name"]
+        links = "".join(
+            "<li><a href='" + base + "/alternatives/" + p.stem + "/'>" +
+            p.stem.replace("-alternatives", "").replace("-", " ").title() +
+            " Alternatives</a></li>"
+            for p in sorted(alt_dir.glob("*.json"))
+        )
+        alt_index.write_text(
+            "<!DOCTYPE html><html lang=en><head><meta charset=UTF-8>"
+            "<title>All Alternatives | " + name + "</title>"
+            "<link rel=stylesheet href='" + base + "/static/style.css'></head>"
+            "<body><header class=site-header><div class=container>"
+            "<a href='" + base + "/' class=logo>" + name + "</a>"
+            "<nav><a href='" + base + "/compare/'>Compare Tools</a> "
+            "<a href='" + base + "/alternatives/'>Alternatives</a> "
+            "<a href='" + base + "/tools/'>All Tools</a></nav>"
+            "</div></header><main class=container>"
+            "<h1 style='margin:2rem 0 0.5rem'>All Alternatives</h1>"
+            "<ul style='columns:2;padding-left:1.5rem'>" + links + "</ul>"
+            "</main></body></html>",
+            encoding="utf-8"
+        )
+
     # ── Sitemap ─────────────────────────────────────────────────────────────────
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     sitemap_lines = ['<?xml version="1.0" encoding="UTF-8"?>',
