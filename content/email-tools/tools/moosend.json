@@ -1,0 +1,40 @@
+{
+  "type": "tool",
+  "slug": "moosend",
+  "title": "Moosend Review 2025: Features, Pricing & Honest Verdict",
+  "meta_description": "Moosend email marketing review: unlimited emails, automation & landing pages from $9/month. See pricing, features & our honest verdict.",
+  "h1": "Moosend Email Marketing Review: Features, Pricing & Honest Verdict",
+  "intro": "Moosend is an email marketing and automation platform founded in 2011 that emphasizes affordability and accessibility for businesses of all sizes. The platform stands out for offering unlimited emails even on paid plans, making it particularly attractive to small businesses and growing companies that want to scale their email campaigns without worrying about sending limits.",
+  "verdict": "Moosend delivers excellent value for budget-conscious marketers, with its unlimited email sending and solid automation capabilities justifying its low price point. However, it lacks some advanced segmentation features and enterprise-grade customization found in competitors, making it better suited for small to mid-sized businesses rather than large enterprises with complex needs.",
+  "pros": [
+    "Unlimited emails on all paid plans\u2014you only pay for contacts, not sends",
+    "Robust automation workflows and behavioral triggers included at every tier",
+    "Free tier supports up to 1,000 subscribers with core features intact",
+    "Built-in landing page builder and subscription forms eliminate need for extra tools"
+  ],
+  "cons": [
+    "Free plan is limited to 1,000 subscribers, which restricts growth before upgrade",
+    "Advanced segmentation and conditional logic not as powerful as enterprise competitors",
+    "Smaller integrations marketplace compared to Mailchimp or HubSpot"
+  ],
+  "pricing_summary": "Moosend uses a freemium model starting at $0 for up to 1,000 subscribers and $9/month for paid plans, with pricing based on subscriber count rather than email volume. The unlimited emails policy across all tiers means costs remain predictable and low for high-volume senders.",
+  "best_for_detail": "Moosend is ideal for small businesses and startups that send frequent emails and want to avoid per-email sending costs while maintaining professional automation capabilities. It's particularly valuable for e-commerce stores, SaaS companies, and service providers looking to maximize ROI on email marketing without enterprise software complexity.",
+  "faq": [
+    {
+      "q": "Is Moosend free?",
+      "a": "Yes, Moosend offers a free tier that supports up to 1,000 subscribers with access to core features like email campaigns, basic automation, and real-time analytics. Once you exceed 1,000 contacts, you'll need to upgrade to a paid plan starting at $9/month."
+    },
+    {
+      "q": "What is Moosend best used for?",
+      "a": "Moosend excels at cost-effective email marketing automation for small to mid-sized businesses, particularly those sending high email volumes. Its unlimited sending policy makes it ideal for e-commerce, SaaS, and service-based companies that want scalable automation without worrying about per-send costs."
+    },
+    {
+      "q": "Is Moosend good for beginners?",
+      "a": "Yes, Moosend is beginner-friendly with an intuitive interface, drag-and-drop editor, and pre-built automation templates that require no coding knowledge. The free tier lets new users experiment risk-free, and the platform provides good documentation and support resources for learning."
+    },
+    {
+      "q": "Does Moosend have an affiliate program?",
+      "a": "Yes, Moosend offers an affiliate program with 30% recurring commission on referred customers. This means affiliates earn a percentage of subscription fees as long as their referrals remain customers, making it an attractive partnership for marketers and agencies."
+    }
+  ]
+}

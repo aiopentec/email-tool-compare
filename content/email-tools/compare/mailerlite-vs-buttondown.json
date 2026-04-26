@@ -1,0 +1,69 @@
+{
+  "type": "compare",
+  "slug": "mailerlite-vs-buttondown",
+  "title": "MailerLite vs Buttondown (2025): Which Is Better?",
+  "meta_description": "Compare MailerLite and Buttondown email marketing tools. See pricing, features, and which is best for your needs.",
+  "h1": "MailerLite vs Buttondown: Detailed Comparison",
+  "intro": "MailerLite and Buttondown are both popular freemium email marketing platforms, but they serve different audiences. MailerLite is a feature-rich, visual-first tool ideal for small businesses and e-commerce, while Buttondown caters to developers and writers who prefer markdown and simplicity. This comparison will help you determine which platform aligns best with your needs.",
+  "quick_verdict": {
+    "winner_overall": "MailerLite",
+    "winner_price": "Tie",
+    "winner_features": "MailerLite",
+    "winner_beginners": "MailerLite",
+    "winner_ecommerce": "MailerLite"
+  },
+  "comparison_table": [
+    {
+      "feature": "Free Tier Subscriber Limit",
+      "tool_a": "1,000 subscribers",
+      "tool_b": "100 subscribers"
+    },
+    {
+      "feature": "Starting Paid Price",
+      "tool_a": "$9/month",
+      "tool_b": "$9/month"
+    },
+    {
+      "feature": "Editor Type",
+      "tool_a": "Drag-and-drop visual builder",
+      "tool_b": "Markdown-based writing"
+    },
+    {
+      "feature": "Key Strengths",
+      "tool_a": "Landing pages, pop-ups, surveys, e-commerce integrations",
+      "tool_b": "API access, paid subscriptions, developer-friendly, multiple newsletters"
+    },
+    {
+      "feature": "G2 Rating",
+      "tool_a": "4.6/5",
+      "tool_b": "4.8/5"
+    }
+  ],
+  "choose_a_if": [
+    "You want a generous free tier with 1,000 subscribers to test the platform",
+    "You need e-commerce integrations, landing pages, or advanced marketing tools",
+    "You prefer visual, drag-and-drop editing over writing in markdown",
+    "You're interested in an affiliate program to earn recurring commissions"
+  ],
+  "choose_b_if": [
+    "You're a developer or technical writer comfortable with markdown syntax",
+    "You want to offer paid subscriptions to your newsletter subscribers",
+    "You need direct API access to build custom integrations",
+    "You prefer a minimalist, distraction-free writing experience",
+    "You plan to run multiple separate newsletters from one account"
+  ],
+  "faq": [
+    {
+      "q": "Is MailerLite better than Buttondown?",
+      "a": "It depends on your use case. MailerLite is better for small businesses needing e-commerce and marketing features, while Buttondown excels for developers and writers who prioritize simplicity and markdown support. MailerLite offers more features overall, but Buttondown has slightly higher customer ratings and a more specialized focus."
+    },
+    {
+      "q": "Which is cheaper, MailerLite or Buttondown?",
+      "a": "Both platforms start at $9/month for paid plans, making them equally affordable. However, MailerLite's free tier supports 1,000 subscribers compared to Buttondown's 100, giving MailerLite better value for testing and growing your audience at no cost."
+    },
+    {
+      "q": "Can I switch from Buttondown to MailerLite?",
+      "a": "Yes, both platforms support import and export functionality. Buttondown explicitly lists import/export as a key feature, making migration straightforward. You can export your subscriber list and email content from Buttondown and import them into MailerLite without significant data loss."
+    }
+  ]
+}

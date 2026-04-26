@@ -1,0 +1,94 @@
+{
+  "type": "compare",
+  "slug": "substack-vs-flodesk",
+  "title": "Substack vs Flodesk (2025): Which Is Better?",
+  "meta_description": "Compare Substack and Flodesk email marketing tools. See pricing, features, and which platform suits your needs.",
+  "h1": "Substack vs Flodesk: Detailed Comparison for 2025",
+  "intro": "Substack and Flodesk are both popular email marketing platforms, but they serve different audiences and business models. Substack focuses on writer monetization with a revenue-share model, while Flodesk targets designers and visual brands with flat-rate pricing. Understanding their core differences will help you choose the right platform for your newsletter or email marketing strategy.",
+  "quick_verdict": {
+    "winner_overall": "Flodesk",
+    "winner_price": "Substack",
+    "winner_features": "Flodesk",
+    "winner_beginners": "Substack",
+    "winner_ecommerce": "Flodesk"
+  },
+  "comparison_table": [
+    {
+      "feature": "Pricing Model",
+      "tool_a": "Revenue-share (no upfront cost)",
+      "tool_b": "Flat-rate ($38/month minimum)"
+    },
+    {
+      "feature": "Free Tier",
+      "tool_a": "Yes, unlimited subscribers",
+      "tool_b": "No free plan available"
+    },
+    {
+      "feature": "Starting Price",
+      "tool_a": "$0",
+      "tool_b": "$38/month"
+    },
+    {
+      "feature": "Subscriber Limits",
+      "tool_a": "Unlimited on free tier",
+      "tool_b": "Unlimited subscribers"
+    },
+    {
+      "feature": "Monetization",
+      "tool_a": "Built-in paid subscriptions & recommendations",
+      "tool_b": "Checkout forms for product sales"
+    },
+    {
+      "feature": "Design Capabilities",
+      "tool_a": "Basic templates",
+      "tool_b": "Stunning, customizable templates"
+    },
+    {
+      "feature": "Key Strengths",
+      "tool_a": "Podcast hosting, notes feed, built-in audience discovery",
+      "tool_b": "Visual design focus, workflows, link in bio feature"
+    },
+    {
+      "feature": "G2 Rating",
+      "tool_a": "4.0/5",
+      "tool_b": "4.8/5"
+    },
+    {
+      "feature": "Trustpilot Rating",
+      "tool_a": "2.9/5",
+      "tool_b": "4.7/5"
+    },
+    {
+      "feature": "Affiliate Program",
+      "tool_a": "None",
+      "tool_b": "Yes, 50% recurring commission"
+    }
+  ],
+  "choose_a_if": [
+    "You want to start for free with no upfront investment",
+    "You're a writer looking to monetize directly from subscribers",
+    "You want to distribute content across podcasts and newsletters simultaneously",
+    "You prefer a simpler platform without paying monthly fees"
+  ],
+  "choose_b_if": [
+    "You prioritize beautiful, visually stunning email designs",
+    "You're a designer, photographer, or visual brand",
+    "You need advanced workflows and checkout forms for ecommerce",
+    "You value strong customer reviews and support ratings",
+    "You want to build a link-in-bio landing page alongside email campaigns"
+  ],
+  "faq": [
+    {
+      "q": "Is Substack better than Flodesk?",
+      "a": "Neither is objectively better—it depends on your needs. Substack excels for writers monetizing content directly, while Flodesk is superior for visual brands and ecommerce. Flodesk has higher ratings, but Substack offers free unlimited usage, making it better for budget-conscious creators."
+    },
+    {
+      "q": "Which is cheaper, Substack or Flodesk?",
+      "a": "Substack is free forever if you don't monetize, while Flodesk starts at $38/month with no free tier. However, Substack takes a 10% revenue share when you earn money from subscriptions, making Flodesk's flat rate potentially cheaper at scale if you have significant subscriber revenue."
+    },
+    {
+      "q": "Can I switch from Flodesk to Substack?",
+      "a": "Yes, both platforms allow you to export your subscriber lists and migrate to another service, though the process requires manual work. Most email marketing platforms support CSV imports, so switching is possible but requires some setup time to reconfigure campaigns and workflows."
+    }
+  ]
+}

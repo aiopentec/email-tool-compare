@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "getresponse-vs-buttondown",
+  "title": "GetResponse vs Buttondown (2025): Which Is Better?",
+  "meta_description": "Compare GetResponse and Buttondown. See pricing, features, ratings, and which email marketing tool suits your needs best.",
+  "h1": "GetResponse vs Buttondown: Complete Comparison",
+  "intro": "GetResponse and Buttondown are both freemium email marketing platforms, but they serve different audiences and use cases. GetResponse is a comprehensive marketing suite ideal for course creators and webinar hosts, while Buttondown is purpose-built for developers and technical writers who prefer markdown-based newsletter writing. Understanding their key differences will help you choose the right tool for your specific needs.",
+  "quick_verdict": {
+    "winner_overall": "GetResponse",
+    "winner_price": "Buttondown",
+    "winner_features": "GetResponse",
+    "winner_beginners": "GetResponse",
+    "winner_ecommerce": "GetResponse"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting Price",
+      "tool_a": "$19/month",
+      "tool_b": "$9/month"
+    },
+    {
+      "feature": "Free Tier Subscriber Limit",
+      "tool_a": "500 subscribers",
+      "tool_b": "100 subscribers"
+    },
+    {
+      "feature": "Key Strengths",
+      "tool_a": "Webinars, courses, landing pages, automation, funnels",
+      "tool_b": "Markdown writing, API access, paid subscriptions, simplicity"
+    },
+    {
+      "feature": "Best For",
+      "tool_a": "Online educators, webinar hosts, marketers",
+      "tool_b": "Developers, technical writers, indie publishers"
+    },
+    {
+      "feature": "Affiliate Program",
+      "tool_a": "Yes (33% recurring or $100 one-time)",
+      "tool_b": "No"
+    }
+  ],
+  "choose_a_if": [
+    "You need webinars, landing pages, or online course hosting functionality",
+    "You want a comprehensive all-in-one marketing platform with automation and sales funnels",
+    "You plan to scale beyond 500 free subscribers and need enterprise features"
+  ],
+  "choose_b_if": [
+    "You prefer writing newsletters in markdown and want a simple, distraction-free editor",
+    "You're a developer or technical writer who values API access and customization",
+    "You want the lowest entry price and don't need advanced marketing features"
+  ],
+  "faq": [
+    {
+      "q": "Is GetResponse better than Buttondown?",
+      "a": "It depends on your needs. GetResponse is better for those needing webinars, courses, and comprehensive marketing automation, with higher G2 ratings (4.2 vs 4.8). However, Buttondown excels for developers and technical writers who want a simpler, markdown-first experience with better Trustpilot ratings (4.7 vs 3.7). Neither is objectively 'better'—they're optimized for different audiences."
+    },
+    {
+      "q": "Which is cheaper, GetResponse or Buttondown?",
+      "a": "Buttondown has a lower entry price at $9/month compared to GetResponse's $19/month for paid plans. However, GetResponse offers a larger free tier (500 vs 100 subscribers), which may keep you on the free plan longer. For budget-conscious users, Buttondown is the more affordable option."
+    },
+    {
+      "q": "Can I switch from Buttondown to GetResponse?",
+      "a": "Yes, both platforms support import/export functionality. Buttondown explicitly lists import/export as a feature, making migration straightforward. You can export your subscriber lists and email content from Buttondown and import them into GetResponse's system with minimal data loss."
+    }
+  ]
+}

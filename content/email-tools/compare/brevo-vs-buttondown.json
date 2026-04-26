@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "brevo-vs-buttondown",
+  "title": "Brevo vs Buttondown (2025): Which Is Better?",
+  "meta_description": "Compare Brevo and Buttondown email marketing tools. See pricing, features, and which is best for your needs.",
+  "h1": "Brevo vs Buttondown: Detailed Comparison",
+  "intro": "Brevo and Buttondown are both freemium email marketing platforms, but they serve different audiences and use cases. Brevo is an all-in-one CRM suite designed for businesses needing multi-channel marketing and transactional email, while Buttondown specializes in newsletters for developers and technical writers who prefer markdown-based writing. Understanding their differences will help you choose the right tool for your specific needs.",
+  "quick_verdict": {
+    "winner_overall": "Brevo",
+    "winner_price": "Buttondown",
+    "winner_features": "Brevo",
+    "winner_beginners": "Buttondown",
+    "winner_ecommerce": "Brevo"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting Price",
+      "tool_a": "$25/month",
+      "tool_b": "$9/month"
+    },
+    {
+      "feature": "Free Tier Subscribers",
+      "tool_a": "Up to 100,000",
+      "tool_b": "Up to 100"
+    },
+    {
+      "feature": "Best For",
+      "tool_a": "Multi-channel marketing and transactional email",
+      "tool_b": "Developers and technical writers"
+    },
+    {
+      "feature": "Writing Format",
+      "tool_a": "Visual editor",
+      "tool_b": "Markdown-based"
+    },
+    {
+      "feature": "Additional Channels",
+      "tool_a": "SMS, WhatsApp, live chat, CRM",
+      "tool_b": "Newsletter focus only"
+    }
+  ],
+  "choose_a_if": [
+    "You need multi-channel marketing capabilities including SMS, WhatsApp, and live chat",
+    "You want a comprehensive CRM platform with transactional email API",
+    "You need to manage large subscriber lists on a free tier (up to 100,000)"
+  ],
+  "choose_b_if": [
+    "You prefer writing newsletters in markdown format",
+    "You want the lowest entry price point for paid features",
+    "You're a developer or technical writer looking for a simple, focused newsletter tool"
+  ],
+  "faq": [
+    {
+      "q": "Is Brevo better than Buttondown?",
+      "a": "It depends on your needs. Brevo is better if you want an all-in-one platform with multiple channels and CRM features. Buttondown is better if you're a developer or technical writer who wants a lightweight, markdown-focused tool. Both have strong ratings (Brevo: 4.5/4.3, Buttondown: 4.8/4.7), but serve different use cases."
+    },
+    {
+      "q": "Which is cheaper, Brevo or Buttondown?",
+      "a": "Buttondown has a lower entry price at $9/month compared to Brevo's $25/month for paid plans. However, Brevo's free tier supports up to 100,000 subscribers versus Buttondown's 100, making Brevo more cost-effective if you have a large list before upgrading."
+    },
+    {
+      "q": "Can I switch from Buttondown to Brevo?",
+      "a": "Yes, both platforms support import/export functionality. Buttondown explicitly lists import/export as a feature, allowing you to export your subscriber list and content. Most modern email platforms support standard CSV imports, making the migration process straightforward."
+    }
+  ]
+}

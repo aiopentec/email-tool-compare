@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "substack-vs-buttondown",
+  "title": "Substack vs Buttondown (2025): Which Is Better?",
+  "meta_description": "Compare Substack and Buttondown email marketing tools. See pricing, features, and which platform suits your newsletter best.",
+  "h1": "Substack vs Buttondown: Complete Comparison Guide",
+  "intro": "Substack and Buttondown are both popular newsletter platforms founded in 2017, but they serve different creator types. Substack focuses on monetization and audience building, while Buttondown caters to developers and technical writers who value markdown support and API access. Choosing between them depends on your writing style, technical needs, and revenue model.",
+  "quick_verdict": {
+    "winner_overall": "Buttondown",
+    "winner_price": "Substack",
+    "winner_features": "Buttondown",
+    "winner_beginners": "Substack",
+    "winner_ecommerce": "Substack"
+  },
+  "comparison_table": [
+    {
+      "feature": "Pricing Model",
+      "tool_a": "Revenue-share (10% on paid subscriptions)",
+      "tool_b": "Freemium ($9-99/month for paid tiers)"
+    },
+    {
+      "feature": "Free Tier",
+      "tool_a": "Unlimited subscribers, fully featured",
+      "tool_b": "Up to 100 subscribers"
+    },
+    {
+      "feature": "Writing Format",
+      "tool_a": "Rich text editor",
+      "tool_b": "Markdown-native with rich text option"
+    },
+    {
+      "feature": "Paid Subscriptions",
+      "tool_a": "Built-in with revenue share",
+      "tool_b": "Available with full control"
+    },
+    {
+      "feature": "Developer Features",
+      "tool_a": "Limited",
+      "tool_b": "Full API access and automation"
+    }
+  ],
+  "choose_a_if": [
+    "You want to monetize your newsletter and don't mind sharing revenue",
+    "You prefer an all-in-one platform with built-in audience discovery features",
+    "You're starting out and need unlimited subscribers on the free plan"
+  ],
+  "choose_b_if": [
+    "You prefer markdown writing and technical control over your content",
+    "You want full revenue control without sharing subscription earnings",
+    "You need API access, automation, or integration capabilities for your workflow"
+  ],
+  "faq": [
+    {
+      "q": "Is Substack better than Buttondown?",
+      "a": "Neither is universally better—it depends on your needs. Substack excels for monetization-focused creators and non-technical writers, while Buttondown is superior for developers and those wanting full revenue control. Buttondown also has higher customer ratings (4.8 on G2 vs 4.0), suggesting better overall satisfaction."
+    },
+    {
+      "q": "Which is cheaper, Substack or Buttondown?",
+      "a": "Substack is free forever with no subscriber limits, making it cheaper upfront. However, Substack takes 10% of paid subscription revenue, while Buttondown charges fixed monthly fees ($9-99) regardless of earnings. For high-revenue newsletters, Buttondown's flat fee model becomes more cost-effective."
+    },
+    {
+      "q": "Can I switch from Buttondown to Substack?",
+      "a": "Yes, both platforms support import and export functionality. Buttondown explicitly offers import/export, and Substack allows you to bring your subscriber list. However, you'll need to rebuild paid subscription mechanics differently since the platforms handle monetization differently."
+    }
+  ]
+}

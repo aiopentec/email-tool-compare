@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "mailchimp-vs-buttondown",
+  "title": "Mailchimp vs Buttondown (2025): Which Is Better?",
+  "meta_description": "Compare Mailchimp and Buttondown email marketing tools. See pricing, features, and which fits your needs.",
+  "h1": "Mailchimp vs Buttondown: Detailed Comparison",
+  "intro": "Mailchimp and Buttondown are both freemium email marketing platforms, but they serve different audiences and use cases. Mailchimp is a comprehensive marketing suite designed for small businesses and general users, while Buttondown caters to developers, technical writers, and newsletter creators who value markdown support and API access. This comparison will help you determine which tool aligns best with your email marketing needs.",
+  "quick_verdict": {
+    "winner_overall": "Mailchimp",
+    "winner_price": "Buttondown",
+    "winner_features": "Mailchimp",
+    "winner_beginners": "Mailchimp",
+    "winner_ecommerce": "Mailchimp"
+  },
+  "comparison_table": [
+    {
+      "feature": "Free Tier Subscriber Limit",
+      "tool_a": "500 subscribers",
+      "tool_b": "100 subscribers"
+    },
+    {
+      "feature": "Lowest Paid Plan",
+      "tool_a": "$13/month",
+      "tool_b": "$9/month"
+    },
+    {
+      "feature": "Writing Format",
+      "tool_a": "Drag-and-drop editor",
+      "tool_b": "Markdown native"
+    },
+    {
+      "feature": "Key Strength",
+      "tool_a": "All-in-one marketing suite with landing pages and A/B testing",
+      "tool_b": "API access, paid subscriptions, and developer-friendly features"
+    },
+    {
+      "feature": "Customer Rating",
+      "tool_a": "4.3/5 (G2), 1.5/5 (Trustpilot)",
+      "tool_b": "4.8/5 (G2), 4.7/5 (Trustpilot)"
+    }
+  ],
+  "choose_a_if": [
+    "You're a beginner or small business owner seeking an all-in-one marketing platform with visual editor and landing pages",
+    "You need to manage larger subscriber lists on the free tier (up to 500 contacts)",
+    "You want advanced features like A/B testing, audience segmentation, and pre-built templates out of the box"
+  ],
+  "choose_b_if": [
+    "You're a developer, technical writer, or someone comfortable writing in markdown",
+    "You need API access to build custom integrations with your workflow",
+    "You want to offer paid subscriptions to your newsletter readers and have better customer satisfaction ratings"
+  ],
+  "faq": [
+    {
+      "q": "Is Mailchimp better than Buttondown?",
+      "a": "Neither is universally better—it depends on your use case. Mailchimp excels as an all-in-one marketing platform for beginners and small businesses, offering more features at a glance. Buttondown is superior if you're technical, prefer markdown, need API access, or want to monetize your newsletter with paid subscriptions. Customer satisfaction scores favor Buttondown significantly on Trustpilot (4.7 vs 1.5)."
+    },
+    {
+      "q": "Which is cheaper, Mailchimp or Buttondown?",
+      "a": "Buttondown starts at $9/month, making it $4 cheaper than Mailchimp's $13/month entry point. However, Mailchimp's free tier supports 500 subscribers compared to Buttondown's 100, so beginners can stay free longer with Mailchimp. The choice depends on how quickly you plan to grow beyond free limits."
+    },
+    {
+      "q": "Can I switch from Buttondown to Mailchimp?",
+      "a": "Yes, both platforms support import/export functionality, making migration possible. Buttondown specifically lists import/export as a key feature, allowing you to export your subscriber list and campaigns. You may need to manually reconfigure automations and segments in Mailchimp, but your core data can transfer smoothly."
+    }
+  ]
+}

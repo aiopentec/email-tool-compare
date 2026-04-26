@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "convertkit-vs-buttondown",
+  "title": "ConvertKit vs Buttondown (2025): Which Is Better?",
+  "meta_description": "Compare ConvertKit and Buttondown: pricing, features, and which email marketing platform suits your needs best.",
+  "h1": "ConvertKit vs Buttondown: Which Email Marketing Platform Should You Choose?",
+  "intro": "ConvertKit and Buttondown are both freemium email marketing platforms, but they serve different audiences with distinct strengths. ConvertKit is purpose-built for creators and course sellers seeking robust automation and commerce features, while Buttondown caters to developers and technical writers who prioritize simplicity and markdown support. Choosing between them depends on your specific needs, technical preferences, and growth plans.",
+  "quick_verdict": {
+    "winner_overall": "ConvertKit",
+    "winner_price": "Buttondown",
+    "winner_features": "ConvertKit",
+    "winner_beginners": "Buttondown",
+    "winner_ecommerce": "ConvertKit"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting Price",
+      "tool_a": "$29/month",
+      "tool_b": "$9/month"
+    },
+    {
+      "feature": "Free Tier Subscriber Limit",
+      "tool_a": "1,000 subscribers",
+      "tool_b": "100 subscribers"
+    },
+    {
+      "feature": "Key Strength",
+      "tool_a": "Automation, landing pages, commerce",
+      "tool_b": "Markdown editing, API access, simplicity"
+    },
+    {
+      "feature": "Best For",
+      "tool_a": "Creators, bloggers, course sellers",
+      "tool_b": "Developers, technical writers"
+    },
+    {
+      "feature": "Customer Ratings",
+      "tool_a": "G2: 4.4, Trustpilot: 3.2",
+      "tool_b": "G2: 4.8, Trustpilot: 4.7"
+    }
+  ],
+  "choose_a_if": [
+    "You need advanced automation and visual workflow builders for complex email sequences",
+    "You want built-in commerce features, landing pages, and subscriber tagging for course or product sales",
+    "You plan to scale beyond 1,000 subscribers and need an affiliate program for promotion"
+  ],
+  "choose_b_if": [
+    "You prefer writing newsletters in markdown and value developer-friendly tools like API access",
+    "You're budget-conscious and want the lowest entry price point for a professional email platform",
+    "You value simplicity and strong customer support ratings over extensive feature sets"
+  ],
+  "faq": [
+    {
+      "q": "Is ConvertKit better than Buttondown?",
+      "a": "It depends on your use case. ConvertKit is better for creators needing automation, landing pages, and e-commerce features. Buttondown is superior for developers who want markdown support and simplicity at a lower cost. ConvertKit has more comprehensive features, while Buttondown has significantly higher customer satisfaction ratings."
+    },
+    {
+      "q": "Which is cheaper, ConvertKit or Buttondown?",
+      "a": "Buttondown is cheaper, starting at $9/month compared to ConvertKit's $29/month. Additionally, Buttondown's free tier allows up to 100 subscribers, while ConvertKit's free tier extends to 1,000 subscribers—making ConvertKit better value if you have a larger audience before upgrading."
+    },
+    {
+      "q": "Can I switch from Buttondown to ConvertKit?",
+      "a": "Yes, both platforms support import/export functionality. Buttondown explicitly lists import/export as a key feature, making migration straightforward. ConvertKit can accept imported subscriber lists, though you may need to manually recreate automations and sequences since the platforms structure workflows differently."
+    }
+  ]
+}

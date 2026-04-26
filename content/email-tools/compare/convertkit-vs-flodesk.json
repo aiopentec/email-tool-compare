@@ -1,0 +1,91 @@
+{
+  "type": "compare",
+  "slug": "convertkit-vs-flodesk",
+  "title": "ConvertKit vs Flodesk (2025): Which Is Better?",
+  "meta_description": "Compare ConvertKit and Flodesk email marketing platforms. See pricing, features, and ratings to choose the best fit for your needs.",
+  "h1": "ConvertKit vs Flodesk: Detailed Comparison for 2025",
+  "intro": "ConvertKit and Flodesk are both popular email marketing platforms, but they serve different creator audiences. ConvertKit emphasizes automation and monetization features, while Flodesk focuses on design-first email creation with flat-rate pricing. This comparison will help you determine which platform best aligns with your business needs and budget.",
+  "quick_verdict": {
+    "winner_overall": "Flodesk",
+    "winner_price": "ConvertKit",
+    "winner_features": "ConvertKit",
+    "winner_beginners": "ConvertKit",
+    "winner_ecommerce": "ConvertKit"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting Price",
+      "tool_a": "$0 (free tier available)",
+      "tool_b": "$38/month (no free tier)"
+    },
+    {
+      "feature": "Pricing Model",
+      "tool_a": "Freemium with subscriber-based scaling",
+      "tool_b": "Flat-rate pricing unlimited subscribers"
+    },
+    {
+      "feature": "Free Subscribers Limit",
+      "tool_a": "1,000 subscribers",
+      "tool_b": "No free plan offered"
+    },
+    {
+      "feature": "Automation Capabilities",
+      "tool_a": "Visual automations and sequences",
+      "tool_b": "Workflows with visual editor"
+    },
+    {
+      "feature": "G2 Rating",
+      "tool_a": "4.4/5",
+      "tool_b": "4.8/5"
+    },
+    {
+      "feature": "Trustpilot Rating",
+      "tool_a": "3.2/5",
+      "tool_b": "4.7/5"
+    },
+    {
+      "feature": "Best For",
+      "tool_a": "Creators, bloggers, course sellers",
+      "tool_b": "Visual brands, photographers, designers"
+    },
+    {
+      "feature": "E-commerce Features",
+      "tool_a": "Commerce and broadcast emails",
+      "tool_b": "Checkout forms and link in bio"
+    },
+    {
+      "feature": "Affiliate Commission",
+      "tool_a": "30% recurring for 24 months",
+      "tool_b": "50% recurring"
+    },
+    {
+      "feature": "Founded",
+      "tool_a": "2013",
+      "tool_b": "2019"
+    }
+  ],
+  "choose_a_if": [
+    "You want a free plan to start email marketing at no cost",
+    "You need advanced automation and tagging for complex workflows",
+    "You're selling online courses or digital products and need built-in commerce features"
+  ],
+  "choose_b_if": [
+    "Design and aesthetics are your top priority for email campaigns",
+    "You want predictable flat-rate pricing with unlimited subscribers",
+    "You're a visual brand or designer who wants stunning, pre-designed templates"
+  ],
+  "faq": [
+    {
+      "q": "Is ConvertKit better than Flodesk?",
+      "a": "Neither is objectively better—it depends on your priorities. ConvertKit excels in automation, e-commerce features, and affordability with a free tier. Flodesk wins on design, customer satisfaction ratings, and straightforward flat-rate pricing. Choose ConvertKit for functionality and Flodesk for visual appeal and simplicity."
+    },
+    {
+      "q": "Which is cheaper, ConvertKit or Flodesk?",
+      "a": "ConvertKit is cheaper overall because it offers a free tier for up to 1,000 subscribers, making it ideal for beginners. Flodesk starts at $38/month with no free option but provides unlimited subscribers at that price, which becomes cost-effective for larger lists. Your choice depends on subscriber count and budget flexibility."
+    },
+    {
+      "q": "Can I switch from Flodesk to ConvertKit?",
+      "a": "Yes, both platforms support email list exports and imports, making migration possible. You can export your subscribers from Flodesk as a CSV file and import them into ConvertKit. However, you'll need to manually recreate your automations and sequences, as they don't transfer automatically."
+    }
+  ]
+}

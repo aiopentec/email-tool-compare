@@ -1,0 +1,70 @@
+{
+  "type": "compare",
+  "slug": "getresponse-vs-substack",
+  "title": "GetResponse vs Substack (2025): Which Is Better?",
+  "meta_description": "Compare GetResponse and Substack. Learn their pricing, features, and which email marketing tool suits your needs.",
+  "h1": "GetResponse vs Substack: Complete Comparison Guide",
+  "intro": "GetResponse and Substack serve different email marketing needs despite both offering free tiers. GetResponse is a comprehensive marketing platform built for businesses running courses and webinars, while Substack is purpose-built for writers monetizing newsletters directly. Your choice depends on whether you need advanced marketing tools or a simple newsletter platform.",
+  "quick_verdict": {
+    "winner_overall": "GetResponse",
+    "winner_price": "Substack",
+    "winner_features": "GetResponse",
+    "winner_beginners": "Substack",
+    "winner_ecommerce": "GetResponse"
+  },
+  "comparison_table": [
+    {
+      "feature": "Pricing Model",
+      "tool_a": "Freemium ($0-$19+/month)",
+      "tool_b": "Revenue-share (Free, 10% commission on paid subscriptions)"
+    },
+    {
+      "feature": "Free Subscriber Limit",
+      "tool_a": "500 subscribers",
+      "tool_b": "Unlimited subscribers"
+    },
+    {
+      "feature": "Core Features",
+      "tool_a": "Email marketing, webinars, landing pages, automation, courses, funnels",
+      "tool_b": "Paid subscriptions, podcast hosting, notes feed, recommendations, built-in audience"
+    },
+    {
+      "feature": "Best For",
+      "tool_a": "Online course creators, webinar hosts, marketers",
+      "tool_b": "Writers, journalists, newsletter creators monetizing directly"
+    },
+    {
+      "feature": "Affiliate Program",
+      "tool_a": "Yes (33% recurring or $100 one-time)",
+      "tool_b": "No"
+    }
+  ],
+  "choose_a_if": [
+    "You need advanced marketing automation, webinars, and sales funnel tools",
+    "You're building an online course or hosting educational webinars",
+    "You want to scale beyond email with landing pages and conversion funnels",
+    "You need an affiliate program to earn commission on referrals",
+    "You serve ecommerce or have complex marketing workflows"
+  ],
+  "choose_b_if": [
+    "You're a writer, journalist, or creator wanting to monetize your newsletter",
+    "You want unlimited free subscribers with no upgrade required",
+    "You prefer simplicity over advanced marketing features",
+    "You want to build an audience directly within the platform",
+    "You're interested in podcasting alongside your newsletter"
+  ],
+  "faq": [
+    {
+      "q": "Is GetResponse better than Substack?",
+      "a": "It depends on your use case. GetResponse is superior for marketers needing automation, webinars, and sales funnels. Substack excels if you're a writer monetizing newsletters directly. They target different audiences, so 'better' depends on your specific needs."
+    },
+    {
+      "q": "Which is cheaper, GetResponse or Substack?",
+      "a": "Substack is cheaper if you're monetizing—it's completely free until subscribers pay you, then takes 10% commission. GetResponse's free tier supports only 500 subscribers; paid plans start at $19/month. Substack wins on cost for low-volume creators, GetResponse for those needing enterprise features."
+    },
+    {
+      "q": "Can I switch from Substack to GetResponse?",
+      "a": "Yes, you can export your subscriber list from Substack and import it into GetResponse. Both platforms allow data portability, though you'll need to rebuild some automations and templates in GetResponse. The transition is straightforward for most users."
+    }
+  ]
+}
