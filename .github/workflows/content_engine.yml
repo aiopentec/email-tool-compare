@@ -66,9 +66,9 @@ jobs:
         run: |
           git config user.name "pseo-bot"
           git config user.email "bot@aiopentec.github.io"
-          git add content/ sites/
+          git add -f content/ sites/
           git diff --staged --quiet || git commit -m "chore: auto-generate content $(date +%Y-%m-%d)"
-          git push
+          git push || true
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
