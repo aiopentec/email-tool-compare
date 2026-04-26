@@ -244,7 +244,68 @@ def build(site_id):
             sitemap_urls.append({"url": full_url, "priority": "0.85", "changefreq": "monthly"})
             page_count += 1
 
-    # ── Sitemap ─────────────────────────────────────────────────────────────────
+    # ── Section index pages (built from entities, not content files) ─────────
+    import itertools as _it
+
+    base = site_cfg["base_url"]
+    name = site_cfg["site_name"]
+
+    def _nav():
+        return (f"<header class='site-header'><div class='container'>"
+                f"<a href='{base}/' class='logo'>Email Tool <span>Compare</span></a>"
+                f"<nav><a href='{base}/compare/'>Compare Tools</a> "
+                f"<a href='{base}/alternatives/'>Alternatives</a> "
+                f"<a href='{base}/tools/'>All Tools</a></nav></div></header>")
+
+    def _pg(title, h1, desc, body):
+        return (f"<!DOCTYPE html><html lang=en data-theme=light><head>"
+                f"<meta charset=UTF-8><meta name=viewport content='width=device-width,initial-scale=1'>"
+                f"<title>{title} | {name}</title>"
+                f"<meta name=description content='{desc}'>"
+                f"<link rel=stylesheet href='{base}/static/style.css'>"
+                f"<script>(function(){{var t=localStorage.getItem('theme')||'light';"
+                f"document.documentElement.setAttribute('data-theme',t);}})();</script>"
+                f"</head><body>{_nav()}"
+                f"<div class='page-wrap'><h1 class='page-h1'>{h1}</h1>"
+                f"<p class='page-intro'>{desc}</p>{body}</div></body></html>")
+
+    # Compare index
+    (dist_dir / "compare").mkdir(exist_ok=True)
+    clinks = "".join(
+        f"<li><a href='{base}/compare/{a['slug']}-vs-{b['slug']}/'>{a['name']} vs {b['name']}</a></li>"
+        for a, b in _it.combinations(entities, 2)
+    )
+    (dist_dir / "compare" / "index.html").write_text(
+        _pg("All Comparisons", "All Email Tool Comparisons",
+            f"Side-by-side comparisons across {len(entities)} email marketing platforms.",
+            f"<ul style='columns:2;padding-left:1.5rem;line-height:2'>{clinks}</ul>"),
+        encoding="utf-8")
+
+    # Alternatives index
+    (dist_dir / "alternatives").mkdir(exist_ok=True)
+    alinks = "".join(
+        f"<li><a href='{base}/alternatives/{e['slug']}-alternatives/'>Best {e['name']} Alternatives</a></li>"
+        for e in entities
+    )
+    (dist_dir / "alternatives" / "index.html").write_text(
+        _pg("All Alternatives", "Best Email Tool Alternatives",
+            "Find the best alternative for every major email marketing platform.",
+            f"<ul style='columns:2;padding-left:1.5rem;line-height:2'>{alinks}</ul>"),
+        encoding="utf-8")
+
+    # Tools index
+    (dist_dir / "tools").mkdir(exist_ok=True)
+    tlinks = "".join(
+        f"<li><a href='{base}/tools/{e['slug']}/'>{e['name']} — {e['tagline']}</a></li>"
+        for e in entities
+    )
+    (dist_dir / "tools" / "index.html").write_text(
+        _pg("All Tools", "All 18 Email Marketing Tools Reviewed",
+            f"Honest reviews of {len(entities)} email marketing platforms.",
+            f"<ul style='padding-left:1.5rem;line-height:2'>{tlinks}</ul>"),
+        encoding="utf-8")
+
+        # ── Sitemap ─────────────────────────────────────────────────────────────────
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     sitemap_lines = ['<?xml version="1.0" encoding="UTF-8"?>',
                      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
