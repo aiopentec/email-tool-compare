@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "getresponse-vs-sendinblue",
+  "title": "GetResponse vs Sendinblue (2025): Which Is Better?",
+  "meta_description": "GetResponse vs Sendinblue: compare pricing, features, and real use cases to find the right email tool for your needs.",
+  "h1": "GetResponse vs Sendinblue: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between GetResponse and Sendinblue comes down to your specific use case. Both are legitimate email marketing platforms, but they serve different audiences. GetResponse is built for online course creators and webinar hosts, while Sendinblue targets transactional email and SMS campaigns. This comparison covers the key differences so you can decide quickly.",
+  "quick_verdict": {
+    "winner_overall": "Sendinblue",
+    "winner_price": "GetResponse",
+    "winner_features": "GetResponse",
+    "winner_beginners": "GetResponse",
+    "winner_ecommerce": "GetResponse"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$19/mo",
+      "tool_b": "$25/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Online Course Creators And Webinar Hosts",
+      "tool_b": "Transactional Email And Sms Campaigns"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "500",
+      "tool_b": "100000"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.2",
+      "tool_b": "4.5"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on online course creators and webinar hosts",
+    "You value email marketing",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on transactional email and SMS campaigns",
+    "You value 300 free emails/day",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is GetResponse better than Sendinblue?",
+      "a": "It depends on your use case. GetResponse wins for online course creators and webinar hosts, while Sendinblue is stronger for transactional email and SMS campaigns. Neither is objectively better — the right choice depends on your specific needs."
+    },
+    {
+      "q": "Which is cheaper, GetResponse or Sendinblue?",
+      "a": "GetResponse starts at a lower price point ($19/mo vs $25/mo). However, pricing scales with subscriber count, so the total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Sendinblue to GetResponse?",
+      "a": "Yes, switching from Sendinblue to GetResponse is possible. Most platforms support CSV import/export for subscriber lists. Plan for some time to recreate automations and templates, as these rarely transfer directly between platforms."
+    }
+  ]
+}

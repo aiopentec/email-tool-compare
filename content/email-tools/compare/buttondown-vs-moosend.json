@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "buttondown-vs-moosend",
+  "title": "Buttondown vs Moosend (2025): Which Is Better?",
+  "meta_description": "Buttondown vs Moosend: compare pricing, features, and real use cases to find the right email tool for your needs.",
+  "h1": "Buttondown vs Moosend: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Buttondown and Moosend comes down to your specific use case. Both are legitimate email marketing platforms, but they serve different audiences. Buttondown is built for developers and technical writers who prefer markdown, while Moosend targets small businesses wanting unlimited emails at low cost. This comparison covers the key differences so you can decide quickly.",
+  "quick_verdict": {
+    "winner_overall": "Buttondown",
+    "winner_price": "Buttondown",
+    "winner_features": "Buttondown",
+    "winner_beginners": "Buttondown",
+    "winner_ecommerce": "Buttondown"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$9/mo",
+      "tool_b": "$9/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Developers And Technical Writers Who Prefer Markdown",
+      "tool_b": "Small Businesses Wanting Unlimited Emails At Low Cost"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "100",
+      "tool_b": "1000"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.8",
+      "tool_b": "4.7"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on developers and technical writers who prefer markdown",
+    "You value markdown writing",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on small businesses wanting unlimited emails at low cost",
+    "You value unlimited emails",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Buttondown better than Moosend?",
+      "a": "It depends on your use case. Buttondown wins for developers and technical writers who prefer markdown, while Moosend is stronger for small businesses wanting unlimited emails at low cost. Neither is objectively better — the right choice depends on your specific needs."
+    },
+    {
+      "q": "Which is cheaper, Buttondown or Moosend?",
+      "a": "Buttondown starts at a lower price point ($9/mo vs $9/mo). However, pricing scales with subscriber count, so the total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Moosend to Buttondown?",
+      "a": "Yes, switching from Moosend to Buttondown is possible. Most platforms support CSV import/export for subscriber lists. Plan for some time to recreate automations and templates, as these rarely transfer directly between platforms."
+    }
+  ]
+}

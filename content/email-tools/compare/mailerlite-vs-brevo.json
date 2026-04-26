@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "mailerlite-vs-brevo",
+  "title": "MailerLite vs Brevo (2025): Which Is Better?",
+  "meta_description": "MailerLite vs Brevo: compare pricing, features, and real use cases to find the right email tool for your needs.",
+  "h1": "MailerLite vs Brevo: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between MailerLite and Brevo comes down to your specific use case. Both are legitimate email marketing platforms, but they serve different audiences. MailerLite is built for small businesses and freelancers on a budget, while Brevo targets transactional email and multi-channel marketing. This comparison covers the key differences so you can decide quickly.",
+  "quick_verdict": {
+    "winner_overall": "MailerLite",
+    "winner_price": "MailerLite",
+    "winner_features": "MailerLite",
+    "winner_beginners": "MailerLite",
+    "winner_ecommerce": "MailerLite"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$9/mo",
+      "tool_b": "$25/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Small Businesses And Freelancers On A Budget",
+      "tool_b": "Transactional Email And Multi-Channel Marketing"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "1000",
+      "tool_b": "100000"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.6",
+      "tool_b": "4.5"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on small businesses and freelancers on a budget",
+    "You value drag-drop editor",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on transactional email and multi-channel marketing",
+    "You value email campaigns",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is MailerLite better than Brevo?",
+      "a": "It depends on your use case. MailerLite wins for small businesses and freelancers on a budget, while Brevo is stronger for transactional email and multi-channel marketing. Neither is objectively better — the right choice depends on your specific needs."
+    },
+    {
+      "q": "Which is cheaper, MailerLite or Brevo?",
+      "a": "MailerLite starts at a lower price point ($9/mo vs $25/mo). However, pricing scales with subscriber count, so the total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Brevo to MailerLite?",
+      "a": "Yes, switching from Brevo to MailerLite is possible. Most platforms support CSV import/export for subscriber lists. Plan for some time to recreate automations and templates, as these rarely transfer directly between platforms."
+    }
+  ]
+}
