@@ -268,7 +268,7 @@ def generate_tool_pages(entities, site_cfg, content_dir, demo, client, limit_rem
                 tool_data=json.dumps(entity, indent=2)
             )
             content = generate_with_api(client, prompt)
-        out_path.write_text(json.dumps(content, indent=2, ensure_ascii=True))
+        out_path.write_text(json.dumps(content, indent=2, ensure_ascii=False))
         entity["generated"] = True
         print("done")
         generated += 1
@@ -296,7 +296,7 @@ def generate_compare_pages(entities, site_cfg, content_dir, demo, client, limit_
                 name_b=b["name"], slug_b=b["slug"], data_b=json.dumps(b, indent=2)
             )
             content = generate_with_api(client, prompt)
-        out_path.write_text(json.dumps(content, indent=2, ensure_ascii=True))
+        out_path.write_text(json.dumps(content, indent=2, ensure_ascii=False))
         print("done")
         generated += 1
     return generated
@@ -322,7 +322,7 @@ def generate_alternatives_pages(entities, site_cfg, content_dir, demo, client, l
                 alternatives_data=json.dumps(others[:8], indent=2)
             )
             content = generate_with_api(client, prompt)
-        out_path.write_text(json.dumps(content, indent=2, ensure_ascii=True))
+        out_path.write_text(json.dumps(content, indent=2, ensure_ascii=False))
         print("done")
         generated += 1
     return generated

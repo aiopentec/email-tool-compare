@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,37 +10,69 @@
   <meta property="og:type" content="article">
   <meta property="og:url" content="{{ site.base_url }}/{{ page.url_path }}">
   <link rel="canonical" href="{{ site.base_url }}/{{ page.url_path }}">
-  {% if site.gsc_verification %}
-  <meta name="google-site-verification" content="{{ D6t0d91es0kKxa0Fhq5O0dXn58500JPsmUNqLhzJ_ZE }}">
-  {% endif %}
+  {% if site.gsc_verification %}<meta name="google-site-verification" content="{{ site.gsc_verification }}">{% endif %}
   <script type="application/ld+json">{{ page.schema_json | safe }}</script>
   <link rel="stylesheet" href="{{ site.base_url }}/static/style.css">
   {% if site.ga4_id %}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga4_id }}"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','{{ site.ga4_id }}');</script>
   {% endif %}
+  <script>
+    // Apply saved theme before paint to avoid flash
+    (function(){var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);})();
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <a href="{{ site.base_url }}/" class="logo">{{ site.site_name }}</a>
+      <a href="{{ site.base_url }}/" class="logo">Email Tool <span>Compare</span></a>
       <nav>
         <a href="{{ site.base_url }}/compare/">Compare Tools</a>
         <a href="{{ site.base_url }}/alternatives/">Alternatives</a>
         <a href="{{ site.base_url }}/tools/">All Tools</a>
       </nav>
+      <button class="dark-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <span class="icon" id="theme-icon">🌙</span>
+        <span id="theme-label">Dark</span>
+      </button>
     </div>
   </header>
 
-  <main class="container">
-    {% block content %}{% endblock %}
-  </main>
+  {% block content %}{% endblock %}
 
   <footer class="site-footer">
     <div class="container">
+      <div class="footer-links">
+        <a href="{{ site.base_url }}/">Home</a>
+        <a href="{{ site.base_url }}/compare/">Compare Tools</a>
+        <a href="{{ site.base_url }}/alternatives/">Alternatives</a>
+        <a href="{{ site.base_url }}/tools/">All Tools</a>
+      </div>
+      <p><strong>{{ site.site_name }}</strong> &nbsp;·&nbsp; {{ site.site_description }}</p>
       <p class="disclosure">{{ site.affiliate_disclosure }}</p>
-      <p>&copy; 2025 {{ site.site_name }}. Built with the <a href="https://github.com/aiopentec">aiopentec</a> PSEO engine.</p>
+      <p style="margin-top:8px;font-size:12px;opacity:0.6">
+        Hosted on <a href="https://pages.github.com">GitHub Pages</a> &nbsp;·&nbsp;
+        Built by <a href="https://github.com/aiopentec">aiopentec</a> &nbsp;·&nbsp; $0/month to operate
+      </p>
     </div>
   </footer>
+
+  <script>
+    function toggleTheme(){
+      var html=document.documentElement;
+      var cur=html.getAttribute('data-theme');
+      var next=cur==='dark'?'light':'dark';
+      html.setAttribute('data-theme',next);
+      localStorage.setItem('theme',next);
+      document.getElementById('theme-icon').textContent=next==='dark'?'☀️':'🌙';
+      document.getElementById('theme-label').textContent=next==='dark'?'Light':'Dark';
+    }
+    // Set icon correctly on load
+    (function(){
+      var t=localStorage.getItem('theme')||'light';
+      document.getElementById('theme-icon').textContent=t==='dark'?'☀️':'🌙';
+      document.getElementById('theme-label').textContent=t==='dark'?'Light':'Dark';
+    })();
+  </script>
 </body>
 </html>

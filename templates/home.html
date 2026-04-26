@@ -1,45 +1,128 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="page-home">
-  <div class="hero">
-    <h1>{{ site.site_description }}</h1>
-    <p>Compare features, pricing, and honest reviews for {{ entity_count }} email marketing platforms.</p>
+<div class="hero">
+  <div class="container hero-inner">
+    <h1>Compare <em>Email Marketing</em> Tools</h1>
+    <p class="sub">Unbiased side-by-side comparisons to help you choose the right platform. {{ entity_count }} tools reviewed. No fluff.</p>
+    <div class="hero-stats">
+      <div class="stat"><span class="num">{{ compare_count }}</span><span class="lbl">Comparisons</span></div>
+      <div class="stat"><span class="num">{{ entity_count }}</span><span class="lbl">Tools Covered</span></div>
+      <div class="stat"><span class="num">$0</span><span class="lbl">Cost to Run</span></div>
+      <div class="stat"><span class="num">Weekly</span><span class="lbl">Auto-Updated</span></div>
+    </div>
   </div>
-
-  <section class="section">
-    <h2>Popular comparisons</h2>
-    <div class="card-grid">
-      {% for c in featured_compares %}
-      <a href="{{ site.base_url }}/compare/{{ c.slug }}/" class="card">
-        <span class="card-title">{{ c.title }}</span>
-      </a>
-      {% endfor %}
-    </div>
-    <p><a href="{{ site.base_url }}/compare/">See all comparisons &rarr;</a></p>
-  </section>
-
-  <section class="section">
-    <h2>Find alternatives</h2>
-    <div class="card-grid">
-      {% for e in entities %}
-      <a href="{{ site.base_url }}/alternatives/{{ e.slug }}-alternatives/" class="card">
-        <span class="card-title">Best {{ e.name }} alternatives</span>
-      </a>
-      {% endfor %}
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>All tools reviewed</h2>
-    <div class="tool-list">
-      {% for e in entities %}
-      <a href="{{ site.base_url }}/tools/{{ e.slug }}/" class="tool-row">
-        <span class="tool-name">{{ e.name }}</span>
-        <span class="tool-tagline">{{ e.tagline }}</span>
-        <span class="tool-price">From ${{ e.paid_from_usd }}/mo</span>
-      </a>
-      {% endfor %}
-    </div>
-  </section>
 </div>
+
+<div class="filter-bar">
+  <div class="container">
+    <span class="filter-lbl">Filter:</span>
+    <button class="flt active" onclick="filterCards('all',this)">All</button>
+    <button class="flt" onclick="filterCards('freemium',this)">Free Plan</button>
+    <button class="flt" onclick="filterCards('paid',this)">Paid Only</button>
+    <button class="flt" onclick="filterCards('flat-rate',this)">Flat Rate</button>
+    <button class="flt" onclick="filterCards('revenue-share',this)">Revenue Share</button>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="container">
+
+    <div class="panels" style="margin-bottom:48px">
+      <div class="panel panel-navy">
+        <div class="panel-left">
+          <div class="panel-icon">📊</div>
+          <div>
+            <div class="panel-title">153 Head-to-Head Comparisons</div>
+            <div class="panel-desc">Every combination of {{ entity_count }} tools — pricing, features, migration guides</div>
+          </div>
+        </div>
+        <a href="{{ site.base_url }}/compare/" class="panel-btn">Browse Comparisons →</a>
+      </div>
+      <div class="panel panel-forest">
+        <div class="panel-left">
+          <div class="panel-icon">🔄</div>
+          <div>
+            <div class="panel-title">Find the Best Alternative</div>
+            <div class="panel-desc">Switching platforms? See which tool wins for your specific use case</div>
+          </div>
+        </div>
+        <a href="{{ site.base_url }}/alternatives/" class="panel-btn">View Alternatives →</a>
+      </div>
+      <div class="panel panel-plum">
+        <div class="panel-left">
+          <div class="panel-icon">💰</div>
+          <div>
+            <div class="panel-title">Top Affiliate Programmes</div>
+            <div class="panel-desc">Beehiiv (50%), Flodesk (50%), ConvertKit (30%) — best commissions in email</div>
+          </div>
+        </div>
+        <a href="{{ site.base_url }}/tools/" class="panel-btn">All Tools →</a>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-head">
+        <span class="sec-title">🔥 Popular Comparisons</span>
+        <a href="{{ site.base_url }}/compare/" class="sec-link">View all {{ compare_count }} →</a>
+      </div>
+      <div class="cards-grid" id="card-grid">
+        {% for c in featured_compares %}
+        <div class="cmp-card" data-cat="{{ c.cat }}">
+          <div class="cmp-cat-bar" style="background:{{ c.color }}">{{ c.icon }} {{ c.label }}</div>
+          <div class="cmp-logos">
+            <div class="tool-logo" style="background:{{ c.color_a }}">{{ c.init_a }}</div>
+            <div class="vs-pill">VS</div>
+            <div class="tool-logo" style="background:{{ c.color_b }}">{{ c.init_b }}</div>
+          </div>
+          <div class="cmp-names">
+            <div class="cmp-name-a">{{ c.tool_a }}</div>
+            <div class="cmp-vs-txt">compared with</div>
+            <div class="cmp-name-b" style="color:{{ c.color }}">{{ c.tool_b }}</div>
+          </div>
+          <div class="cmp-savings">
+            <span class="cmp-slbl">💰 Pricing:</span>
+            <span class="cmp-sval">{{ c.pricing_a }} vs {{ c.pricing_b }}</span>
+          </div>
+          <div class="cmp-tag">👥 {{ c.best_for }}</div>
+          <div class="cmp-btns">
+            <a href="{{ site.base_url }}/compare/{{ c.slug }}/" class="btn-cmp">Compare Now →</a>
+            <a href="{{ site.base_url }}/alternatives/{{ c.slug_a }}-alternatives/" class="btn-alt">{{ c.tool_a }} Alts</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-head">
+        <span class="sec-title">📋 All {{ entity_count }} Tools Reviewed</span>
+        <a href="{{ site.base_url }}/tools/" class="sec-link">Full reviews →</a>
+      </div>
+      <div class="tool-list">
+        {% for e in entities %}
+        <a href="{{ site.base_url }}/tools/{{ e.slug }}/" class="tool-row">
+          <div class="tool-logo-sm" style="background:{{ e.color }}">{{ e.name[0] }}</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">{{ e.name }}</div>
+            <div class="tool-row-tag">{{ e.tagline }}</div>
+          </div>
+          <span class="tool-row-badge b-{{ e.pricing_model }}">{{ e.pricing_model | replace('-',' ') | title }}</span>
+          <span class="tool-row-price">From ${{ e.paid_from_usd }}/mo</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function filterCards(cat,btn){
+  document.querySelectorAll('.flt').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#card-grid .cmp-card').forEach(c=>{
+    c.style.display=(cat==='all'||c.dataset.cat===cat)?'':'none';
+  });
+}
+</script>
 {% endblock %}

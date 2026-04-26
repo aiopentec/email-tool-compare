@@ -102,10 +102,48 @@ def build(site_id):
         for a, b in all_pairs[:12]
     ]
 
+    # Build richer compare card data for homepage
+    LOGO_PALETTE = [
+        "#1F5C99","#2ECC71","#E74C3C","#9B59B6","#F39C12",
+        "#1ABC9C","#E91E63","#3498DB","#FF5722","#607D8B",
+        "#00BCD4","#8BC34A","#FF9800","#673AB7","#009688",
+        "#795548","#F44336","#2196F3",
+    ]
+    CAT_COLORS = {
+        "freemium":"#3498DB","paid":"#E74C3C",
+        "flat-rate":"#9B59B6","revenue-share":"#F39C12",
+    }
+    CAT_ICONS = {"freemium":"📧","paid":"💼","flat-rate":"📬","revenue-share":"✍️"}
+
+    # Assign a unique colour to each entity for its logo avatar
+    for i, e in enumerate(entities):
+        e["color"] = LOGO_PALETTE[i % len(LOGO_PALETTE)]
+
+    rich_compares = []
+    for idx, (a, b) in enumerate(list(__import__('itertools').combinations(entities, 2))[:12]):
+        color = CAT_COLORS.get(a.get("pricing_model","freemium"), "#3498DB")
+        rich_compares.append({
+            "slug": f"{a['slug']}-vs-{b['slug']}",
+            "slug_a": a["slug"], "slug_b": b["slug"],
+            "tool_a": a["name"], "tool_b": b["name"],
+            "init_a": a["name"][0].upper(),
+            "init_b": b["name"][0].upper(),
+            "color_a": a.get("color","#1F5C99"),
+            "color_b": b.get("color","#2ECC71"),
+            "color": color,
+            "icon": CAT_ICONS.get(a.get("pricing_model","freemium"), "📧"),
+            "label": a.get("pricing_model","freemium").replace("-"," ").title(),
+            "cat": a.get("pricing_model","freemium"),
+            "pricing_a": f"${a.get('paid_from_usd',0)}/mo",
+            "pricing_b": f"${b.get('paid_from_usd',0)}/mo",
+            "best_for": a.get("best_for","all users")[:40],
+        })
+
     home_html = home_tmpl.render(
         site=site_cfg,
         entities=entities,
-        featured_compares=featured_compares,
+        featured_compares=rich_compares,
+        compare_count=153,
         entity_count=len(entities),
         page={"title": site_cfg["site_name"], "meta_description": site_cfg["site_description"],
               "url_path": "", "schema_json": "{}"}
@@ -205,111 +243,6 @@ def build(site_id):
             (page_out / "index.html").write_text(html, encoding="utf-8")
             sitemap_urls.append({"url": full_url, "priority": "0.85", "changefreq": "monthly"})
             page_count += 1
-
-    # ── Compare index page
-        compare_index = dist_dir / "compare" / "index.html"
-        compare_links = "".join(
-            f'<li><a href="{site_cfg["base_url"]}/compare/{u["url"].split("/compare/")[1]}">{u["url"].split("/compare/")[1].replace("/","").replace("-vs-"," vs ").replace("-"," ").title()}</a></li>'
-            for u in sitemap_urls if "/compare/" in u["url"] and u["url"].count("/") > 4
-        )
-        compare_index.write_text(f'''<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-    <title>All Comparisons | {site_cfg["site_name"]}</title>
-    <link rel="stylesheet" href="{site_cfg["base_url"]}/static/style.css"></head>
-    <body><header class="site-header"><div class="container">
-    <a href="{site_cfg["base_url"]}/" class="logo">{site_cfg["site_name"]}</a></div></header>
-    <main class="container"><h1 style="margin:2rem 0 1rem">All Comparisons</h1>
-    <ul style="columns:2;gap:2rem">{compare_links}</ul></main></body></html>''', encoding="utf-8")
-    
-
-    # ── Compare index page
-    comp_dir = content_dir / "compare"
-    if comp_dir.exists():
-        comp_index = dist_dir / "compare" / "index.html"
-        base = site_cfg["base_url"]
-        name = site_cfg["site_name"]
-        links = "".join(
-            "<li><a href='" + base + "/compare/" + p.stem + "/'>" +
-            p.stem.replace("-vs-", " vs ").replace("-", " ").title() +
-            "</a></li>"
-            for p in sorted(comp_dir.glob("*.json"))
-        )
-        comp_index.write_text(
-            "<!DOCTYPE html><html lang=en><head><meta charset=UTF-8>"
-            "<title>All Comparisons | " + name + "</title>"
-            "<link rel=stylesheet href='" + base + "/static/style.css'></head>"
-            "<body><header class=site-header><div class=container>"
-            "<a href='" + base + "/' class=logo>" + name + "</a>"
-            "<nav><a href='" + base + "/compare/'>Compare Tools</a> "
-            "<a href='" + base + "/alternatives/'>Alternatives</a> "
-            "<a href='" + base + "/tools/'>All Tools</a></nav>"
-            "</div></header><main class=container>"
-            "<h1 style='margin:2rem 0 0.5rem'>All Comparisons</h1>"
-            "<ul style='columns:2;padding-left:1.5rem'>" + links + "</ul>"
-            "</main></body></html>",
-            encoding="utf-8"
-        )
-
-    # ── Alternatives index page
-    alt_dir = content_dir / "alternatives"
-    if alt_dir.exists():
-        alt_index = dist_dir / "alternatives" / "index.html"
-        base = site_cfg["base_url"]
-        name = site_cfg["site_name"]
-        links = "".join(
-            "<li><a href='" + base + "/alternatives/" + p.stem + "/'>" +
-            p.stem.replace("-alternatives", "").replace("-", " ").title() +
-            " Alternatives</a></li>"
-            for p in sorted(alt_dir.glob("*.json"))
-        )
-        alt_index.write_text(
-            "<!DOCTYPE html><html lang=en><head><meta charset=UTF-8>"
-            "<title>All Alternatives | " + name + "</title>"
-            "<link rel=stylesheet href='" + base + "/static/style.css'></head>"
-            "<body><header class=site-header><div class=container>"
-            "<a href='" + base + "/' class=logo>" + name + "</a>"
-            "<nav><a href='" + base + "/compare/'>Compare Tools</a> "
-            "<a href='" + base + "/alternatives/'>Alternatives</a> "
-            "<a href='" + base + "/tools/'>All Tools</a></nav>"
-            "</div></header><main class=container>"
-            "<h1 style='margin:2rem 0 0.5rem'>All Alternatives</h1>"
-            "<ul style='columns:2;padding-left:1.5rem'>" + links + "</ul>"
-            "</main></body></html>",
-            encoding="utf-8"
-        )
-
-
-    # ── Tools index page
-    tools_content_dir = content_dir / "tools"
-    if tools_content_dir.exists():
-        tools_index = dist_dir / "tools" / "index.html"
-        base = site_cfg["base_url"]
-        name = site_cfg["site_name"]
-        entity_map_local = {e["slug"]: e for e in entities}
-        links = "".join(
-            "<li><a href='" + base + "/tools/" + p.stem + "/'>" +
-            entity_map_local.get(p.stem, {}).get("name", p.stem.replace("-", " ").title()) +
-            " — " +
-            entity_map_local.get(p.stem, {}).get("tagline", "") +
-            "</a></li>"
-            for p in sorted(tools_content_dir.glob("*.json"))
-        )
-        tools_index.write_text(
-            "<!DOCTYPE html><html lang=en><head><meta charset=UTF-8>"
-            "<title>All Email Marketing Tools | " + name + "</title>"
-            "<meta name='description' content='Reviews and comparisons of 18 email marketing platforms.'>"
-            "<link rel=stylesheet href='" + base + "/static/style.css'></head>"
-            "<body><header class=site-header><div class=container>"
-            "<a href='" + base + "/' class=logo>" + name + "</a>"
-            "<nav><a href='" + base + "/compare/'>Compare Tools</a> "
-            "<a href='" + base + "/alternatives/'>Alternatives</a> "
-            "<a href='" + base + "/tools/'>All Tools</a></nav>"
-            "</div></header><main class=container>"
-            "<h1 style='margin:2rem 0 0.5rem'>All Email Marketing Tools</h1>"
-            "<p style='color:#6b7280;margin-bottom:1.5rem'>Honest reviews of 18 platforms.</p>"
-            "<ul style='columns:2;padding-left:1.5rem;line-height:2.2'>" + links + "</ul>"
-            "</main></body></html>",
-            encoding="utf-8"
-        )
 
     # ── Sitemap ─────────────────────────────────────────────────────────────────
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
