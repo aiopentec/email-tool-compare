@@ -75,5 +75,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist/${{ matrix.site }}
-          # Uncomment below to use a custom domain:
-          # cname: yourdomain.com
+          cname: emailtoolcompare.com
