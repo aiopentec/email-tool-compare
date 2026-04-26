@@ -1,0 +1,40 @@
+{
+  "type": "tool",
+  "slug": "substack",
+  "title": "Substack Review 2025: Features, Pricing & Honest Verdict",
+  "meta_description": "Is Substack worth it in 2025? We break down pricing, features, pros and cons so you can decide.",
+  "h1": "Substack Review 2025: Everything You Need to Know",
+  "intro": "Substack is start a paid newsletter that positions itself for writers monetising directly from subscribers. Founded in 2017, it has become one of the most recognised platforms in the email marketing space. In this review we cover what it does well, where it falls short, and who should actually use it.",
+  "verdict": "Substack is a solid choice for writers monetising directly from subscribers. Its free tier is genuinely useful. The main trade-off is between its particular strengths and the limitations that make alternatives worth considering for some users.",
+  "pros": [
+    "Good fit for writers monetising directly from subscribers",
+    "Competitive pricing starting at $0/mo",
+    "Key feature: Paid Subscriptions",
+    "Free tier available"
+  ],
+  "cons": [
+    "Can get expensive at higher subscriber counts",
+    "Learning curve for advanced automations",
+    "Some features locked to higher tiers"
+  ],
+  "pricing_summary": "Substack offers a free plan, with paid plans from $0/month. Pricing typically scales with subscriber count.",
+  "best_for_detail": "Substack works best for writers monetising directly from subscribers. If you fit that profile, the feature set aligns well. If you need something different, check the alternatives section.",
+  "faq": [
+    {
+      "q": "Is Substack free?",
+      "a": "Yes, Substack has a free plan supporting up to -1 subscribers. This makes it accessible for new senders testing the platform."
+    },
+    {
+      "q": "What is Substack best used for?",
+      "a": "Substack is best for writers monetising directly from subscribers. Its standout features include paid subscriptions, podcast hosting, notes feed, which suit this use case well."
+    },
+    {
+      "q": "Is Substack good for beginners?",
+      "a": "Substack is aimed at users with some email marketing experience. The interface is straightforward for basic campaigns, though advanced automation features have a learning curve."
+    },
+    {
+      "q": "Does Substack have an affiliate program?",
+      "a": "Substack does not currently offer an affiliate program. This is worth considering if you plan to recommend the platform to your audience."
+    }
+  ]
+}
