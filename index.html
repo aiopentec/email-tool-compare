@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,290 +11,614 @@
   <meta property="og:url" content="https://emailtoolcompare.com/">
   <link rel="canonical" href="https://emailtoolcompare.com/">
   
-  <meta name="google-site-verification" content="">
-  
   <script type="application/ld+json">{}</script>
   <link rel="stylesheet" href="https://emailtoolcompare.com/static/style.css">
   
+  <script>
+    // Apply saved theme before paint to avoid flash
+    (function(){var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);})();
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <a href="https://emailtoolcompare.com/" class="logo">Email Tool Compare</a>
+      <a href="https://emailtoolcompare.com/" class="logo">Email Tool <span>Compare</span></a>
       <nav>
         <a href="https://emailtoolcompare.com/compare/">Compare Tools</a>
         <a href="https://emailtoolcompare.com/alternatives/">Alternatives</a>
         <a href="https://emailtoolcompare.com/tools/">All Tools</a>
       </nav>
+      <button class="dark-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <span class="icon" id="theme-icon">🌙</span>
+        <span id="theme-label">Dark</span>
+      </button>
     </div>
   </header>
 
-  <main class="container">
-    
-<div class="page-home">
-  <div class="hero">
-    <h1>Unbiased comparisons and alternatives for email marketing tools</h1>
-    <p>Compare features, pricing, and honest reviews for 18 email marketing platforms.</p>
+  
+<div class="hero">
+  <div class="container hero-inner">
+    <h1>Compare <em>Email Marketing</em> Tools</h1>
+    <p class="sub">Unbiased side-by-side comparisons to help you choose the right platform. 18 tools reviewed. No fluff.</p>
+    <div class="hero-stats">
+      <div class="stat"><span class="num">153</span><span class="lbl">Comparisons</span></div>
+      <div class="stat"><span class="num">18</span><span class="lbl">Tools Covered</span></div>
+      <div class="stat"><span class="num">$0</span><span class="lbl">Cost to Run</span></div>
+      <div class="stat"><span class="num">Weekly</span><span class="lbl">Auto-Updated</span></div>
+    </div>
   </div>
-
-  <section class="section">
-    <h2>Popular comparisons</h2>
-    <div class="card-grid">
-      
-      <a href="https://emailtoolcompare.com/compare/mailchimp-vs-convertkit/" class="card">
-        <span class="card-title">Mailchimp vs ConvertKit</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/compare/mailchimp-vs-beehiiv/" class="card">
-        <span class="card-title">Mailchimp vs Beehiiv</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/compare/mailchimp-vs-mailerlite/" class="card">
-        <span class="card-title">Mailchimp vs MailerLite</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/compare/mailchimp-vs-activecampaign/" class="card">
-        <span class="card-title">Mailchimp vs ActiveCampaign</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/compare/mailchimp-vs-brevo/" class="card">
-        <span class="card-title">Mailchimp vs Brevo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/compare/mailchimp-vs-klaviyo/" class="card">
-        <span class="card-title">Mailchimp vs Klaviyo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/compare/mailchimp-vs-getresponse/" class="card">
-        <span class="card-title">Mailchimp vs GetResponse</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/compare/mailchimp-vs-substack/" class="card">
-        <span class="card-title">Mailchimp vs Substack</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/compare/mailchimp-vs-drip/" class="card">
-        <span class="card-title">Mailchimp vs Drip</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/compare/mailchimp-vs-buttondown/" class="card">
-        <span class="card-title">Mailchimp vs Buttondown</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/compare/mailchimp-vs-campaign-monitor/" class="card">
-        <span class="card-title">Mailchimp vs Campaign Monitor</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/compare/mailchimp-vs-moosend/" class="card">
-        <span class="card-title">Mailchimp vs Moosend</span>
-      </a>
-      
-    </div>
-    <p><a href="https://emailtoolcompare.com/compare/">See all comparisons &rarr;</a></p>
-  </section>
-
-  <section class="section">
-    <h2>Find alternatives</h2>
-    <div class="card-grid">
-      
-      <a href="https://emailtoolcompare.com/alternatives/mailchimp-alternatives/" class="card">
-        <span class="card-title">Best Mailchimp alternatives</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/alternatives/convertkit-alternatives/" class="card">
-        <span class="card-title">Best ConvertKit alternatives</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/alternatives/beehiiv-alternatives/" class="card">
-        <span class="card-title">Best Beehiiv alternatives</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/alternatives/mailerlite-alternatives/" class="card">
-        <span class="card-title">Best MailerLite alternatives</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/alternatives/activecampaign-alternatives/" class="card">
-        <span class="card-title">Best ActiveCampaign alternatives</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/alternatives/brevo-alternatives/" class="card">
-        <span class="card-title">Best Brevo alternatives</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/alternatives/klaviyo-alternatives/" class="card">
-        <span class="card-title">Best Klaviyo alternatives</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/alternatives/getresponse-alternatives/" class="card">
-        <span class="card-title">Best GetResponse alternatives</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/alternatives/substack-alternatives/" class="card">
-        <span class="card-title">Best Substack alternatives</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/alternatives/drip-alternatives/" class="card">
-        <span class="card-title">Best Drip alternatives</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/alternatives/buttondown-alternatives/" class="card">
-        <span class="card-title">Best Buttondown alternatives</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/alternatives/campaign-monitor-alternatives/" class="card">
-        <span class="card-title">Best Campaign Monitor alternatives</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/alternatives/moosend-alternatives/" class="card">
-        <span class="card-title">Best Moosend alternatives</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/alternatives/aweber-alternatives/" class="card">
-        <span class="card-title">Best AWeber alternatives</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/alternatives/omnisend-alternatives/" class="card">
-        <span class="card-title">Best Omnisend alternatives</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/alternatives/flodesk-alternatives/" class="card">
-        <span class="card-title">Best Flodesk alternatives</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/alternatives/constant-contact-alternatives/" class="card">
-        <span class="card-title">Best Constant Contact alternatives</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/alternatives/sendinblue-alternatives/" class="card">
-        <span class="card-title">Best Sendinblue alternatives</span>
-      </a>
-      
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>All tools reviewed</h2>
-    <div class="tool-list">
-      
-      <a href="https://emailtoolcompare.com/tools/mailchimp/" class="tool-row">
-        <span class="tool-name">Mailchimp</span>
-        <span class="tool-tagline">The all-in-one marketing platform</span>
-        <span class="tool-price">From $13/mo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/tools/convertkit/" class="tool-row">
-        <span class="tool-name">ConvertKit</span>
-        <span class="tool-tagline">Email platform built for creators</span>
-        <span class="tool-price">From $29/mo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/tools/beehiiv/" class="tool-row">
-        <span class="tool-name">Beehiiv</span>
-        <span class="tool-tagline">The newsletter platform built for growth</span>
-        <span class="tool-price">From $39/mo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/tools/mailerlite/" class="tool-row">
-        <span class="tool-name">MailerLite</span>
-        <span class="tool-tagline">Simple email marketing for small businesses</span>
-        <span class="tool-price">From $9/mo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/tools/activecampaign/" class="tool-row">
-        <span class="tool-name">ActiveCampaign</span>
-        <span class="tool-tagline">Email, automation, and CRM combined</span>
-        <span class="tool-price">From $15/mo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/tools/brevo/" class="tool-row">
-        <span class="tool-name">Brevo</span>
-        <span class="tool-tagline">All-in-one CRM suite</span>
-        <span class="tool-price">From $25/mo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/tools/klaviyo/" class="tool-row">
-        <span class="tool-name">Klaviyo</span>
-        <span class="tool-tagline">The platform for intelligent marketing automation</span>
-        <span class="tool-price">From $45/mo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/tools/getresponse/" class="tool-row">
-        <span class="tool-name">GetResponse</span>
-        <span class="tool-tagline">Complete online marketing platform</span>
-        <span class="tool-price">From $19/mo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/tools/substack/" class="tool-row">
-        <span class="tool-name">Substack</span>
-        <span class="tool-tagline">Start a paid newsletter</span>
-        <span class="tool-price">From $0/mo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/tools/drip/" class="tool-row">
-        <span class="tool-name">Drip</span>
-        <span class="tool-tagline">Ecommerce email marketing made easy</span>
-        <span class="tool-price">From $39/mo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/tools/buttondown/" class="tool-row">
-        <span class="tool-name">Buttondown</span>
-        <span class="tool-tagline">The best way to write a newsletter</span>
-        <span class="tool-price">From $9/mo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/tools/campaign-monitor/" class="tool-row">
-        <span class="tool-name">Campaign Monitor</span>
-        <span class="tool-tagline">Beautiful emails for your business</span>
-        <span class="tool-price">From $11/mo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/tools/moosend/" class="tool-row">
-        <span class="tool-name">Moosend</span>
-        <span class="tool-tagline">Email marketing and automation for all</span>
-        <span class="tool-price">From $9/mo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/tools/aweber/" class="tool-row">
-        <span class="tool-name">AWeber</span>
-        <span class="tool-tagline">Email marketing made easy</span>
-        <span class="tool-price">From $15/mo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/tools/omnisend/" class="tool-row">
-        <span class="tool-name">Omnisend</span>
-        <span class="tool-tagline">Ecommerce email and SMS platform</span>
-        <span class="tool-price">From $16/mo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/tools/flodesk/" class="tool-row">
-        <span class="tool-name">Flodesk</span>
-        <span class="tool-tagline">Design beautiful emails people love to get</span>
-        <span class="tool-price">From $38/mo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/tools/constant-contact/" class="tool-row">
-        <span class="tool-name">Constant Contact</span>
-        <span class="tool-tagline">Digital marketing made simple</span>
-        <span class="tool-price">From $12/mo</span>
-      </a>
-      
-      <a href="https://emailtoolcompare.com/tools/sendinblue/" class="tool-row">
-        <span class="tool-name">Sendinblue</span>
-        <span class="tool-tagline">Now Brevo — the all-in-one CRM suite</span>
-        <span class="tool-price">From $25/mo</span>
-      </a>
-      
-    </div>
-  </section>
 </div>
 
-  </main>
+<div class="filter-bar">
+  <div class="container">
+    <span class="filter-lbl">Filter:</span>
+    <button class="flt active" onclick="filterCards('all',this)">All</button>
+    <button class="flt" onclick="filterCards('freemium',this)">Free Plan</button>
+    <button class="flt" onclick="filterCards('paid',this)">Paid Only</button>
+    <button class="flt" onclick="filterCards('flat-rate',this)">Flat Rate</button>
+    <button class="flt" onclick="filterCards('revenue-share',this)">Revenue Share</button>
+  </div>
+</div>
+
+<div class="main-content">
+  <div class="container">
+
+    <div class="panels" style="margin-bottom:48px">
+      <div class="panel panel-navy">
+        <div class="panel-left">
+          <div class="panel-icon">📊</div>
+          <div>
+            <div class="panel-title">153 Head-to-Head Comparisons</div>
+            <div class="panel-desc">Every combination of 18 tools — pricing, features, migration guides</div>
+          </div>
+        </div>
+        <a href="https://emailtoolcompare.com/compare/" class="panel-btn">Browse Comparisons →</a>
+      </div>
+      <div class="panel panel-forest">
+        <div class="panel-left">
+          <div class="panel-icon">🔄</div>
+          <div>
+            <div class="panel-title">Find the Best Alternative</div>
+            <div class="panel-desc">Switching platforms? See which tool wins for your specific use case</div>
+          </div>
+        </div>
+        <a href="https://emailtoolcompare.com/alternatives/" class="panel-btn">View Alternatives →</a>
+      </div>
+      <div class="panel panel-plum">
+        <div class="panel-left">
+          <div class="panel-icon">💰</div>
+          <div>
+            <div class="panel-title">Top Affiliate Programmes</div>
+            <div class="panel-desc">Beehiiv (50%), Flodesk (50%), ConvertKit (30%) — best commissions in email</div>
+          </div>
+        </div>
+        <a href="https://emailtoolcompare.com/tools/" class="panel-btn">All Tools →</a>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-head">
+        <span class="sec-title">🔥 Popular Comparisons</span>
+        <a href="https://emailtoolcompare.com/compare/" class="sec-link">View all 153 →</a>
+      </div>
+      <div class="cards-grid" id="card-grid">
+        
+        <div class="cmp-card" data-cat="freemium">
+          <div class="cmp-cat-bar" style="background:#3498DB">📧 Freemium</div>
+          <div class="cmp-logos">
+            <div class="tool-logo" style="background:#1F5C99">M</div>
+            <div class="vs-pill">VS</div>
+            <div class="tool-logo" style="background:#2ECC71">C</div>
+          </div>
+          <div class="cmp-names">
+            <div class="cmp-name-a">Mailchimp</div>
+            <div class="cmp-vs-txt">compared with</div>
+            <div class="cmp-name-b" style="color:#3498DB">ConvertKit</div>
+          </div>
+          <div class="cmp-savings">
+            <span class="cmp-slbl">💰 Pricing:</span>
+            <span class="cmp-sval">$13/mo vs $29/mo</span>
+          </div>
+          <div class="cmp-tag">👥 beginners and small businesses</div>
+          <div class="cmp-btns">
+            <a href="https://emailtoolcompare.com/compare/mailchimp-vs-convertkit/" class="btn-cmp">Compare Now →</a>
+            <a href="https://emailtoolcompare.com/alternatives/mailchimp-alternatives/" class="btn-alt">Mailchimp Alts</a>
+          </div>
+        </div>
+        
+        <div class="cmp-card" data-cat="freemium">
+          <div class="cmp-cat-bar" style="background:#3498DB">📧 Freemium</div>
+          <div class="cmp-logos">
+            <div class="tool-logo" style="background:#1F5C99">M</div>
+            <div class="vs-pill">VS</div>
+            <div class="tool-logo" style="background:#E74C3C">B</div>
+          </div>
+          <div class="cmp-names">
+            <div class="cmp-name-a">Mailchimp</div>
+            <div class="cmp-vs-txt">compared with</div>
+            <div class="cmp-name-b" style="color:#3498DB">Beehiiv</div>
+          </div>
+          <div class="cmp-savings">
+            <span class="cmp-slbl">💰 Pricing:</span>
+            <span class="cmp-sval">$13/mo vs $39/mo</span>
+          </div>
+          <div class="cmp-tag">👥 beginners and small businesses</div>
+          <div class="cmp-btns">
+            <a href="https://emailtoolcompare.com/compare/mailchimp-vs-beehiiv/" class="btn-cmp">Compare Now →</a>
+            <a href="https://emailtoolcompare.com/alternatives/mailchimp-alternatives/" class="btn-alt">Mailchimp Alts</a>
+          </div>
+        </div>
+        
+        <div class="cmp-card" data-cat="freemium">
+          <div class="cmp-cat-bar" style="background:#3498DB">📧 Freemium</div>
+          <div class="cmp-logos">
+            <div class="tool-logo" style="background:#1F5C99">M</div>
+            <div class="vs-pill">VS</div>
+            <div class="tool-logo" style="background:#9B59B6">M</div>
+          </div>
+          <div class="cmp-names">
+            <div class="cmp-name-a">Mailchimp</div>
+            <div class="cmp-vs-txt">compared with</div>
+            <div class="cmp-name-b" style="color:#3498DB">MailerLite</div>
+          </div>
+          <div class="cmp-savings">
+            <span class="cmp-slbl">💰 Pricing:</span>
+            <span class="cmp-sval">$13/mo vs $9/mo</span>
+          </div>
+          <div class="cmp-tag">👥 beginners and small businesses</div>
+          <div class="cmp-btns">
+            <a href="https://emailtoolcompare.com/compare/mailchimp-vs-mailerlite/" class="btn-cmp">Compare Now →</a>
+            <a href="https://emailtoolcompare.com/alternatives/mailchimp-alternatives/" class="btn-alt">Mailchimp Alts</a>
+          </div>
+        </div>
+        
+        <div class="cmp-card" data-cat="freemium">
+          <div class="cmp-cat-bar" style="background:#3498DB">📧 Freemium</div>
+          <div class="cmp-logos">
+            <div class="tool-logo" style="background:#1F5C99">M</div>
+            <div class="vs-pill">VS</div>
+            <div class="tool-logo" style="background:#F39C12">A</div>
+          </div>
+          <div class="cmp-names">
+            <div class="cmp-name-a">Mailchimp</div>
+            <div class="cmp-vs-txt">compared with</div>
+            <div class="cmp-name-b" style="color:#3498DB">ActiveCampaign</div>
+          </div>
+          <div class="cmp-savings">
+            <span class="cmp-slbl">💰 Pricing:</span>
+            <span class="cmp-sval">$13/mo vs $15/mo</span>
+          </div>
+          <div class="cmp-tag">👥 beginners and small businesses</div>
+          <div class="cmp-btns">
+            <a href="https://emailtoolcompare.com/compare/mailchimp-vs-activecampaign/" class="btn-cmp">Compare Now →</a>
+            <a href="https://emailtoolcompare.com/alternatives/mailchimp-alternatives/" class="btn-alt">Mailchimp Alts</a>
+          </div>
+        </div>
+        
+        <div class="cmp-card" data-cat="freemium">
+          <div class="cmp-cat-bar" style="background:#3498DB">📧 Freemium</div>
+          <div class="cmp-logos">
+            <div class="tool-logo" style="background:#1F5C99">M</div>
+            <div class="vs-pill">VS</div>
+            <div class="tool-logo" style="background:#1ABC9C">B</div>
+          </div>
+          <div class="cmp-names">
+            <div class="cmp-name-a">Mailchimp</div>
+            <div class="cmp-vs-txt">compared with</div>
+            <div class="cmp-name-b" style="color:#3498DB">Brevo</div>
+          </div>
+          <div class="cmp-savings">
+            <span class="cmp-slbl">💰 Pricing:</span>
+            <span class="cmp-sval">$13/mo vs $25/mo</span>
+          </div>
+          <div class="cmp-tag">👥 beginners and small businesses</div>
+          <div class="cmp-btns">
+            <a href="https://emailtoolcompare.com/compare/mailchimp-vs-brevo/" class="btn-cmp">Compare Now →</a>
+            <a href="https://emailtoolcompare.com/alternatives/mailchimp-alternatives/" class="btn-alt">Mailchimp Alts</a>
+          </div>
+        </div>
+        
+        <div class="cmp-card" data-cat="freemium">
+          <div class="cmp-cat-bar" style="background:#3498DB">📧 Freemium</div>
+          <div class="cmp-logos">
+            <div class="tool-logo" style="background:#1F5C99">M</div>
+            <div class="vs-pill">VS</div>
+            <div class="tool-logo" style="background:#E91E63">K</div>
+          </div>
+          <div class="cmp-names">
+            <div class="cmp-name-a">Mailchimp</div>
+            <div class="cmp-vs-txt">compared with</div>
+            <div class="cmp-name-b" style="color:#3498DB">Klaviyo</div>
+          </div>
+          <div class="cmp-savings">
+            <span class="cmp-slbl">💰 Pricing:</span>
+            <span class="cmp-sval">$13/mo vs $45/mo</span>
+          </div>
+          <div class="cmp-tag">👥 beginners and small businesses</div>
+          <div class="cmp-btns">
+            <a href="https://emailtoolcompare.com/compare/mailchimp-vs-klaviyo/" class="btn-cmp">Compare Now →</a>
+            <a href="https://emailtoolcompare.com/alternatives/mailchimp-alternatives/" class="btn-alt">Mailchimp Alts</a>
+          </div>
+        </div>
+        
+        <div class="cmp-card" data-cat="freemium">
+          <div class="cmp-cat-bar" style="background:#3498DB">📧 Freemium</div>
+          <div class="cmp-logos">
+            <div class="tool-logo" style="background:#1F5C99">M</div>
+            <div class="vs-pill">VS</div>
+            <div class="tool-logo" style="background:#3498DB">G</div>
+          </div>
+          <div class="cmp-names">
+            <div class="cmp-name-a">Mailchimp</div>
+            <div class="cmp-vs-txt">compared with</div>
+            <div class="cmp-name-b" style="color:#3498DB">GetResponse</div>
+          </div>
+          <div class="cmp-savings">
+            <span class="cmp-slbl">💰 Pricing:</span>
+            <span class="cmp-sval">$13/mo vs $19/mo</span>
+          </div>
+          <div class="cmp-tag">👥 beginners and small businesses</div>
+          <div class="cmp-btns">
+            <a href="https://emailtoolcompare.com/compare/mailchimp-vs-getresponse/" class="btn-cmp">Compare Now →</a>
+            <a href="https://emailtoolcompare.com/alternatives/mailchimp-alternatives/" class="btn-alt">Mailchimp Alts</a>
+          </div>
+        </div>
+        
+        <div class="cmp-card" data-cat="freemium">
+          <div class="cmp-cat-bar" style="background:#3498DB">📧 Freemium</div>
+          <div class="cmp-logos">
+            <div class="tool-logo" style="background:#1F5C99">M</div>
+            <div class="vs-pill">VS</div>
+            <div class="tool-logo" style="background:#FF5722">S</div>
+          </div>
+          <div class="cmp-names">
+            <div class="cmp-name-a">Mailchimp</div>
+            <div class="cmp-vs-txt">compared with</div>
+            <div class="cmp-name-b" style="color:#3498DB">Substack</div>
+          </div>
+          <div class="cmp-savings">
+            <span class="cmp-slbl">💰 Pricing:</span>
+            <span class="cmp-sval">$13/mo vs $0/mo</span>
+          </div>
+          <div class="cmp-tag">👥 beginners and small businesses</div>
+          <div class="cmp-btns">
+            <a href="https://emailtoolcompare.com/compare/mailchimp-vs-substack/" class="btn-cmp">Compare Now →</a>
+            <a href="https://emailtoolcompare.com/alternatives/mailchimp-alternatives/" class="btn-alt">Mailchimp Alts</a>
+          </div>
+        </div>
+        
+        <div class="cmp-card" data-cat="freemium">
+          <div class="cmp-cat-bar" style="background:#3498DB">📧 Freemium</div>
+          <div class="cmp-logos">
+            <div class="tool-logo" style="background:#1F5C99">M</div>
+            <div class="vs-pill">VS</div>
+            <div class="tool-logo" style="background:#607D8B">D</div>
+          </div>
+          <div class="cmp-names">
+            <div class="cmp-name-a">Mailchimp</div>
+            <div class="cmp-vs-txt">compared with</div>
+            <div class="cmp-name-b" style="color:#3498DB">Drip</div>
+          </div>
+          <div class="cmp-savings">
+            <span class="cmp-slbl">💰 Pricing:</span>
+            <span class="cmp-sval">$13/mo vs $39/mo</span>
+          </div>
+          <div class="cmp-tag">👥 beginners and small businesses</div>
+          <div class="cmp-btns">
+            <a href="https://emailtoolcompare.com/compare/mailchimp-vs-drip/" class="btn-cmp">Compare Now →</a>
+            <a href="https://emailtoolcompare.com/alternatives/mailchimp-alternatives/" class="btn-alt">Mailchimp Alts</a>
+          </div>
+        </div>
+        
+        <div class="cmp-card" data-cat="freemium">
+          <div class="cmp-cat-bar" style="background:#3498DB">📧 Freemium</div>
+          <div class="cmp-logos">
+            <div class="tool-logo" style="background:#1F5C99">M</div>
+            <div class="vs-pill">VS</div>
+            <div class="tool-logo" style="background:#00BCD4">B</div>
+          </div>
+          <div class="cmp-names">
+            <div class="cmp-name-a">Mailchimp</div>
+            <div class="cmp-vs-txt">compared with</div>
+            <div class="cmp-name-b" style="color:#3498DB">Buttondown</div>
+          </div>
+          <div class="cmp-savings">
+            <span class="cmp-slbl">💰 Pricing:</span>
+            <span class="cmp-sval">$13/mo vs $9/mo</span>
+          </div>
+          <div class="cmp-tag">👥 beginners and small businesses</div>
+          <div class="cmp-btns">
+            <a href="https://emailtoolcompare.com/compare/mailchimp-vs-buttondown/" class="btn-cmp">Compare Now →</a>
+            <a href="https://emailtoolcompare.com/alternatives/mailchimp-alternatives/" class="btn-alt">Mailchimp Alts</a>
+          </div>
+        </div>
+        
+        <div class="cmp-card" data-cat="freemium">
+          <div class="cmp-cat-bar" style="background:#3498DB">📧 Freemium</div>
+          <div class="cmp-logos">
+            <div class="tool-logo" style="background:#1F5C99">M</div>
+            <div class="vs-pill">VS</div>
+            <div class="tool-logo" style="background:#8BC34A">C</div>
+          </div>
+          <div class="cmp-names">
+            <div class="cmp-name-a">Mailchimp</div>
+            <div class="cmp-vs-txt">compared with</div>
+            <div class="cmp-name-b" style="color:#3498DB">Campaign Monitor</div>
+          </div>
+          <div class="cmp-savings">
+            <span class="cmp-slbl">💰 Pricing:</span>
+            <span class="cmp-sval">$13/mo vs $11/mo</span>
+          </div>
+          <div class="cmp-tag">👥 beginners and small businesses</div>
+          <div class="cmp-btns">
+            <a href="https://emailtoolcompare.com/compare/mailchimp-vs-campaign-monitor/" class="btn-cmp">Compare Now →</a>
+            <a href="https://emailtoolcompare.com/alternatives/mailchimp-alternatives/" class="btn-alt">Mailchimp Alts</a>
+          </div>
+        </div>
+        
+        <div class="cmp-card" data-cat="freemium">
+          <div class="cmp-cat-bar" style="background:#3498DB">📧 Freemium</div>
+          <div class="cmp-logos">
+            <div class="tool-logo" style="background:#1F5C99">M</div>
+            <div class="vs-pill">VS</div>
+            <div class="tool-logo" style="background:#FF9800">M</div>
+          </div>
+          <div class="cmp-names">
+            <div class="cmp-name-a">Mailchimp</div>
+            <div class="cmp-vs-txt">compared with</div>
+            <div class="cmp-name-b" style="color:#3498DB">Moosend</div>
+          </div>
+          <div class="cmp-savings">
+            <span class="cmp-slbl">💰 Pricing:</span>
+            <span class="cmp-sval">$13/mo vs $9/mo</span>
+          </div>
+          <div class="cmp-tag">👥 beginners and small businesses</div>
+          <div class="cmp-btns">
+            <a href="https://emailtoolcompare.com/compare/mailchimp-vs-moosend/" class="btn-cmp">Compare Now →</a>
+            <a href="https://emailtoolcompare.com/alternatives/mailchimp-alternatives/" class="btn-alt">Mailchimp Alts</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sec-head">
+        <span class="sec-title">📋 All 18 Tools Reviewed</span>
+        <a href="https://emailtoolcompare.com/tools/" class="sec-link">Full reviews →</a>
+      </div>
+      <div class="tool-list">
+        
+        <a href="https://emailtoolcompare.com/tools/mailchimp/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#1F5C99">M</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">Mailchimp</div>
+            <div class="tool-row-tag">The all-in-one marketing platform</div>
+          </div>
+          <span class="tool-row-badge b-freemium">Freemium</span>
+          <span class="tool-row-price">From $13/mo</span>
+        </a>
+        
+        <a href="https://emailtoolcompare.com/tools/convertkit/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#2ECC71">C</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">ConvertKit</div>
+            <div class="tool-row-tag">Email platform built for creators</div>
+          </div>
+          <span class="tool-row-badge b-freemium">Freemium</span>
+          <span class="tool-row-price">From $29/mo</span>
+        </a>
+        
+        <a href="https://emailtoolcompare.com/tools/beehiiv/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#E74C3C">B</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">Beehiiv</div>
+            <div class="tool-row-tag">The newsletter platform built for growth</div>
+          </div>
+          <span class="tool-row-badge b-freemium">Freemium</span>
+          <span class="tool-row-price">From $39/mo</span>
+        </a>
+        
+        <a href="https://emailtoolcompare.com/tools/mailerlite/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#9B59B6">M</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">MailerLite</div>
+            <div class="tool-row-tag">Simple email marketing for small businesses</div>
+          </div>
+          <span class="tool-row-badge b-freemium">Freemium</span>
+          <span class="tool-row-price">From $9/mo</span>
+        </a>
+        
+        <a href="https://emailtoolcompare.com/tools/activecampaign/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#F39C12">A</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">ActiveCampaign</div>
+            <div class="tool-row-tag">Email, automation, and CRM combined</div>
+          </div>
+          <span class="tool-row-badge b-paid">Paid</span>
+          <span class="tool-row-price">From $15/mo</span>
+        </a>
+        
+        <a href="https://emailtoolcompare.com/tools/brevo/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#1ABC9C">B</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">Brevo</div>
+            <div class="tool-row-tag">All-in-one CRM suite</div>
+          </div>
+          <span class="tool-row-badge b-freemium">Freemium</span>
+          <span class="tool-row-price">From $25/mo</span>
+        </a>
+        
+        <a href="https://emailtoolcompare.com/tools/klaviyo/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#E91E63">K</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">Klaviyo</div>
+            <div class="tool-row-tag">The platform for intelligent marketing automation</div>
+          </div>
+          <span class="tool-row-badge b-freemium">Freemium</span>
+          <span class="tool-row-price">From $45/mo</span>
+        </a>
+        
+        <a href="https://emailtoolcompare.com/tools/getresponse/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#3498DB">G</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">GetResponse</div>
+            <div class="tool-row-tag">Complete online marketing platform</div>
+          </div>
+          <span class="tool-row-badge b-freemium">Freemium</span>
+          <span class="tool-row-price">From $19/mo</span>
+        </a>
+        
+        <a href="https://emailtoolcompare.com/tools/substack/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#FF5722">S</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">Substack</div>
+            <div class="tool-row-tag">Start a paid newsletter</div>
+          </div>
+          <span class="tool-row-badge b-revenue-share">Revenue Share</span>
+          <span class="tool-row-price">From $0/mo</span>
+        </a>
+        
+        <a href="https://emailtoolcompare.com/tools/drip/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#607D8B">D</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">Drip</div>
+            <div class="tool-row-tag">Ecommerce email marketing made easy</div>
+          </div>
+          <span class="tool-row-badge b-paid">Paid</span>
+          <span class="tool-row-price">From $39/mo</span>
+        </a>
+        
+        <a href="https://emailtoolcompare.com/tools/buttondown/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#00BCD4">B</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">Buttondown</div>
+            <div class="tool-row-tag">The best way to write a newsletter</div>
+          </div>
+          <span class="tool-row-badge b-freemium">Freemium</span>
+          <span class="tool-row-price">From $9/mo</span>
+        </a>
+        
+        <a href="https://emailtoolcompare.com/tools/campaign-monitor/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#8BC34A">C</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">Campaign Monitor</div>
+            <div class="tool-row-tag">Beautiful emails for your business</div>
+          </div>
+          <span class="tool-row-badge b-paid">Paid</span>
+          <span class="tool-row-price">From $11/mo</span>
+        </a>
+        
+        <a href="https://emailtoolcompare.com/tools/moosend/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#FF9800">M</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">Moosend</div>
+            <div class="tool-row-tag">Email marketing and automation for all</div>
+          </div>
+          <span class="tool-row-badge b-freemium">Freemium</span>
+          <span class="tool-row-price">From $9/mo</span>
+        </a>
+        
+        <a href="https://emailtoolcompare.com/tools/aweber/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#673AB7">A</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">AWeber</div>
+            <div class="tool-row-tag">Email marketing made easy</div>
+          </div>
+          <span class="tool-row-badge b-freemium">Freemium</span>
+          <span class="tool-row-price">From $15/mo</span>
+        </a>
+        
+        <a href="https://emailtoolcompare.com/tools/omnisend/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#009688">O</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">Omnisend</div>
+            <div class="tool-row-tag">Ecommerce email and SMS platform</div>
+          </div>
+          <span class="tool-row-badge b-freemium">Freemium</span>
+          <span class="tool-row-price">From $16/mo</span>
+        </a>
+        
+        <a href="https://emailtoolcompare.com/tools/flodesk/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#795548">F</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">Flodesk</div>
+            <div class="tool-row-tag">Design beautiful emails people love to get</div>
+          </div>
+          <span class="tool-row-badge b-flat-rate">Flat Rate</span>
+          <span class="tool-row-price">From $38/mo</span>
+        </a>
+        
+        <a href="https://emailtoolcompare.com/tools/constant-contact/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#F44336">C</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">Constant Contact</div>
+            <div class="tool-row-tag">Digital marketing made simple</div>
+          </div>
+          <span class="tool-row-badge b-paid">Paid</span>
+          <span class="tool-row-price">From $12/mo</span>
+        </a>
+        
+        <a href="https://emailtoolcompare.com/tools/sendinblue/" class="tool-row">
+          <div class="tool-logo-sm" style="background:#2196F3">S</div>
+          <div class="tool-row-info">
+            <div class="tool-row-name">Sendinblue</div>
+            <div class="tool-row-tag">Now Brevo — the all-in-one CRM suite</div>
+          </div>
+          <span class="tool-row-badge b-freemium">Freemium</span>
+          <span class="tool-row-price">From $25/mo</span>
+        </a>
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function filterCards(cat,btn){
+  document.querySelectorAll('.flt').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#card-grid .cmp-card').forEach(c=>{
+    c.style.display=(cat==='all'||c.dataset.cat===cat)?'':'none';
+  });
+}
+</script>
+
 
   <footer class="site-footer">
     <div class="container">
+      <div class="footer-links">
+        <a href="https://emailtoolcompare.com/">Home</a>
+        <a href="https://emailtoolcompare.com/compare/">Compare Tools</a>
+        <a href="https://emailtoolcompare.com/alternatives/">Alternatives</a>
+        <a href="https://emailtoolcompare.com/tools/">All Tools</a>
+      </div>
+      <p><strong>Email Tool Compare</strong> &nbsp;·&nbsp; Unbiased comparisons and alternatives for email marketing tools</p>
       <p class="disclosure">Some links on this site are affiliate links. We may earn a commission at no extra cost to you.</p>
-      <p>&copy; 2025 Email Tool Compare. Built with the <a href="https://github.com/aiopentec">aiopentec</a> PSEO engine.</p>
+      <p style="margin-top:8px;font-size:12px;opacity:0.6">
+        Hosted on <a href="https://pages.github.com">GitHub Pages</a> &nbsp;·&nbsp;
+        Built by <a href="https://github.com/aiopentec">aiopentec</a> &nbsp;·&nbsp; $0/month to operate
+      </p>
     </div>
   </footer>
+
+  <script>
+    function toggleTheme(){
+      var html=document.documentElement;
+      var cur=html.getAttribute('data-theme');
+      var next=cur==='dark'?'light':'dark';
+      html.setAttribute('data-theme',next);
+      localStorage.setItem('theme',next);
+      document.getElementById('theme-icon').textContent=next==='dark'?'☀️':'🌙';
+      document.getElementById('theme-label').textContent=next==='dark'?'Light':'Dark';
+    }
+    // Set icon correctly on load
+    (function(){
+      var t=localStorage.getItem('theme')||'light';
+      document.getElementById('theme-icon').textContent=t==='dark'?'☀️':'🌙';
+      document.getElementById('theme-label').textContent=t==='dark'?'Light':'Dark';
+    })();
+  </script>
 </body>
 </html>
