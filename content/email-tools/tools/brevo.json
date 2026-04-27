@@ -1,0 +1,41 @@
+{
+  "type": "tool",
+  "slug": "brevo",
+  "title": "Brevo Review 2025: Features, Pricing & Honest Verdict",
+  "meta_description": "Brevo review: all-in-one CRM with email, SMS & WhatsApp. Free tier for 100k contacts, from $25/month. Read our detailed analysis.",
+  "h1": "Brevo Review: Comprehensive All-in-One CRM & Email Marketing Platform",
+  "intro": "Brevo is an all-in-one CRM suite that combines email marketing, SMS, WhatsApp, live chat, and transactional email capabilities in a single platform. Founded in 2012, it serves businesses of all sizes looking to manage customer relationships and multi-channel marketing campaigns. It's particularly well-suited for companies that need integrated communication tools beyond traditional email marketing.",
+  "verdict": "Brevo excels as a cost-effective, feature-rich alternative to more expensive marketing automation platforms, with standout strengths in transactional email delivery and multi-channel capabilities. The generous free tier supporting up to 100,000 contacts is exceptional, though the interface can feel overwhelming for beginners and paid plan features are more competitive than premium. Overall, it's an excellent choice for growing businesses and those prioritizing multi-channel communication over advanced automation.",
+  "pros": [
+    "Exceptionally generous free tier supporting up to 100,000 contacts with no daily sending limits",
+    "Multi-channel marketing includes SMS, WhatsApp, and live chat alongside email",
+    "Excellent transactional email API with reliable delivery and detailed tracking",
+    "Integrated CRM functionality eliminates the need for separate systems",
+    "Strong customer ratings (4.5 on G2, 4.3 on Trustpilot) with proven track record since 2012"
+  ],
+  "cons": [
+    "User interface can be complex and overwhelming for beginners despite its power",
+    "Advanced automation features are less robust compared to dedicated marketing automation platforms",
+    "Free tier limitations mean some features require paid upgrade despite high contact limits"
+  ],
+  "pricing_summary": "Brevo operates on a freemium model with a free tier for up to 100,000 contacts and no daily sending limit, making it accessible for startups and small businesses. Paid plans start at $25 USD per month and scale based on contact volume and desired features.",
+  "best_for_detail": "Brevo is ideal for businesses that need to send transactional emails at scale alongside marketing campaigns, particularly those operating in multiple channels (email, SMS, WhatsApp). It's a strong fit for SMBs and growing companies seeking an integrated solution without enterprise pricing, especially those already managing large contact databases.",
+  "faq": [
+    {
+      "q": "Is Brevo free?",
+      "a": "Yes, Brevo offers a completely free tier supporting up to 100,000 contacts with unlimited daily emails. The free plan includes essential email marketing features, though some advanced capabilities like advanced automation and premium integrations are reserved for paid tiers."
+    },
+    {
+      "q": "What is Brevo best used for?",
+      "a": "Brevo is best used for transactional email delivery combined with multi-channel marketing campaigns. It excels when you need to send both automated system emails (receipts, confirmations) and promotional communications, while also managing customer relationships through SMS, WhatsApp, and live chat."
+    },
+    {
+      "q": "Is Brevo good for beginners?",
+      "a": "Brevo can work for beginners thanks to its free tier and available tutorials, but the comprehensive feature set can be intimidating initially. If you're looking for a simpler email marketing tool specifically, you might find more beginner-friendly alternatives, though Brevo rewards learning with powerful capabilities."
+    },
+    {
+      "q": "Does Brevo have an affiliate program?",
+      "a": "Yes, Brevo offers an active affiliate program providing 5 EUR per free signup and 100 EUR per paid customer referral. This makes it an attractive option for content creators and agencies looking to earn commissions while recommending a legitimate platform."
+    }
+  ]
+}

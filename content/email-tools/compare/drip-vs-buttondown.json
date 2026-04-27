@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "drip-vs-buttondown",
+  "title": "Drip vs Buttondown (2025): Which Is Better?",
+  "meta_description": "Compare Drip and Buttondown email marketing tools. Find out which is best for e-commerce, newsletters, and your budget.",
+  "h1": "Drip vs Buttondown: Detailed Comparison",
+  "intro": "Drip and Buttondown serve different email marketing needs. Drip is built for e-commerce businesses seeking advanced tracking and store integration, while Buttondown caters to developers and writers who want simplicity and markdown support. Your choice depends on your business model and technical preferences.",
+  "quick_verdict": {
+    "winner_overall": "Buttondown",
+    "winner_price": "Buttondown",
+    "winner_features": "Drip",
+    "winner_beginners": "Buttondown",
+    "winner_ecommerce": "Drip"
+  },
+  "comparison_table": [
+    {
+      "feature": "Pricing",
+      "tool_a": "$39/month (no free tier)",
+      "tool_b": "Free up to 100 subscribers, then $9/month"
+    },
+    {
+      "feature": "Best For",
+      "tool_a": "E-commerce businesses with store integration needs",
+      "tool_b": "Developers and technical writers using markdown"
+    },
+    {
+      "feature": "Key Strengths",
+      "tool_a": "Revenue attribution, e-commerce tracking, SMS, automation builder",
+      "tool_b": "Markdown editing, API access, paid subscriptions feature, higher ratings"
+    },
+    {
+      "feature": "Customer Ratings",
+      "tool_a": "G2: 4.4/5, Trustpilot: 3.5/5",
+      "tool_b": "G2: 4.8/5, Trustpilot: 4.7/5"
+    },
+    {
+      "feature": "Affiliate Program",
+      "tool_a": "Yes, 15% recurring commission",
+      "tool_b": "No affiliate program"
+    }
+  ],
+  "choose_a_if": [
+    "You run an e-commerce store and need revenue tracking and attribution",
+    "You want SMS marketing capabilities integrated with email",
+    "You need visual automation builder and advanced segmentation tools"
+  ],
+  "choose_b_if": [
+    "You prefer writing emails in markdown format",
+    "You need to start free and scale affordably as you grow",
+    "You're a developer who values API access and technical flexibility"
+  ],
+  "faq": [
+    {
+      "q": "Is Drip better than Buttondown?",
+      "a": "It depends on your use case. Drip is superior for e-commerce with its revenue attribution and store integration, while Buttondown excels for writers and developers with better ratings, lower cost, and markdown support. Drip is more feature-rich for commerce; Buttondown is simpler and more affordable."
+    },
+    {
+      "q": "Which is cheaper, Drip or Buttondown?",
+      "a": "Buttondown is significantly cheaper. It offers a free tier for up to 100 subscribers, then starts at $9/month. Drip has no free tier and starts at $39/month. If you're just starting out, Buttondown is the clear winner."
+    },
+    {
+      "q": "Can I switch from Buttondown to Drip?",
+      "a": "Yes, both platforms support import/export functionality, making migration possible. Buttondown specifically lists import/export as a feature, so you can export your subscribers and content. However, you'll lose some functionality like markdown editing if switching to Drip's more visual interface."
+    }
+  ]
+}

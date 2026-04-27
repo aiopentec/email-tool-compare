@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "buttondown-vs-sendinblue",
+  "title": "Buttondown vs Sendinblue (2025): Which Is Better?",
+  "meta_description": "Compare Buttondown vs Sendinblue. See pricing, features, and which email marketing tool suits your needs best.",
+  "h1": "Buttondown vs Sendinblue: Detailed Comparison",
+  "intro": "Buttondown and Sendinblue (now Brevo) serve different email marketing needs, making the choice dependent on your specific use case. Buttondown excels for newsletter writers and developers who value simplicity and markdown support, while Sendinblue offers a comprehensive CRM suite with SMS and transactional email capabilities. Understanding their strengths will help you select the platform that best matches your business requirements.",
+  "quick_verdict": {
+    "winner_overall": "Sendinblue",
+    "winner_price": "Sendinblue",
+    "winner_features": "Sendinblue",
+    "winner_beginners": "Buttondown",
+    "winner_ecommerce": "Sendinblue"
+  },
+  "comparison_table": [
+    {
+      "feature": "Free Tier Subscriber Limit",
+      "tool_a": "100 subscribers",
+      "tool_b": "100,000 subscribers"
+    },
+    {
+      "feature": "Starting Paid Price",
+      "tool_a": "$9/month",
+      "tool_b": "$25/month"
+    },
+    {
+      "feature": "Primary Strength",
+      "tool_a": "Newsletter writing with markdown",
+      "tool_b": "Omnichannel CRM and transactional email"
+    },
+    {
+      "feature": "SMS Marketing",
+      "tool_a": "Not available",
+      "tool_b": "Included"
+    },
+    {
+      "feature": "G2 Rating",
+      "tool_a": "4.8/5",
+      "tool_b": "4.5/5"
+    }
+  ],
+  "choose_a_if": [
+    "You're a developer or technical writer who prefers writing in markdown",
+    "You want a simple, focused tool for newsletter management without extra features",
+    "You need API access and paid subscription functionality for your readers"
+  ],
+  "choose_b_if": [
+    "You need SMS and WhatsApp marketing capabilities alongside email",
+    "You require transactional email and a full CRM platform",
+    "You want to manage unlimited subscribers on the free tier"
+  ],
+  "faq": [
+    {
+      "q": "Is Buttondown better than Sendinblue?",
+      "a": "Neither is universally better—it depends on your needs. Buttondown is superior for newsletter writers who love markdown and want a streamlined experience, with higher user satisfaction ratings (4.8 vs 4.5 on G2). Sendinblue excels for businesses needing omnichannel marketing, transactional email, and CRM features at a broader scale."
+    },
+    {
+      "q": "Which is cheaper, Buttondown or Sendinblue?",
+      "a": "Sendinblue offers significantly better value on the free tier, supporting 100,000 subscribers versus Buttondown's 100. However, Buttondown's paid plans start at $9/month compared to Sendinblue's $25/month. For small projects, Sendinblue's free tier may eliminate upgrade costs entirely."
+    },
+    {
+      "q": "Can I switch from Sendinblue to Buttondown?",
+      "a": "Yes, both tools support import/export functionality, making migration possible. However, you'll lose Sendinblue-specific features like SMS and CRM data in the transfer. Buttondown is better suited for newsletter-focused workflows, so some transactional features may not transfer seamlessly."
+    }
+  ]
+}

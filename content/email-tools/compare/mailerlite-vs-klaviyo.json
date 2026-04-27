@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "mailerlite-vs-klaviyo",
+  "title": "MailerLite vs Klaviyo (2025): Which Is Better?",
+  "meta_description": "Compare MailerLite and Klaviyo. See pricing, features, and which email marketing tool suits your business best.",
+  "h1": "MailerLite vs Klaviyo: Complete Comparison",
+  "intro": "MailerLite and Klaviyo are both popular email marketing platforms, but they serve different audiences and use cases. If you're deciding between them, understanding their strengths, pricing, and ideal user base will help you make the right choice for your business.",
+  "quick_verdict": {
+    "winner_overall": "MailerLite",
+    "winner_price": "MailerLite",
+    "winner_features": "Klaviyo",
+    "winner_beginners": "MailerLite",
+    "winner_ecommerce": "Klaviyo"
+  },
+  "comparison_table": [
+    {
+      "feature": "Free Tier",
+      "tool_a": "1,000 subscribers",
+      "tool_b": "500 subscribers"
+    },
+    {
+      "feature": "Starting Paid Price",
+      "tool_a": "$9/month",
+      "tool_b": "$45/month"
+    },
+    {
+      "feature": "G2 Rating",
+      "tool_a": "4.6/5",
+      "tool_b": "4.6/5"
+    },
+    {
+      "feature": "Best For",
+      "tool_a": "Small businesses and freelancers",
+      "tool_b": "E-commerce brands (Shopify, WooCommerce)"
+    },
+    {
+      "feature": "Key Strength",
+      "tool_a": "Ease of use, affordability, landing pages",
+      "tool_b": "Predictive analytics, SMS, advanced segmentation"
+    }
+  ],
+  "choose_a_if": [
+    "You're a small business or freelancer with a limited budget",
+    "You want an easy-to-use platform with drag-and-drop features and landing pages",
+    "You prefer a lower entry price point with a generous free tier"
+  ],
+  "choose_b_if": [
+    "You run an e-commerce store on Shopify or WooCommerce",
+    "You need advanced features like predictive analytics and SMS marketing",
+    "You're willing to pay more for specialized e-commerce marketing tools"
+  ],
+  "faq": [
+    {
+      "q": "Is MailerLite better than Klaviyo?",
+      "a": "Neither is objectively better—it depends on your needs. MailerLite excels for small businesses seeking affordability and simplicity, while Klaviyo is purpose-built for e-commerce brands needing advanced automation and analytics. MailerLite has better Trustpilot ratings (4.5 vs 3.8), while both share the same G2 score of 4.6."
+    },
+    {
+      "q": "Which is cheaper, MailerLite or Klaviyo?",
+      "a": "MailerLite is significantly cheaper, starting at $9/month compared to Klaviyo's $45/month. MailerLite also offers a more generous free tier with 1,000 subscribers versus Klaviyo's 500, making it the clear winner for budget-conscious users."
+    },
+    {
+      "q": "Can I switch from Klaviyo to MailerLite?",
+      "a": "Yes, you can migrate your subscriber lists and campaigns between platforms. Both tools support standard data export formats, though you may need to manually recreate complex automation workflows. It's recommended to plan the migration carefully to avoid losing subscriber data or breaking active campaigns."
+    }
+  ]
+}

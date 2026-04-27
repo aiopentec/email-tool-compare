@@ -1,0 +1,40 @@
+{
+  "type": "tool",
+  "slug": "omnisend",
+  "title": "Omnisend Review 2025: Features, Pricing & Honest Verdict",
+  "meta_description": "Omnisend review: ecommerce email & SMS marketing platform with automation, push notifications & pre-built workflows. See pricing, features & ratings.",
+  "h1": "Omnisend Review: Email & SMS Marketing for Ecommerce Brands",
+  "intro": "Omnisend is an ecommerce-focused email and SMS marketing platform that combines multiple communication channels into a single dashboard. Founded in 2014, it's designed specifically for online retailers who want to engage customers across email, SMS, and push notifications without juggling separate tools. The platform is best suited for e-commerce brands wanting a streamlined, integrated approach to customer communication.",
+  "verdict": "Omnisend is a solid choice for ecommerce businesses prioritizing omnichannel marketing with strong ratings (4.5 on G2, 4.6 on Trustpilot). The platform excels with SMS integration, pre-built workflows, and segmentation capabilities, though the interface can feel overwhelming for complete beginners and pricing escalates quickly beyond the free tier.",
+  "pros": [
+    "Integrated SMS and email in one platform—no need for separate services",
+    "Pre-built automation workflows save setup time for common ecommerce scenarios",
+    "Advanced segmentation and product picker features are powerful for targeted campaigns",
+    "Free tier supports up to 250 subscribers with core features accessible"
+  ],
+  "cons": [
+    "Steep learning curve for users new to marketing automation platforms",
+    "Pricing jumps significantly once you exceed free tier limits",
+    "Limited AI-powered content generation compared to newer competitors"
+  ],
+  "pricing_summary": "Omnisend offers a freemium model starting at $0 for up to 250 contacts, with paid plans beginning at $16/month as contacts grow. The pricing scales with subscriber count and feature access, making it affordable for small businesses but progressively more expensive as you scale.",
+  "best_for_detail": "Omnisend is best for established ecommerce brands and online stores that need SMS and email marketing integrated into one platform, rather than managing multiple subscriptions. It's particularly valuable for retailers running promotional campaigns, abandoned cart sequences, and multi-channel customer engagement strategies at scale.",
+  "faq": [
+    {
+      "q": "Is Omnisend free?",
+      "a": "Yes, Omnisend offers a free tier that supports up to 250 subscribers with access to core email and SMS features. However, advanced features like priority support and some automation capabilities are reserved for paid plans, which start at $16/month."
+    },
+    {
+      "q": "What is Omnisend best used for?",
+      "a": "Omnisend is designed for ecommerce businesses that want to run coordinated email, SMS, and push notification campaigns from a single platform. It's particularly effective for abandoned cart recovery, product recommendations, and customer retention workflows."
+    },
+    {
+      "q": "Is Omnisend good for beginners?",
+      "a": "Omnisend is moderately beginner-friendly thanks to pre-built templates and workflows, but the interface and feature set can be overwhelming for complete marketing automation newcomers. The platform is better suited for business owners with some marketing experience or small marketing teams."
+    },
+    {
+      "q": "Does Omnisend have an affiliate program?",
+      "a": "Yes, Omnisend runs an affiliate program offering 20% recurring commission on referred customers. This makes it attractive for agencies and marketing professionals looking to generate ongoing revenue through partner referrals."
+    }
+  ]
+}

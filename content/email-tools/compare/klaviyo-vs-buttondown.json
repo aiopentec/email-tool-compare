@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "klaviyo-vs-buttondown",
+  "title": "Klaviyo vs Buttondown (2025): Which Is Better?",
+  "meta_description": "Compare Klaviyo and Buttondown email marketing tools. Learn which is best for e-commerce, newsletters, pricing, and features.",
+  "h1": "Klaviyo vs Buttondown: Detailed Comparison",
+  "intro": "Klaviyo and Buttondown are both freemium email marketing platforms, but they serve different audiences and use cases. Klaviyo excels as a powerful automation and e-commerce solution, while Buttondown is purpose-built for newsletter creators and developers. This comparison will help you determine which platform aligns with your marketing needs and budget.",
+  "quick_verdict": {
+    "winner_overall": "Klaviyo",
+    "winner_price": "Buttondown",
+    "winner_features": "Klaviyo",
+    "winner_beginners": "Buttondown",
+    "winner_ecommerce": "Klaviyo"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting Price",
+      "tool_a": "$45/month",
+      "tool_b": "$9/month"
+    },
+    {
+      "feature": "Free Tier Subscribers",
+      "tool_a": "Up to 500",
+      "tool_b": "Up to 100"
+    },
+    {
+      "feature": "Primary Use Case",
+      "tool_a": "E-commerce automation",
+      "tool_b": "Newsletter writing"
+    },
+    {
+      "feature": "Key Strength",
+      "tool_a": "Predictive analytics, SMS, reviews",
+      "tool_b": "Markdown editor, API access, simplicity"
+    },
+    {
+      "feature": "Best For",
+      "tool_a": "Shopify/WooCommerce stores",
+      "tool_b": "Developers and technical writers"
+    }
+  ],
+  "choose_a_if": [
+    "You run an e-commerce store on Shopify or WooCommerce and need advanced automation",
+    "You want SMS marketing, review collection, and predictive analytics built-in",
+    "You need sophisticated segmentation and customer journey mapping tools"
+  ],
+  "choose_b_if": [
+    "You're starting with a smaller budget and want an affordable email solution",
+    "You prefer writing in markdown and need API access for customization",
+    "You want to launch a simple newsletter or offer paid subscriptions to readers"
+  ],
+  "faq": [
+    {
+      "q": "Is Klaviyo better than Buttondown?",
+      "a": "It depends on your needs. Klaviyo is more powerful for e-commerce brands requiring advanced automation, segmentation, and SMS capabilities. Buttondown is better for newsletter creators and developers who value simplicity, markdown support, and affordability. Neither is objectively 'better'—they serve different purposes."
+    },
+    {
+      "q": "Which is cheaper, Klaviyo or Buttondown?",
+      "a": "Buttondown is significantly cheaper, starting at $9/month compared to Klaviyo's $45/month. Buttondown also offers a more generous free tier for scaling from 100 to larger subscriber counts at a lower cost, making it ideal for budget-conscious creators."
+    },
+    {
+      "q": "Can I switch from Buttondown to Klaviyo?",
+      "a": "Yes, Buttondown offers import/export functionality, so you can export your subscriber lists and content. Both platforms support standard email formats, making migration relatively straightforward. However, you'll need to rebuild automation workflows in Klaviyo as the platforms have different automation architectures."
+    }
+  ]
+}

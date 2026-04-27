@@ -1,0 +1,68 @@
+{
+  "type": "compare",
+  "slug": "mailerlite-vs-getresponse",
+  "title": "MailerLite vs GetResponse (2025): Which Is Better?",
+  "meta_description": "Compare MailerLite and GetResponse. See pricing, features, ratings, and which email marketing tool suits your needs best.",
+  "h1": "MailerLite vs GetResponse: Complete Feature & Price Comparison",
+  "intro": "Both MailerLite and GetResponse are popular freemium email marketing platforms, but they serve different needs. MailerLite excels at simplicity and affordability for small businesses, while GetResponse offers a comprehensive marketing suite ideal for course creators and webinar hosts. This comparison will help you choose the right tool based on your specific requirements.",
+  "quick_verdict": {
+    "winner_overall": "MailerLite",
+    "winner_price": "MailerLite",
+    "winner_features": "GetResponse",
+    "winner_beginners": "MailerLite",
+    "winner_ecommerce": "MailerLite"
+  },
+  "comparison_table": [
+    {
+      "feature": "Free Tier",
+      "tool_a": "1,000 subscribers",
+      "tool_b": "500 subscribers"
+    },
+    {
+      "feature": "Starting Price (Paid)",
+      "tool_a": "$9/month",
+      "tool_b": "$19/month"
+    },
+    {
+      "feature": "Ease of Use",
+      "tool_a": "Drag-drop editor, very beginner-friendly",
+      "tool_b": "More feature-rich, steeper learning curve"
+    },
+    {
+      "feature": "Core Features",
+      "tool_a": "Email, automation, landing pages, pop-ups, surveys, e-commerce",
+      "tool_b": "Email, automation, webinars, courses, funnels, landing pages"
+    },
+    {
+      "feature": "G2 Rating",
+      "tool_a": "4.6/5",
+      "tool_b": "4.2/5"
+    }
+  ],
+  "choose_a_if": [
+    "You're a small business or freelancer on a tight budget seeking simplicity",
+    "You need e-commerce integrations and pop-up forms for list building",
+    "You prefer an intuitive drag-and-drop interface with minimal learning curve",
+    "You want a larger free tier (up to 1,000 subscribers)"
+  ],
+  "choose_b_if": [
+    "You're an online course creator or webinar host needing advanced features",
+    "You want conversion funnels and sales funnel automation built-in",
+    "You need a platform that combines email marketing with course delivery",
+    "You're willing to pay more for an all-in-one marketing suite"
+  ],
+  "faq": [
+    {
+      "q": "Is MailerLite better than GetResponse?",
+      "a": "MailerLite is better for small businesses and beginners due to its simplicity, lower pricing, and larger free tier. GetResponse is better if you need advanced features like webinars, online courses, and conversion funnels. The best choice depends on your specific use case."
+    },
+    {
+      "q": "Which is cheaper, MailerLite or GetResponse?",
+      "a": "MailerLite is significantly cheaper, starting at $9/month compared to GetResponse's $19/month. MailerLite also offers a more generous free tier with 1,000 subscribers versus GetResponse's 500. Both offer affiliate commissions around 30-33%."
+    },
+    {
+      "q": "Can I switch from GetResponse to MailerLite?",
+      "a": "Yes, you can migrate your subscriber list and email campaigns between platforms. Both tools support CSV exports and integrations with migration services. We recommend exporting your contacts and templates first to ensure a smooth transition."
+    }
+  ]
+}

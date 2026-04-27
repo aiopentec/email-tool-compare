@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "buttondown-vs-omnisend",
+  "title": "Buttondown vs Omnisend (2025): Which Is Better?",
+  "meta_description": "Compare Buttondown and Omnisend. See pricing, features, and which email marketing tool wins for your needs.",
+  "h1": "Buttondown vs Omnisend: Detailed Comparison",
+  "intro": "Buttondown and Omnisend are both freemium email marketing platforms, but they serve different audiences. Buttondown excels for developers and writers who value simplicity and markdown support, while Omnisend is built specifically for e-commerce brands needing multi-channel capabilities. Your choice depends on whether you need a focused newsletter tool or an omnichannel e-commerce platform.",
+  "quick_verdict": {
+    "winner_overall": "Omnisend",
+    "winner_price": "Buttondown",
+    "winner_features": "Omnisend",
+    "winner_beginners": "Omnisend",
+    "winner_ecommerce": "Omnisend"
+  },
+  "comparison_table": [
+    {
+      "feature": "Free Subscriber Limit",
+      "tool_a": "100 subscribers",
+      "tool_b": "250 subscribers"
+    },
+    {
+      "feature": "Paid Plan Starting Price",
+      "tool_a": "$9/month",
+      "tool_b": "$16/month"
+    },
+    {
+      "feature": "Primary Strength",
+      "tool_a": "Markdown writing and API access",
+      "tool_b": "Omnichannel (email + SMS + push)"
+    },
+    {
+      "feature": "Best For",
+      "tool_a": "Developers and technical writers",
+      "tool_b": "E-commerce businesses"
+    },
+    {
+      "feature": "Key Features",
+      "tool_a": "Markdown, API, paid subscriptions, automations",
+      "tool_b": "SMS, push notifications, product picker, advanced segmentation"
+    }
+  ],
+  "choose_a_if": [
+    "You prefer writing newsletters in markdown and want a simple, focused tool",
+    "You need API access for custom integrations and developer-friendly features",
+    "You're looking for the absolute lowest entry price and value simplicity over bells and whistles"
+  ],
+  "choose_b_if": [
+    "You run an e-commerce business and need email, SMS, and push notifications in one platform",
+    "You want pre-built workflows and advanced segmentation for customer targeting",
+    "You need a higher free subscriber limit (250 vs 100) to test before upgrading"
+  ],
+  "faq": [
+    {
+      "q": "Is Buttondown better than Omnisend?",
+      "a": "It depends on your needs. Buttondown is better if you're a developer or technical writer who values markdown and simplicity. Omnisend is better for e-commerce brands needing omnichannel marketing with SMS and push notifications. For pure newsletter writing, Buttondown wins; for e-commerce, Omnisend is superior."
+    },
+    {
+      "q": "Which is cheaper, Buttondown or Omnisend?",
+      "a": "Buttondown is cheaper at $9/month compared to Omnisend's $16/month for paid plans. Buttondown also has a lower free tier of 100 subscribers, while Omnisend offers 250 free subscribers. However, Omnisend's extra features like SMS may justify the higher cost for e-commerce businesses."
+    },
+    {
+      "q": "Can I switch from Omnisend to Buttondown?",
+      "a": "Yes, both platforms support import/export functionality, making migration possible. However, you should note that Buttondown focuses on email only, so if you're using Omnisend's SMS or push notification features, those won't have direct equivalents in Buttondown. Plan your transition carefully based on which features you actually need."
+    }
+  ]
+}

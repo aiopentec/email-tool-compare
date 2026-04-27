@@ -23,7 +23,7 @@
     "affiliate_commission": "30% recurring",
     "g2_rating": 4.3,
     "trustpilot_rating": 1.5,
-    "generated": false
+    "generated": true
   },
   {
     "slug": "convertkit",
@@ -49,7 +49,7 @@
     "affiliate_commission": "30% recurring for 24 months",
     "g2_rating": 4.4,
     "trustpilot_rating": 3.2,
-    "generated": false
+    "generated": true
   },
   {
     "slug": "beehiiv",
@@ -75,7 +75,7 @@
     "affiliate_commission": "50% first year",
     "g2_rating": 4.7,
     "trustpilot_rating": 4.4,
-    "generated": false
+    "generated": true
   },
   {
     "slug": "mailerlite",
@@ -101,7 +101,7 @@
     "affiliate_commission": "30% recurring",
     "g2_rating": 4.6,
     "trustpilot_rating": 4.5,
-    "generated": false
+    "generated": true
   },
   {
     "slug": "activecampaign",
@@ -127,7 +127,7 @@
     "affiliate_commission": "20-30% recurring",
     "g2_rating": 4.5,
     "trustpilot_rating": 4.1,
-    "generated": false
+    "generated": true
   },
   {
     "slug": "brevo",
@@ -153,7 +153,7 @@
     "affiliate_commission": "5 EUR per free signup + 100 EUR per paid",
     "g2_rating": 4.5,
     "trustpilot_rating": 4.3,
-    "generated": false
+    "generated": true
   },
   {
     "slug": "klaviyo",
@@ -179,7 +179,7 @@
     "affiliate_commission": "none",
     "g2_rating": 4.6,
     "trustpilot_rating": 3.8,
-    "generated": false
+    "generated": true
   },
   {
     "slug": "getresponse",
@@ -205,7 +205,7 @@
     "affiliate_commission": "33% recurring or $100 one-time",
     "g2_rating": 4.2,
     "trustpilot_rating": 3.7,
-    "generated": false
+    "generated": true
   },
   {
     "slug": "substack",
@@ -231,7 +231,7 @@
     "affiliate_commission": "none",
     "g2_rating": 4.0,
     "trustpilot_rating": 2.9,
-    "generated": false
+    "generated": true
   },
   {
     "slug": "drip",
@@ -257,7 +257,7 @@
     "affiliate_commission": "15% recurring",
     "g2_rating": 4.4,
     "trustpilot_rating": 3.5,
-    "generated": false
+    "generated": true
   },
   {
     "slug": "buttondown",
@@ -283,7 +283,7 @@
     "affiliate_commission": "none",
     "g2_rating": 4.8,
     "trustpilot_rating": 4.7,
-    "generated": false
+    "generated": true
   },
   {
     "slug": "campaign-monitor",
@@ -309,7 +309,7 @@
     "affiliate_commission": "varies",
     "g2_rating": 4.1,
     "trustpilot_rating": 3.2,
-    "generated": false
+    "generated": true
   },
   {
     "slug": "moosend",
@@ -335,7 +335,7 @@
     "affiliate_commission": "30% recurring",
     "g2_rating": 4.7,
     "trustpilot_rating": 4.4,
-    "generated": false
+    "generated": true
   },
   {
     "slug": "aweber",
@@ -361,7 +361,7 @@
     "affiliate_commission": "30% recurring",
     "g2_rating": 4.2,
     "trustpilot_rating": 4.0,
-    "generated": false
+    "generated": true
   },
   {
     "slug": "omnisend",
@@ -387,7 +387,7 @@
     "affiliate_commission": "20% recurring",
     "g2_rating": 4.5,
     "trustpilot_rating": 4.6,
-    "generated": false
+    "generated": true
   },
   {
     "slug": "flodesk",
@@ -413,7 +413,7 @@
     "affiliate_commission": "50% recurring",
     "g2_rating": 4.8,
     "trustpilot_rating": 4.7,
-    "generated": false
+    "generated": true
   },
   {
     "slug": "constant-contact",
@@ -439,13 +439,13 @@
     "affiliate_commission": "$80 per paid signup",
     "g2_rating": 4.0,
     "trustpilot_rating": 2.8,
-    "generated": false
+    "generated": true
   },
   {
     "slug": "sendinblue",
     "name": "Sendinblue",
     "category": "email-marketing",
-    "tagline": "Now Brevo \u00e2\u20ac\u201d the all-in-one CRM suite",
+    "tagline": "Now Brevo â€” the all-in-one CRM suite",
     "pricing_model": "freemium",
     "free_tier": true,
     "starting_price_usd": 0,
@@ -465,6 +465,6 @@
     "affiliate_commission": "5 EUR free + 100 EUR paid",
     "g2_rating": 4.5,
     "trustpilot_rating": 4.3,
-    "generated": false
+    "generated": true
   }
 ]

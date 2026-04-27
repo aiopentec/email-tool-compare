@@ -1,0 +1,40 @@
+{
+  "type": "tool",
+  "slug": "sendinblue",
+  "title": "Sendinblue Review 2025: Features, Pricing & Honest Verdict",
+  "meta_description": "Sendinblue (Brevo) review: All-in-one CRM with free email, SMS, and chat. Best for transactional campaigns and small businesses.",
+  "h1": "Sendinblue (Brevo) Review: Complete Email Marketing & CRM Platform",
+  "intro": "Sendinblue, now rebranded as Brevo, is an all-in-one CRM suite that combines email marketing with SMS, WhatsApp, chat, and transactional APIs. It's best suited for small to medium businesses and developers who need reliable transactional email delivery alongside marketing automation capabilities.",
+  "verdict": "Sendinblue delivers strong value, particularly for transactional email and SMS campaigns with its generous free tier (300 emails/day, up to 100,000 contacts). However, its interface can feel cluttered, and advanced automation features lag behind dedicated marketing automation platforms like HubSpot or ActiveCampaign.",
+  "pros": [
+    "Exceptional free tier with 300 emails/day and 100,000 contact limit",
+    "Integrated SMS and WhatsApp messaging alongside email marketing",
+    "Robust transactional email API perfect for developers",
+    "Affordable paid plans starting at just $25/month"
+  ],
+  "cons": [
+    "User interface is less intuitive compared to competitors like Mailchimp",
+    "Advanced automation and segmentation features require higher-tier plans",
+    "Customer support can be slow, particularly for free plan users"
+  ],
+  "pricing_summary": "Sendinblue operates on a freemium model with a generous free plan including 300 emails per day and support for up to 100,000 contacts. Paid plans start at $25/month and scale based on email volume and additional features like advanced automation and dedicated support.",
+  "best_for_detail": "Sendinblue excels for businesses prioritizing transactional email reliability and companies needing SMS or WhatsApp integration without switching platforms. Startups and developers appreciate the free tier's generous limits and straightforward transactional API for application notifications.",
+  "faq": [
+    {
+      "q": "Is Sendinblue free?",
+      "a": "Yes, Sendinblue offers a robust free plan that includes 300 emails per day and support for up to 100,000 contacts. This makes it one of the most generous free email marketing options available, though advanced features like custom automation workflows require paid upgrades."
+    },
+    {
+      "q": "What is Sendinblue best used for?",
+      "a": "Sendinblue is particularly strong for transactional email delivery, SMS campaigns, and multi-channel customer communication. It's ideal for e-commerce businesses, SaaS companies sending order confirmations and notifications, and teams that need email, SMS, and chat in a single platform."
+    },
+    {
+      "q": "Is Sendinblue good for beginners?",
+      "a": "Sendinblue is reasonably beginner-friendly with straightforward email campaign creation and a free plan with no credit card required. However, beginners may find the dashboard somewhat overwhelming due to the number of integrated features, and learning all capabilities requires exploration."
+    },
+    {
+      "q": "Does Sendinblue have an affiliate program?",
+      "a": "Yes, Sendinblue offers an affiliate program with a commission structure of 5 EUR for free plan referrals and 100 EUR for paid plan referrals. This makes it attractive for content creators and agencies looking to earn recurring commissions."
+    }
+  ]
+}

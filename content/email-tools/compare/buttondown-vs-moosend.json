@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "buttondown-vs-moosend",
+  "title": "Buttondown vs Moosend (2025): Which Is Better?",
+  "meta_description": "Compare Buttondown and Moosend email marketing tools. See pricing, features, and which fits your needs best.",
+  "h1": "Buttondown vs Moosend: Detailed Comparison",
+  "intro": "Both Buttondown and Moosend are freemium email marketing platforms starting at $9/month, but they target different user bases. Buttondown caters to developers and technical writers who love markdown, while Moosend focuses on small businesses seeking unlimited emails at low cost. Your choice depends on your technical comfort level and specific feature needs.",
+  "quick_verdict": {
+    "winner_overall": "Moosend",
+    "winner_price": "Moosend",
+    "winner_features": "Moosend",
+    "winner_beginners": "Moosend",
+    "winner_ecommerce": "Moosend"
+  },
+  "comparison_table": [
+    {
+      "feature": "Free Subscriber Limit",
+      "tool_a": "100 subscribers",
+      "tool_b": "1,000 subscribers"
+    },
+    {
+      "feature": "Starting Paid Price",
+      "tool_a": "$9/month",
+      "tool_b": "$9/month"
+    },
+    {
+      "feature": "Primary Strength",
+      "tool_a": "Markdown editor, API access",
+      "tool_b": "Unlimited emails, landing pages"
+    },
+    {
+      "feature": "Best For",
+      "tool_a": "Developers, technical writers",
+      "tool_b": "Small businesses, beginners"
+    },
+    {
+      "feature": "Affiliate Program",
+      "tool_a": "None",
+      "tool_b": "30% recurring commission"
+    }
+  ],
+  "choose_a_if": [
+    "You write newsletters primarily in markdown and want seamless code integration",
+    "You value API access and need custom automation workflows for developers",
+    "You prefer a minimalist interface designed specifically for writers over visual builders"
+  ],
+  "choose_b_if": [
+    "You need to send unlimited emails on a budget without subscriber count restrictions",
+    "You want built-in landing pages, subscription forms, and A/B testing capabilities",
+    "You're a beginner seeking a full-featured platform with real-time analytics and automation"
+  ],
+  "faq": [
+    {
+      "q": "Is Buttondown better than Moosend?",
+      "a": "Neither is universally better—it depends on your needs. Buttondown excels for technical users who love markdown and API access, while Moosend offers more comprehensive features like landing pages and unlimited emails for general small businesses. Moosend is generally better for non-technical users seeking more functionality."
+    },
+    {
+      "q": "Which is cheaper, Buttondown or Moosend?",
+      "a": "Both start at $9/month for paid tiers, but Moosend offers a significant advantage with 1,000 free subscribers versus Buttondown's 100. If you're in the free tier, Moosend is clearly more cost-effective for growing subscriber lists. Paid plan pricing is competitive between both."
+    },
+    {
+      "q": "Can I switch from Moosend to Buttondown?",
+      "a": "Yes, both platforms support import/export functionality. Buttondown explicitly lists this as a key feature, allowing you to migrate your subscriber lists and data relatively easily. However, you may lose some advanced automation workflows since Buttondown's feature set differs significantly from Moosend's."
+    }
+  ]
+}

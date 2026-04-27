@@ -1,0 +1,67 @@
+{
+  "type": "compare",
+  "slug": "buttondown-vs-aweber",
+  "title": "Buttondown vs AWeber (2025): Which Is Better?",
+  "meta_description": "Compare Buttondown vs AWeber: pricing, features, and which email marketing tool is right for you.",
+  "h1": "Buttondown vs AWeber: Detailed Comparison",
+  "intro": "Buttondown and AWeber are both established email marketing platforms, but they cater to different audiences. Buttondown excels for technical users who value markdown editing and developer-friendly features, while AWeber prioritizes simplicity and broader functionality for content creators. This comparison will help you choose the right platform based on your specific needs.",
+  "quick_verdict": {
+    "winner_overall": "AWeber",
+    "winner_price": "Buttondown",
+    "winner_features": "AWeber",
+    "winner_beginners": "AWeber",
+    "winner_ecommerce": "AWeber"
+  },
+  "comparison_table": [
+    {
+      "feature": "Free Tier Subscriber Limit",
+      "tool_a": "100 subscribers",
+      "tool_b": "500 subscribers"
+    },
+    {
+      "feature": "Paid Plan Starting Price",
+      "tool_a": "$9/month",
+      "tool_b": "$15/month"
+    },
+    {
+      "feature": "Primary Writing Format",
+      "tool_a": "Markdown",
+      "tool_b": "Visual editor with templates"
+    },
+    {
+      "feature": "Key Strength",
+      "tool_a": "API access and automation",
+      "tool_b": "Landing pages and RSS-to-email"
+    },
+    {
+      "feature": "Affiliate Program",
+      "tool_a": "No",
+      "tool_b": "Yes (30% recurring commission)"
+    }
+  ],
+  "choose_a_if": [
+    "You're a developer or technical writer comfortable with markdown",
+    "You need robust API access and advanced automations",
+    "You want the most affordable entry point at $9/month"
+  ],
+  "choose_b_if": [
+    "You're a beginner wanting an intuitive interface and visual editor",
+    "You need landing pages and RSS-to-email functionality",
+    "You want a larger free tier (500 vs 100 subscribers)",
+    "You're interested in earning affiliate commissions"
+  ],
+  "faq": [
+    {
+      "q": "Is Buttondown better than AWeber?",
+      "a": "Neither is universally 'better'—it depends on your needs. Buttondown excels for developers and markdown enthusiasts with strong API features, while AWeber offers broader functionality and simplicity for general bloggers and solopreneurs. AWeber's higher G2 (4.2 vs 4.8) and Trustpilot (4.0 vs 4.7) ratings show Buttondown has higher user satisfaction, though both are well-regarded."
+    },
+    {
+      "q": "Which is cheaper, Buttondown or AWeber?",
+      "a": "Buttondown is cheaper on paid plans at $9/month versus AWeber's $15/month. However, AWeber's free tier allows 500 subscribers compared to Buttondown's 100, making AWeber more cost-effective if you're starting out and want to grow without paying immediately."
+    },
+    {
+      "q": "Can I switch from AWeber to Buttondown?",
+      "a": "Both platforms support import/export functionality, making migration possible. You can export your subscriber list from AWeber and import it into Buttondown. However, you'll need to manually recreate campaigns and automations, as these typically don't transfer between platforms."
+    }
+  ]
+}

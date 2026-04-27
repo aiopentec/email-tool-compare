@@ -1,0 +1,41 @@
+{
+  "type": "tool",
+  "slug": "substack",
+  "title": "Substack Review 2025: Features, Pricing & Honest Verdict",
+  "meta_description": "Substack review: free newsletter platform with paid subscriptions, podcast hosting & no subscriber limits. See pros, cons & pricing.",
+  "h1": "Substack Review: The Newsletter Platform for Direct Creator Monetization",
+  "intro": "Substack is a newsletter and content platform that enables writers, journalists, and creators to build direct relationships with audiences through email subscriptions. Founded in 2017, it specializes in helping creators monetize their work through a revenue-share model rather than upfront fees. It's best suited for independent writers and content creators who want to focus on audience growth without worrying about technical infrastructure.",
+  "verdict": "Substack excels at removing barriers to entry with its free tier, no subscriber limits, and straightforward monetization through paid subscriptions and a built-in audience discovery feature. However, the platform's lower Trustpilot rating (2.9) suggests customer satisfaction issues, and the lack of advanced marketing tools may limit growth for ambitious publishers. It remains a solid choice for individual creators prioritizing simplicity over sophisticated analytics and automation.",
+  "pros": [
+    "Completely free to start with unlimited subscribers on the free tier",
+    "Revenue-share model means no upfront costs—only pay when earning",
+    "Built-in audience discovery and recommendations drive organic subscriber growth",
+    "Multiple content formats including newsletters, podcasts, and notes feed",
+    "Simple, distraction-free interface focused on writing and reader engagement"
+  ],
+  "cons": [
+    "Trustpilot rating of 2.9 indicates notable customer satisfaction concerns",
+    "Limited advanced marketing, segmentation, and automation features",
+    "No affiliate program available for partnership-based growth"
+  ],
+  "pricing_summary": "Substack is completely free to use, with creators earning revenue through a 10% revenue share on paid subscriptions and tips. There are no subscriber limits, setup fees, or hidden costs—you only pay Substack when you're actively earning money from your audience.",
+  "best_for_detail": "Substack is ideal for independent writers, journalists, and niche content creators who want to monetize directly from their most engaged readers without technical overhead. It's particularly effective for creators with existing audiences or strong personal brands looking to build sustainable income through paid subscriptions.",
+  "faq": [
+    {
+      "q": "Is Substack free?",
+      "a": "Yes, Substack is completely free to use. There are no setup fees, monthly costs, or subscriber limits on the free tier. You only share revenue (10%) with Substack when readers purchase paid subscriptions or send tips to your newsletter."
+    },
+    {
+      "q": "What is Substack best used for?",
+      "a": "Substack is best used for publishing newsletters, essays, and serialized content while building a direct relationship with subscribers. It's particularly effective for creators who want to monetize through paid subscriptions, host podcasts, or share exclusive content with their most dedicated audience."
+    },
+    {
+      "q": "Is Substack good for beginners?",
+      "a": "Yes, Substack is beginner-friendly with minimal technical setup required and no upfront costs. However, beginners should expect a learning curve in audience building, as Substack provides distribution features but doesn't replace external marketing efforts to gain initial subscribers."
+    },
+    {
+      "q": "Does Substack have an affiliate program?",
+      "a": "No, Substack does not offer an affiliate program. Creators cannot earn commissions by referring others to the platform, which may limit partnership opportunities compared to some competing email marketing platforms."
+    }
+  ]
+}

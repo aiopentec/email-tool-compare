@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "beehiiv-vs-buttondown",
+  "title": "Beehiiv vs Buttondown (2025): Which Is Better?",
+  "meta_description": "Compare Beehiiv and Buttondown email marketing platforms. See pricing, features, and which newsletter tool suits you best.",
+  "h1": "Beehiiv vs Buttondown: Detailed Comparison",
+  "intro": "Beehiiv and Buttondown are both popular freemium email marketing platforms, but they serve different audiences and priorities. Beehiiv focuses on growth and monetization for publishers, while Buttondown emphasizes simplicity and markdown writing for technical users. Understanding their key differences will help you choose the right tool for your newsletter strategy.",
+  "quick_verdict": {
+    "winner_overall": "Beehiiv",
+    "winner_price": "Buttondown",
+    "winner_features": "Beehiiv",
+    "winner_beginners": "Beehiiv",
+    "winner_ecommerce": "Beehiiv"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting Price",
+      "tool_a": "$0 (free) / $39/month (paid)",
+      "tool_b": "$0 (free) / $9/month (paid)"
+    },
+    {
+      "feature": "Free Subscriber Limit",
+      "tool_a": "2,500 subscribers",
+      "tool_b": "100 subscribers"
+    },
+    {
+      "feature": "Best For",
+      "tool_a": "Newsletter publishers and media operators",
+      "tool_b": "Developers and technical writers using markdown"
+    },
+    {
+      "feature": "Key Differentiators",
+      "tool_a": "Ad network, monetization, referral program, web reader",
+      "tool_b": "Markdown writing, API access, paid subscriptions, automations"
+    },
+    {
+      "feature": "User Rating (Trustpilot)",
+      "tool_a": "4.4/5",
+      "tool_b": "4.7/5"
+    }
+  ],
+  "choose_a_if": [
+    "You want built-in monetization and ad network capabilities for your newsletter",
+    "You need to manage larger subscriber lists with a generous free tier (up to 2,500)",
+    "You're looking for growth-focused features like referral programs and analytics"
+  ],
+  "choose_b_if": [
+    "You prefer markdown writing and need developer-friendly features like API access",
+    "You want the lowest possible entry price ($9/month paid plans)",
+    "You need multiple newsletters and prefer straightforward, minimalist design"
+  ],
+  "faq": [
+    {
+      "q": "Is Beehiiv better than Buttondown?",
+      "a": "Neither is objectively better—it depends on your needs. Beehiiv excels at growth and monetization with higher user ratings on G2, making it ideal for professional publishers. Buttondown has better Trustpilot ratings and is superior for technical users who love markdown and API access."
+    },
+    {
+      "q": "Which is cheaper, Beehiiv or Buttondown?",
+      "a": "Buttondown is cheaper with paid plans starting at $9/month versus Beehiiv's $39/month. However, Beehiiv's free tier supports 2,500 subscribers compared to Buttondown's 100, making Beehiiv better value if you're starting small."
+    },
+    {
+      "q": "Can I switch from Buttondown to Beehiiv?",
+      "a": "Yes, both platforms offer import and export functionality. Buttondown explicitly supports subscriber list export, and Beehiiv can import subscriber data. The migration process is typically straightforward, though you may lose some historical analytics in the transition."
+    }
+  ]
+}

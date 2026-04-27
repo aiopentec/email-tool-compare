@@ -1,0 +1,68 @@
+{
+  "type": "compare",
+  "slug": "buttondown-vs-constant-contact",
+  "title": "Buttondown vs Constant Contact (2025): Which Is Better?",
+  "meta_description": "Compare Buttondown and Constant Contact. See pricing, features, ratings, and which email marketing tool suits your needs best.",
+  "h1": "Buttondown vs Constant Contact: Detailed Comparison",
+  "intro": "Buttondown and Constant Contact are two established email marketing platforms with distinctly different approaches. Buttondown caters to developers and technical writers seeking simplicity and markdown support, while Constant Contact targets small businesses and nonprofits needing comprehensive marketing tools. Understanding their differences will help you choose the right platform for your specific needs.",
+  "quick_verdict": {
+    "winner_overall": "Buttondown",
+    "winner_price": "Buttondown",
+    "winner_features": "Constant Contact",
+    "winner_beginners": "Constant Contact",
+    "winner_ecommerce": "Constant Contact"
+  },
+  "comparison_table": [
+    {
+      "feature": "Free Tier",
+      "tool_a": "Yes (up to 100 subscribers)",
+      "tool_b": "No"
+    },
+    {
+      "feature": "Starting Price",
+      "tool_a": "$9/month",
+      "tool_b": "$12/month"
+    },
+    {
+      "feature": "Markdown Support",
+      "tool_a": "Yes (core feature)",
+      "tool_b": "No"
+    },
+    {
+      "feature": "E-commerce Integration",
+      "tool_a": "No",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "G2 Rating",
+      "tool_a": "4.8/5",
+      "tool_b": "4.0/5"
+    }
+  ],
+  "choose_a_if": [
+    "You're a developer or technical writer who prefers writing in markdown",
+    "You want to start with a free tier before committing to a paid plan",
+    "You need API access for custom integrations and automation",
+    "You value user reviews and ratings highly (4.8 G2 vs 4.0)"
+  ],
+  "choose_b_if": [
+    "You're a nonprofit or local business looking for an all-in-one marketing platform",
+    "You need e-commerce features, event management, or SMS capabilities",
+    "You want to run social media ads directly from your email marketing platform",
+    "You prefer a company with over 25 years of experience (established 1995)"
+  ],
+  "faq": [
+    {
+      "q": "Is Buttondown better than Constant Contact?",
+      "a": "It depends on your use case. Buttondown excels for developers and technical writers with markdown-first publishing and a free tier, earning a 4.8 G2 rating. Constant Contact is better for general small businesses needing comprehensive marketing features like e-commerce and SMS, though it has lower satisfaction ratings (4.0 G2, 2.8 Trustpilot)."
+    },
+    {
+      "q": "Which is cheaper, Buttondown or Constant Contact?",
+      "a": "Buttondown is cheaper overall. It offers a free plan for up to 100 subscribers with no credit card required, then starts at $9/month. Constant Contact has no free tier and begins at $12/month. For budget-conscious users or those just starting out, Buttondown provides better value."
+    },
+    {
+      "q": "Can I switch from Constant Contact to Buttondown?",
+      "a": "Yes, both platforms support import/export functionality. Buttondown specifically lists import/export as a key feature, making it straightforward to migrate your subscriber lists and past campaigns from Constant Contact to Buttondown."
+    }
+  ]
+}
