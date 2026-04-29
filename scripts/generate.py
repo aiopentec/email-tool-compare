@@ -227,20 +227,59 @@ def demo_alternatives_content(entity: dict, all_entities: list) -> dict:
 # ── Real API generation ────────────────────────────────────────────────────────
 
 def generate_with_api(client, prompt: str, retries: int = 3) -> dict:
-    import anthropic
+    """Supports Groq (free), Gemini (free), or Anthropic."""
+    import os
+    provider = os.environ.get("AI_PROVIDER", "anthropic")
+
     for attempt in range(retries):
         try:
-            msg = client.messages.create(
-                model="claude-haiku-4-5-20251001",
-                max_tokens=2048,
-                messages=[{"role": "user", "content": prompt}]
-            )
-            text = msg.content[0].text.strip()
-            # Strip markdown fences if model adds them
+            if provider == "groq":
+                # Groq — free tier, OpenAI-compatible
+                import urllib.request, json as _json
+                key = os.environ["GROQ_API_KEY"]
+                payload = _json.dumps({
+                    "model": "llama-3.1-8b-instant",
+                    "messages": [{"role": "user", "content": prompt}],
+                    "max_tokens": 2048, "temperature": 0.3
+                }).encode()
+                req = urllib.request.Request(
+                    "https://api.groq.com/openai/v1/chat/completions",
+                    data=payload,
+                    headers={"Authorization": f"Bearer {key}",
+                             "Content-Type": "application/json"}
+                )
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    text = _json.loads(r.read())["choices"][0]["message"]["content"].strip()
+
+            elif provider == "gemini":
+                # Gemini — free tier via Google AI Studio
+                import urllib.request, json as _json
+                key = os.environ["GEMINI_API_KEY"]
+                payload = _json.dumps({
+                    "contents": [{"parts": [{"text": prompt}]}],
+                    "generationConfig": {"maxOutputTokens": 2048, "temperature": 0.3}
+                }).encode()
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={key}"
+                req = urllib.request.Request(url, data=payload,
+                    headers={"Content-Type": "application/json"})
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    text = _json.loads(r.read())["candidates"][0]["content"]["parts"][0]["text"].strip()
+
+            else:
+                # Anthropic (default)
+                msg = client.messages.create(
+                    model="claude-haiku-4-5-20251001",
+                    max_tokens=2048,
+                    messages=[{"role": "user", "content": prompt}]
+                )
+                text = msg.content[0].text.strip()
+
+            # Strip markdown fences
             if text.startswith("```"):
                 text = text.split("\n", 1)[1]
                 text = text.rsplit("```", 1)[0]
             return json.loads(text)
+
         except (json.JSONDecodeError, Exception) as e:
             if attempt == retries - 1:
                 raise
@@ -350,13 +389,31 @@ def main():
 
     client = None
     if not args.demo:
-        import anthropic
         import os
-        api_key = os.environ.get("ANTHROPIC_API_KEY")
-        if not api_key:
-            print("Error: ANTHROPIC_API_KEY not set. Run with --demo to test without API.")
-            sys.exit(1)
-        client = anthropic.Anthropic(api_key=api_key)
+        provider = os.environ.get("AI_PROVIDER", "anthropic")
+
+        if provider == "groq":
+            if not os.environ.get("GROQ_API_KEY"):
+                print("Error: GROQ_API_KEY not set. Get a free key at console.groq.com")
+                sys.exit(1)
+            print(f"  Using provider: Groq (free tier) — llama-3.1-8b-instant")
+            client = None  # Groq uses urllib directly
+
+        elif provider == "gemini":
+            if not os.environ.get("GEMINI_API_KEY"):
+                print("Error: GEMINI_API_KEY not set. Get a free key at aistudio.google.com")
+                sys.exit(1)
+            print(f"  Using provider: Gemini (free tier) — gemini-1.5-flash")
+            client = None  # Gemini uses urllib directly
+
+        else:
+            import anthropic
+            api_key = os.environ.get("ANTHROPIC_API_KEY")
+            if not api_key:
+                print("Error: ANTHROPIC_API_KEY not set. Run with --demo to test without API.")
+                sys.exit(1)
+            client = anthropic.Anthropic(api_key=api_key)
+            print(f"  Using provider: Anthropic — claude-haiku")
 
     mode = "DEMO (no API)" if args.demo else "LIVE (Claude API)"
     print(f"\n{'='*55}")

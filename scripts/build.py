@@ -179,7 +179,7 @@ def build(site_id):
             sitemap_urls.append({"url": full_url, "priority": "0.8", "changefreq": "monthly"})
             page_count += 1
 
-    # ── Compare pages ───────────────────────────────────────────────────────────
+    # ── Compare pages (both orderings so A-vs-B and B-vs-A both work) ──────────
     compare_tmpl = env.get_template("compare.html")
     compare_dir = content_dir / "compare"
     if compare_dir.exists():
@@ -188,15 +188,10 @@ def build(site_id):
         for json_file in compare_dir.glob("*.json"):
             page_data = json.loads(json_file.read_text())
             slug = json_file.stem
-            url_path = f"compare/{slug}/"
-            full_url = f"{site_cfg['base_url']}/{url_path}"
-
-            # Extract entity slugs from compare slug (e.g. "mailchimp-vs-beehiiv")
             parts = slug.split("-vs-", 1)
             entity_a = entity_map.get(parts[0], {}) if len(parts) == 2 else {}
             entity_b = entity_map.get(parts[1], {}) if len(parts) == 2 else {}
 
-            # Related: other comparisons involving either tool
             related = [
                 {"slug": f"{entity_a.get('slug','')}-vs-{e['slug']}",
                  "label": f"{entity_a.get('name','')} vs {e['name']}"}
@@ -204,19 +199,27 @@ def build(site_id):
                 if e["slug"] not in (entity_a.get("slug"), entity_b.get("slug"))
             ][:4]
 
-            page_data["url_path"] = url_path
             page_data["schema_json"] = schema_faq(page_data.get("faq", []))
 
-            html = compare_tmpl.render(
-                site=site_cfg, page=page_data,
-                entity_a=entity_a, entity_b=entity_b,
-                related_pages=related
-            )
-            page_out = out_dir / slug
-            page_out.mkdir(exist_ok=True)
-            (page_out / "index.html").write_text(html, encoding="utf-8")
-            sitemap_urls.append({"url": full_url, "priority": "0.9", "changefreq": "monthly"})
-            page_count += 1
+            # Build BOTH orderings: a-vs-b AND b-vs-a
+            for s_a, s_b, ea, eb in [
+                (parts[0], parts[1] if len(parts)==2 else "", entity_a, entity_b),
+                (parts[1] if len(parts)==2 else "", parts[0], entity_b, entity_a),
+            ]:
+                rev_slug = f"{s_a}-vs-{s_b}"
+                url_path = f"compare/{rev_slug}/"
+                full_url = f"{site_cfg['base_url']}/{url_path}"
+                page_data["url_path"] = url_path
+                html = compare_tmpl.render(
+                    site=site_cfg, page=page_data,
+                    entity_a=ea, entity_b=eb,
+                    related_pages=related
+                )
+                page_out = out_dir / rev_slug
+                page_out.mkdir(exist_ok=True)
+                (page_out / "index.html").write_text(html, encoding="utf-8")
+                sitemap_urls.append({"url": full_url, "priority": "0.9", "changefreq": "monthly"})
+                page_count += 1
 
     # ── Alternatives pages ──────────────────────────────────────────────────────
     alt_tmpl = env.get_template("alternatives.html")
