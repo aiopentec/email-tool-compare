@@ -28,6 +28,35 @@ TEMPLATES_DIR = ROOT / "templates"
 STATIC_DIR = ROOT / "static"
 
 
+# ── NEW: Sendinblue → Brevo redirect map ────────────────────────────────────
+# Keys   = old Sendinblue slugs to retire (both orderings)
+# Values = replacement Brevo page path (relative, no leading slash)
+# Add a row for every Sendinblue compare/tool page you currently publish.
+SENDINBLUE_REDIRECTS = {
+    # compare pages — canonical ordering
+    "sendinblue-vs-mailchimp":       "compare/brevo-vs-mailchimp",
+    "sendinblue-vs-activecampaign":  "compare/brevo-vs-activecampaign",
+    "sendinblue-vs-klaviyo":         "compare/brevo-vs-klaviyo",
+    "sendinblue-vs-constantcontact": "compare/brevo-vs-constantcontact",
+    "sendinblue-vs-getresponse":     "compare/brevo-vs-getresponse",
+    "sendinblue-vs-moosend":         "compare/brevo-vs-moosend",
+    "sendinblue-vs-mailerlite":      "compare/brevo-vs-mailerlite",
+    "sendinblue-vs-convertkit":      "compare/brevo-vs-convertkit",
+    # compare pages — reversed ordering (both must redirect)
+    "mailchimp-vs-sendinblue":       "compare/brevo-vs-mailchimp",
+    "activecampaign-vs-sendinblue":  "compare/brevo-vs-activecampaign",
+    "klaviyo-vs-sendinblue":         "compare/brevo-vs-klaviyo",
+    "constantcontact-vs-sendinblue": "compare/brevo-vs-constantcontact",
+    "getresponse-vs-sendinblue":     "compare/brevo-vs-getresponse",
+    "moosend-vs-sendinblue":         "compare/brevo-vs-moosend",
+    "mailerlite-vs-sendinblue":      "compare/brevo-vs-mailerlite",
+    "convertkit-vs-sendinblue":      "compare/brevo-vs-convertkit",
+    # tool page
+    "tools/sendinblue":              "tools/brevo",
+}
+# ── END NEW ──────────────────────────────────────────────────────────────────
+
+
 def schema_article(title, description, url, site_name):
     return json.dumps({
         "@context": "https://schema.org",
@@ -50,6 +79,216 @@ def schema_faq(faq_items):
             for i in faq_items
         ]
     })
+
+
+# ── NEW: canonical URL helper ────────────────────────────────────────────────
+def get_canonical_slug(slug_a: str, slug_b: str) -> str:
+    """
+    Returns the canonical compare slug using alphabetical ordering.
+    Both 'mailchimp-vs-klaviyo' and 'klaviyo-vs-mailchimp' return
+    'klaviyo-vs-mailchimp' — so Google indexes only one version.
+    """
+    ordered = sorted([slug_a.lower(), slug_b.lower()])
+    return f"{ordered[0]}-vs-{ordered[1]}"
+# ── END NEW ──────────────────────────────────────────────────────────────────
+
+
+# ── NEW: comparison table generator ─────────────────────────────────────────
+def generate_comparison_table(entity_a: dict, entity_b: dict, page_data: dict) -> str:
+    """
+    Generates a full HTML comparison table from entity data + compare page data.
+    Returns an HTML string; inject into template with {{ table_html | safe }}.
+
+    Reads from entity fields already in entities.json:
+      slug, name, tagline, pricing_model, paid_from_usd, best_for, free_plan,
+      free_trial, starting_price, features (dict), support (dict), rating, verdict
+
+    Falls back gracefully if any field is missing.
+    """
+    def yes(val):
+        return '<span class="chk y" aria-label="Yes">✓</span>' if val \
+          else '<span class="chk n" aria-label="No">✗</span>'
+
+    def stars(rating):
+        r = float(rating) if rating else 0
+        full = int(r)
+        return "★" * full + "☆" * (5 - full) + f"<small> {r}/5</small>"
+
+    a, b = entity_a, entity_b
+
+    # Pull feature flags — use entity-level fields with sensible defaults
+    def feat(entity, key):
+        return entity.get("features", {}).get(key, entity.get(key, False))
+
+    rows = [
+        # (Section header, None) → rendered as a section divider
+        # (label, lambda a, lambda b) → rendered as a data row
+        ("💰 Pricing", None, None),
+        ("Free Plan",
+            yes(a.get("free_plan", False)),
+            yes(b.get("free_plan", False))),
+        ("Starting Price",
+            f"${a.get('paid_from_usd', '—')}/mo" if a.get("paid_from_usd") else "—",
+            f"${b.get('paid_from_usd', '—')}/mo" if b.get("paid_from_usd") else "—"),
+        ("Free Trial",
+            yes(a.get("free_trial", False)),
+            yes(b.get("free_trial", False))),
+
+        ("⚙️ Features", None, None),
+        ("Email Automation",
+            yes(feat(a, "email_automation")),
+            yes(feat(b, "email_automation"))),
+        ("Visual Workflow Builder",
+            yes(feat(a, "visual_workflow")),
+            yes(feat(b, "visual_workflow"))),
+        ("Landing Pages",
+            yes(feat(a, "landing_pages")),
+            yes(feat(b, "landing_pages"))),
+        ("Built-in CRM",
+            yes(feat(a, "crm_builtin")),
+            yes(feat(b, "crm_builtin"))),
+        ("SMS Marketing",
+            yes(feat(a, "sms_marketing")),
+            yes(feat(b, "sms_marketing"))),
+        ("A/B Testing",
+            yes(feat(a, "ab_testing")),
+            yes(feat(b, "ab_testing"))),
+        ("E-commerce Integration",
+            yes(feat(a, "ecommerce")),
+            yes(feat(b, "ecommerce"))),
+        ("Transactional Email",
+            yes(feat(a, "transactional_email")),
+            yes(feat(b, "transactional_email"))),
+        ("Remove Branding",
+            yes(feat(a, "remove_branding")),
+            yes(feat(b, "remove_branding"))),
+
+        ("🤖 AI Features", None, None),
+        ("AI Subject Lines",
+            yes(feat(a, "ai_subject_lines")),
+            yes(feat(b, "ai_subject_lines"))),
+        ("AI Send-Time Optimisation",
+            yes(feat(a, "ai_send_time")),
+            yes(feat(b, "ai_send_time"))),
+
+        ("🛎 Support", None, None),
+        ("Email Support",
+            yes(a.get("support", {}).get("email", False)),
+            yes(b.get("support", {}).get("email", False))),
+        ("Live Chat",
+            yes(a.get("support", {}).get("live_chat", False)),
+            yes(b.get("support", {}).get("live_chat", False))),
+        ("Phone Support",
+            yes(a.get("support", {}).get("phone", False)),
+            yes(b.get("support", {}).get("phone", False))),
+    ]
+
+    tbody = ""
+    for row in rows:
+        label, cell_a, cell_b = row
+        if cell_a is None:  # section header
+            tbody += f'<tr class="sec-hdr"><td colspan="3">{label}</td></tr>\n'
+        else:
+            tbody += (f'<tr><td class="lbl">{label}</td>'
+                      f'<td>{cell_a}</td><td>{cell_b}</td></tr>\n')
+
+    aff_a = a.get("affiliate_url", f"#{a['slug']}")
+    aff_b = b.get("affiliate_url", f"#{b['slug']}")
+    verdict_a = a.get("verdict", page_data.get("verdict_a", a.get("tagline", "")))
+    verdict_b = b.get("verdict", page_data.get("verdict_b", b.get("tagline", "")))
+
+    return f"""
+<div class="cmp-wrap">
+  <table class="cmp-tbl" role="table"
+         aria-label="{a['name']} vs {b['name']} feature comparison">
+    <thead>
+      <tr>
+        <th class="col-feat">Feature</th>
+        <th class="col-tool">
+          <a href="{aff_a}" target="_blank" rel="noopener sponsored">{a['name']}</a>
+        </th>
+        <th class="col-tool">
+          <a href="{aff_b}" target="_blank" rel="noopener sponsored">{b['name']}</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>{tbody}</tbody>
+  </table>
+
+  <div class="rating-row">
+    <div class="r-cell"><strong>{a['name']}</strong>
+      <div class="stars">{stars(a.get('rating', 0))}</div></div>
+    <div class="r-cell"><strong>{b['name']}</strong>
+      <div class="stars">{stars(b.get('rating', 0))}</div></div>
+  </div>
+
+  <div class="verdict-row">
+    <div class="v-cell">
+      <span class="v-label">Our verdict</span>
+      <p>{verdict_a}</p>
+      <a class="cta-btn" href="{aff_a}" target="_blank" rel="noopener sponsored">
+        Try {a['name']} Free →
+      </a>
+    </div>
+    <div class="v-cell">
+      <span class="v-label">Our verdict</span>
+      <p>{verdict_b}</p>
+      <a class="cta-btn" href="{aff_b}" target="_blank" rel="noopener sponsored">
+        Try {b['name']} Free →
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+.cmp-wrap{{width:100%;overflow-x:auto;margin:2rem 0;font-size:.95rem}}
+.cmp-tbl{{width:100%;border-collapse:collapse;min-width:480px}}
+.cmp-tbl th,.cmp-tbl td{{padding:.65rem 1rem;text-align:center;border-bottom:1px solid #e8e8e8}}
+.cmp-tbl th{{background:#f7f7f7;font-weight:700}}
+.cmp-tbl th.col-feat,.cmp-tbl td.lbl{{text-align:left;color:#444;font-size:.88rem;width:46%}}
+.cmp-tbl tr:hover td{{background:#fafafa}}
+.cmp-tbl tr.sec-hdr td{{background:#f0f4f8;font-weight:700;font-size:.75rem;
+  text-transform:uppercase;letter-spacing:.06em;color:#555;padding:.4rem 1rem;
+  border-top:2px solid #d8e4f0}}
+.chk{{font-size:1.05rem;font-weight:700}}
+.chk.y{{color:#22a06b}}.chk.n{{color:#c9372c}}
+.rating-row,.verdict-row{{display:flex;gap:1rem;margin-top:1rem}}
+.r-cell{{flex:1;text-align:center;padding:.75rem;background:#f7f7f7;border-radius:8px}}
+.stars{{font-size:1.15rem;color:#f5a623;margin-top:.25rem}}
+.stars small{{font-size:.78rem;color:#666}}
+.v-cell{{flex:1;padding:1rem 1.25rem;border:1px solid #e0e8f0;border-radius:8px;text-align:center}}
+.v-label{{display:block;font-size:.72rem;text-transform:uppercase;
+  letter-spacing:.06em;color:#888;margin-bottom:.4rem}}
+.v-cell p{{font-size:.88rem;color:#333;margin:0 0 1rem}}
+.cta-btn{{display:inline-block;padding:.6rem 1.4rem;background:#1a56db;color:#fff!important;
+  border-radius:6px;font-size:.88rem;font-weight:600;text-decoration:none;
+  transition:background .15s ease}}
+.cta-btn:hover{{background:#1444b8;text-decoration:none}}
+@media(max-width:560px){{.verdict-row,.rating-row{{flex-direction:column}}}}
+</style>"""
+# ── END NEW ──────────────────────────────────────────────────────────────────
+
+
+# ── NEW: redirect page generator ─────────────────────────────────────────────
+def generate_redirect_page(from_slug: str, to_url: str) -> str:
+    """Generates a JS + meta-refresh redirect page for retired Sendinblue URLs."""
+    display = from_slug.replace("-", " ").replace("/", " › ").title()
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{display} | Redirecting…</title>
+  <link rel="canonical" href="{to_url}">
+  <meta http-equiv="refresh" content="0; url={to_url}">
+  <script>window.location.replace("{to_url}");</script>
+</head>
+<body>
+  <p>Sendinblue is now Brevo.
+     <a href="{to_url}">Click here if you are not redirected.</a></p>
+</body>
+</html>"""
+# ── END NEW ──────────────────────────────────────────────────────────────────
 
 
 def load_entities(site_id):
@@ -202,6 +441,16 @@ def build(site_id):
 
             page_data["schema_json"] = schema_faq(page_data.get("faq", []))
 
+            # ── NEW: pre-generate comparison table once per file ─────────────
+            table_html = generate_comparison_table(entity_a, entity_b, page_data)
+            # ── END NEW ──────────────────────────────────────────────────────
+
+            # ── NEW: compute canonical slug (alphabetical ordering) ──────────
+            canonical_slug = get_canonical_slug(
+                parts[0], parts[1] if len(parts) == 2 else parts[0]
+            )
+            # ── END NEW ──────────────────────────────────────────────────────
+
             # Build BOTH orderings: a-vs-b AND b-vs-a
             for s_a, s_b, ea, eb in [
                 (parts[0], parts[1] if len(parts)==2 else "", entity_a, entity_b),
@@ -210,17 +459,39 @@ def build(site_id):
                 rev_slug = f"{s_a}-vs-{s_b}"
                 url_path = f"compare/{rev_slug}/"
                 full_url = f"{site_cfg['base_url']}/{url_path}"
-                page_data["url_path"] = url_path
+
+                # ── NEW: canonical URL always points to alphabetical ordering ─
+                canonical_url = f"{site_cfg['base_url']}/compare/{canonical_slug}/"
+                page_data["url_path"]     = url_path
+                page_data["canonical_url"] = canonical_url           # ← NEW
+                # ── END NEW ──────────────────────────────────────────────────
+
                 html = compare_tmpl.render(
                     site=site_cfg, page=page_data,
                     entity_a=ea, entity_b=eb,
-                    related_pages=related
+                    related_pages=related,
+                    table_html=table_html,                            # ← NEW
                 )
                 page_out = out_dir / rev_slug
                 page_out.mkdir(exist_ok=True)
                 (page_out / "index.html").write_text(html, encoding="utf-8")
                 sitemap_urls.append({"url": full_url, "priority": "0.9", "changefreq": "monthly"})
                 page_count += 1
+
+    # ── NEW: Sendinblue → Brevo redirect pages ───────────────────────────────
+    # Generates a lightweight redirect at every retired Sendinblue URL.
+    # Canonical tag on each redirect page transfers link equity to the Brevo page.
+    redirect_count = 0
+    for from_slug, to_path in SENDINBLUE_REDIRECTS.items():
+        to_url = f"{site_cfg['base_url']}/{to_path}/"
+        page_out = dist_dir / from_slug
+        page_out.mkdir(parents=True, exist_ok=True)
+        redirect_html = generate_redirect_page(from_slug, to_url)
+        (page_out / "index.html").write_text(redirect_html, encoding="utf-8")
+        redirect_count += 1
+        # Note: redirect pages are intentionally excluded from sitemap
+    print(f"  Redirects: {redirect_count} Sendinblue → Brevo pages generated")
+    # ── END NEW ──────────────────────────────────────────────────────────────
 
     # ── Alternatives pages ──────────────────────────────────────────────────────
     alt_tmpl = env.get_template("alternatives.html")
@@ -261,11 +532,13 @@ def build(site_id):
                 f"<a href='{base}/alternatives/'>Alternatives</a> "
                 f"<a href='{base}/tools/'>All Tools</a></nav></div></header>")
 
-    def _pg(title, h1, desc, body):
+    def _pg(title, h1, desc, body, canonical=None):       # ← NEW: canonical param
+        canon_tag = f"<link rel='canonical' href='{canonical}'>" if canonical else ""  # ← NEW
         return (f"<!DOCTYPE html><html lang=en data-theme=light><head>"
                 f"<meta charset=UTF-8><meta name=viewport content='width=device-width,initial-scale=1'>"
                 f"<title>{title} | {name}</title>"
                 f"<meta name=description content='{desc}'>"
+                f"{canon_tag}"                                        # ← NEW
                 f"<link rel=stylesheet href='{base}/static/style.css'>"
                 f"<script>(function(){{var t=localStorage.getItem('theme')||'light';"
                 f"document.documentElement.setAttribute('data-theme',t);}})();</script>"
@@ -282,7 +555,8 @@ def build(site_id):
     (dist_dir / "compare" / "index.html").write_text(
         _pg("All Comparisons", "All Email Tool Comparisons",
             f"Side-by-side comparisons across {len(entities)} email marketing platforms.",
-            f"<ul style='columns:2;padding-left:1.5rem;line-height:2'>{clinks}</ul>"),
+            f"<ul style='columns:2;padding-left:1.5rem;line-height:2'>{clinks}</ul>",
+            canonical=f"{base}/compare/"),                            # ← NEW
         encoding="utf-8")
 
     # Alternatives index
@@ -294,7 +568,8 @@ def build(site_id):
     (dist_dir / "alternatives" / "index.html").write_text(
         _pg("All Alternatives", "Best Email Tool Alternatives",
             "Find the best alternative for every major email marketing platform.",
-            f"<ul style='columns:2;padding-left:1.5rem;line-height:2'>{alinks}</ul>"),
+            f"<ul style='columns:2;padding-left:1.5rem;line-height:2'>{alinks}</ul>",
+            canonical=f"{base}/alternatives/"),                       # ← NEW
         encoding="utf-8")
 
     # Tools index
@@ -306,10 +581,11 @@ def build(site_id):
     (dist_dir / "tools" / "index.html").write_text(
         _pg("All Tools", "All 18 Email Marketing Tools Reviewed",
             f"Honest reviews of {len(entities)} email marketing platforms.",
-            f"<ul style='padding-left:1.5rem;line-height:2'>{tlinks}</ul>"),
+            f"<ul style='padding-left:1.5rem;line-height:2'>{tlinks}</ul>",
+            canonical=f"{base}/tools/"),                              # ← NEW
         encoding="utf-8")
 
-        # ── Sitemap ─────────────────────────────────────────────────────────────────
+    # ── Sitemap ─────────────────────────────────────────────────────────────────
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     sitemap_lines = ['<?xml version="1.0" encoding="UTF-8"?>',
                      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

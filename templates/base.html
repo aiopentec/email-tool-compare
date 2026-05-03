@@ -8,8 +8,17 @@
   <meta property="og:title" content="{{ page.title }}">
   <meta property="og:description" content="{{ page.meta_description }}">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="{{ site.base_url }}/{{ page.url_path }}">
-  <link rel="canonical" href="{{ site.base_url }}/{{ page.url_path }}">
+
+  {# ── CHANGED: use page.canonical_url (set by build.py for compare pages)   #}
+  {# so reversed pairs like klaviyo-vs-mailchimp point to the alphabetical    #}
+  {# version. All other page types don't set canonical_url so they fall back  #}
+  {# to the existing site.base_url/page.url_path behaviour — no other        #}
+  {# templates need touching.                                                  #}
+  {% set _canonical = page.canonical_url if page.canonical_url is defined and page.canonical_url else site.base_url ~ '/' ~ page.url_path %}
+  <link rel="canonical" href="{{ _canonical }}">
+  <meta property="og:url" content="{{ _canonical }}">
+  {# ── END CHANGED ──────────────────────────────────────────────────────── #}
+
   {% if site.gsc_verification %}<meta name="google-site-verification" content="{{ site.gsc_verification }}">{% endif %}
   <script type="application/ld+json">{{ page.schema_json | safe }}</script>
   <link rel="stylesheet" href="{{ site.base_url }}/static/style.css">
@@ -21,6 +30,10 @@
     // Apply saved theme before paint to avoid flash
     (function(){var t=localStorage.getItem('theme')||'light';document.documentElement.setAttribute('data-theme',t);})();
   </script>
+
+  {# ── NEW: extensibility block for child templates that need extra <head>   #}
+  {# tags (additional schema types, page-specific preloads, etc.)             #}
+  {% block head %}{% endblock %}
 </head>
 <body>
   <header class="site-header">
