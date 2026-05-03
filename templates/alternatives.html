@@ -8,13 +8,17 @@
   </div>
   <h1 class="page-h1">{{ page.h1 }}</h1>
   <p class="page-intro">{{ page.intro }}</p>
+  
   {% if page.why_switch %}
   <div class="verdict-box">
     <strong>Why look for an alternative?</strong>
     <ul style="margin-top:8px;padding-left:18px">{% for r in page.why_switch %}<li>{{ r }}</li>{% endfor %}</ul>
   </div>
   {% endif %}
+
   <h2>Best {{ entity.name }} Alternatives in 2025</h2>
+  
+  {# --- START ALTERNATIVES LOOP --- #}
   {% for alt in page.alternatives %}
   <div class="alt-card">
     <div class="alt-num">{{ loop.index }}</div>
@@ -29,6 +33,9 @@
       </div>
     </div>
   </div>
+  {% endfor %} {# <--- ADDED THIS: Closes the alternatives list loop #}
+  {# --- END ALTERNATIVES LOOP --- #}
+
   {% if page.faq %}
   <h2>Frequently Asked Questions</h2>
   <div class="faq">
@@ -37,8 +44,9 @@
       <h3>{{ item.q }}</h3>
       <div><p>{{ item.a }}</p></div>
     </div>
-    {% endfor %}
+    {% endfor %} {# This correctly closes the FAQ loop #}
   </div>
   {% endif %}
+
 </div>
 {% endblock %}
