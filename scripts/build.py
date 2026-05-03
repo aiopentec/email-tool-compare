@@ -40,6 +40,7 @@ def schema_article(title, description, url, site_name):
 
 
 def schema_faq(faq_items):
+    if not faq_items: return "{}"
     return json.dumps({
         "@context": "https://schema.org",
         "@type": "FAQPage",
