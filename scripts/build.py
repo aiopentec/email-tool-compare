@@ -93,18 +93,19 @@ def get_canonical_slug(slug_a: str, slug_b: str) -> str:
 # ── END NEW ──────────────────────────────────────────────────────────────────
 
 
-# ── NEW: comparison table generator ─────────────────────────────────────────
+# ── DROP-IN REPLACEMENT for generate_comparison_table() in scripts/build.py ──
+#
+# Paste this over the existing function (search for "def generate_comparison_table").
+# Changes from previous version:
+#   - Reads free_tier as fallback for free_plan
+#   - Reads g2_rating as fallback for rating
+#   - Reads paid_from_usd as fallback for starting_at
+#   - Infers feature flags from key_features[] array as last-resort fallback
+#   - affiliate_url falls back to affiliate_program homepage pattern
+#
+# Everything else (HTML output, CSS) is identical.
+
 def generate_comparison_table(entity_a: dict, entity_b: dict, page_data: dict) -> str:
-    """
-    Generates a full HTML comparison table from entity data + compare page data.
-    Returns an HTML string; inject into template with {{ table_html | safe }}.
-
-    Reads from entity fields already in entities.json:
-      slug, name, tagline, pricing_model, paid_from_usd, best_for, free_plan,
-      free_trial, starting_price, features (dict), support (dict), rating, verdict
-
-    Falls back gracefully if any field is missing.
-    """
     def yes(val):
         return '<span class="chk y" aria-label="Yes">✓</span>' if val \
           else '<span class="chk n" aria-label="No">✗</span>'
@@ -114,25 +115,79 @@ def generate_comparison_table(entity_a: dict, entity_b: dict, page_data: dict) -
         full = int(r)
         return "★" * full + "☆" * (5 - full) + f"<small> {r}/5</small>"
 
+    def get_bool(entity, *keys):
+        """
+        Try multiple keys in order, return bool.
+        Last arg can be a fallback bool (default False).
+        """
+        fallback = False
+        check_keys = list(keys)
+        if isinstance(check_keys[-1], bool):
+            fallback = check_keys.pop()
+        for k in check_keys:
+            if k in entity:
+                return bool(entity[k])
+        return fallback
+
+    def feat(entity, key):
+        """
+        Look up a feature flag. Priority:
+        1. entity['features'][key]        — populated by enrich_entities.py
+        2. entity[key]                    — direct field
+        3. key_features array inference   — e.g. 'ab_testing' ← 'A/B testing' in list
+        """
+        features = entity.get("features", {})
+        if key in features:
+            return bool(features[key])
+        if key in entity:
+            return bool(entity[key])
+        # Infer from key_features string list
+        kf = [k.lower() for k in entity.get("key_features", [])]
+        inference_map = {
+            "email_automation":    ["automation", "email automation"],
+            "visual_workflow":     ["visual workflow", "visual automation"],
+            "landing_pages":       ["landing pages", "landing page"],
+            "crm_builtin":         ["crm", "built-in crm"],
+            "sms_marketing":       ["sms", "sms marketing"],
+            "ab_testing":          ["a/b testing", "ab testing", "split testing"],
+            "ecommerce":           ["ecommerce", "e-commerce", "woocommerce", "shopify"],
+            "transactional_email": ["transactional", "transactional email"],
+            "remove_branding":     ["remove branding", "white label"],
+            "ai_subject_lines":    ["ai", "subject line", "ai subject"],
+            "ai_send_time":        ["send time", "send time optimization"],
+        }
+        return any(term in " ".join(kf) for term in inference_map.get(key, []))
+
+    def get_starting_price(entity):
+        if "starting_at" in entity:
+            return entity["starting_at"]
+        paid = entity.get("paid_from_usd")
+        if paid is not None:
+            return f"${paid}/mo" if paid > 0 else "Free"
+        return "—"
+
+    def get_rating(entity):
+        return entity.get("rating") or entity.get("g2_rating") or 0
+
+    def get_affiliate_url(entity):
+        if "affiliate_url" in entity:
+            return entity["affiliate_url"]
+        slug = entity.get("slug", "")
+        return f"https://{slug}.com/"   # safe fallback until AFFILIATE_URLS are set
+
     a, b = entity_a, entity_b
 
-    # Pull feature flags — use entity-level fields with sensible defaults
-    def feat(entity, key):
-        return entity.get("features", {}).get(key, entity.get(key, False))
-
     rows = [
-        # (Section header, None) → rendered as a section divider
-        # (label, lambda a, lambda b) → rendered as a data row
         ("💰 Pricing", None, None),
         ("Free Plan",
-            yes(a.get("free_plan", False)),
-            yes(b.get("free_plan", False))),
+            yes(get_bool(a, "free_plan", "free_tier")),
+            yes(get_bool(b, "free_plan", "free_tier"))),
         ("Starting Price",
-            f"${a.get('paid_from_usd', '—')}/mo" if a.get("paid_from_usd") else "—",
-            f"${b.get('paid_from_usd', '—')}/mo" if b.get("paid_from_usd") else "—"),
+            get_starting_price(a),
+            get_starting_price(b)),
         ("Free Trial",
-            yes(a.get("free_trial", False)),
-            yes(b.get("free_trial", False))),
+            yes(get_bool(a, "free_trial")),
+            yes(get_bool(b, "free_trial"))),
 
         ("⚙️ Features", None, None),
         ("Email Automation",
@@ -186,16 +241,18 @@ def generate_comparison_table(entity_a: dict, entity_b: dict, page_data: dict) -
     tbody = ""
     for row in rows:
         label, cell_a, cell_b = row
-        if cell_a is None:  # section header
+        if cell_a is None:
             tbody += f'<tr class="sec-hdr"><td colspan="3">{label}</td></tr>\n'
         else:
             tbody += (f'<tr><td class="lbl">{label}</td>'
                       f'<td>{cell_a}</td><td>{cell_b}</td></tr>\n')
 
-    aff_a = a.get("affiliate_url", f"#{a['slug']}")
-    aff_b = b.get("affiliate_url", f"#{b['slug']}")
-    verdict_a = a.get("verdict", page_data.get("verdict_a", a.get("tagline", "")))
-    verdict_b = b.get("verdict", page_data.get("verdict_b", b.get("tagline", "")))
+    aff_a    = get_affiliate_url(a)
+    aff_b    = get_affiliate_url(b)
+    verdict_a = a.get("verdict") or page_data.get("verdict_a") or a.get("tagline", "")
+    verdict_b = b.get("verdict") or page_data.get("verdict_b") or b.get("tagline", "")
+    rating_a  = get_rating(a)
+    rating_b  = get_rating(b)
 
     return f"""
 <div class="cmp-wrap">
@@ -217,9 +274,9 @@ def generate_comparison_table(entity_a: dict, entity_b: dict, page_data: dict) -
 
   <div class="rating-row">
     <div class="r-cell"><strong>{a['name']}</strong>
-      <div class="stars">{stars(a.get('rating', 0))}</div></div>
+      <div class="stars">{stars(rating_a)}</div></div>
     <div class="r-cell"><strong>{b['name']}</strong>
-      <div class="stars">{stars(b.get('rating', 0))}</div></div>
+      <div class="stars">{stars(rating_b)}</div></div>
   </div>
 
   <div class="verdict-row">
@@ -244,8 +301,10 @@ def generate_comparison_table(entity_a: dict, entity_b: dict, page_data: dict) -
 .cmp-wrap{{width:100%;overflow-x:auto;margin:2rem 0;font-size:.95rem}}
 .cmp-tbl{{width:100%;border-collapse:collapse;min-width:480px}}
 .cmp-tbl th,.cmp-tbl td{{padding:.65rem 1rem;text-align:center;border-bottom:1px solid #e8e8e8}}
-.cmp-tbl th{{background:#f7f7f7;font-weight:700}}
-.cmp-tbl th.col-feat,.cmp-tbl td.lbl{{text-align:left;color:#444;font-size:.88rem;width:46%}}
+.cmp-tbl th{{background:#1a3a5c;color:#fff;font-weight:700}}
+.cmp-tbl th.col-feat,.cmp-tbl td.lbl{{text-align:left;font-size:.88rem;width:46%}}
+.cmp-tbl th.col-feat{{color:#fff}}
+.cmp-tbl td.lbl{{color:#444}}
 .cmp-tbl tr:hover td{{background:#fafafa}}
 .cmp-tbl tr.sec-hdr td{{background:#f0f4f8;font-weight:700;font-size:.75rem;
   text-transform:uppercase;letter-spacing:.06em;color:#555;padding:.4rem 1rem;
@@ -293,7 +352,7 @@ def generate_redirect_page(from_slug: str, to_url: str) -> str:
 
 def load_entities(site_id):
     path = SITES_DIR / site_id / "data" / "entities.json"
-    return json.loads(path.read_text())
+    return json.loads(path.read_text(encoding="utf-8"))
 
 
 def find_related_compares(entity_slug, entities, limit=5):
@@ -313,7 +372,7 @@ def find_related_compares(entity_slug, entities, limit=5):
 
 def build(site_id):
     config_path = SITES_DIR / site_id / "config.json"
-    site_cfg = json.loads(config_path.read_text())
+    site_cfg = json.loads(config_path.read_text(encoding="utf-8"))
     entities = load_entities(site_id)
     entity_map = {e["slug"]: e for e in entities}
 

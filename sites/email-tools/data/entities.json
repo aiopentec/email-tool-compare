@@ -23,7 +23,31 @@
     "affiliate_commission": "30% recurring",
     "g2_rating": 4.3,
     "trustpilot_rating": 1.5,
-    "generated": true
+    "generated": true,
+    "free_trial": true,
+    "features": {
+      "email_automation": true,
+      "visual_workflow": false,
+      "landing_pages": true,
+      "crm_builtin": false,
+      "sms_marketing": false,
+      "ab_testing": true,
+      "ecommerce": false,
+      "transactional_email": false,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": true,
+      "live_chat": false,
+      "phone": false
+    },
+    "verdict": "Mailchimp is best for beginners and small businesses.",
+    "free_plan": true,
+    "rating": 4.3,
+    "starting_at": "$13/mo",
+    "affiliate_url": "https://mailchimp.com/"
   },
   {
     "slug": "convertkit",
@@ -49,7 +73,31 @@
     "affiliate_commission": "30% recurring for 24 months",
     "g2_rating": 4.4,
     "trustpilot_rating": 3.2,
-    "generated": true
+    "generated": true,
+    "free_trial": true,
+    "features": {
+      "email_automation": true,
+      "visual_workflow": true,
+      "landing_pages": true,
+      "crm_builtin": false,
+      "sms_marketing": false,
+      "ab_testing": false,
+      "ecommerce": true,
+      "transactional_email": false,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": true,
+      "live_chat": false,
+      "phone": false
+    },
+    "verdict": "ConvertKit is best for creators, bloggers, and course sellers.",
+    "free_plan": true,
+    "rating": 4.4,
+    "starting_at": "$29/mo",
+    "affiliate_url": "https://convertkit.com/"
   },
   {
     "slug": "beehiiv",
@@ -75,7 +123,31 @@
     "affiliate_commission": "50% first year",
     "g2_rating": 4.7,
     "trustpilot_rating": 4.4,
-    "generated": true
+    "generated": true,
+    "free_trial": false,
+    "features": {
+      "email_automation": false,
+      "visual_workflow": false,
+      "landing_pages": false,
+      "crm_builtin": false,
+      "sms_marketing": false,
+      "ab_testing": false,
+      "ecommerce": false,
+      "transactional_email": false,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": false,
+      "live_chat": false,
+      "phone": false
+    },
+    "verdict": "Beehiiv is best for newsletter publishers and media operators.",
+    "free_plan": true,
+    "rating": 4.7,
+    "starting_at": "$39/mo",
+    "affiliate_url": "https://beehiiv.com/"
   },
   {
     "slug": "mailerlite",
@@ -101,7 +173,31 @@
     "affiliate_commission": "30% recurring",
     "g2_rating": 4.6,
     "trustpilot_rating": 4.5,
-    "generated": true
+    "generated": true,
+    "free_trial": true,
+    "features": {
+      "email_automation": true,
+      "visual_workflow": false,
+      "landing_pages": true,
+      "crm_builtin": false,
+      "sms_marketing": false,
+      "ab_testing": false,
+      "ecommerce": true,
+      "transactional_email": false,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": true,
+      "live_chat": false,
+      "phone": false
+    },
+    "verdict": "MailerLite is best for small businesses and freelancers on a budget.",
+    "free_plan": true,
+    "rating": 4.6,
+    "starting_at": "$9/mo",
+    "affiliate_url": "https://www.mailerlite.com/"
   },
   {
     "slug": "activecampaign",
@@ -127,7 +223,31 @@
     "affiliate_commission": "20-30% recurring",
     "g2_rating": 4.5,
     "trustpilot_rating": 4.1,
-    "generated": true
+    "generated": true,
+    "free_trial": true,
+    "features": {
+      "email_automation": true,
+      "visual_workflow": true,
+      "landing_pages": false,
+      "crm_builtin": true,
+      "sms_marketing": true,
+      "ab_testing": false,
+      "ecommerce": false,
+      "transactional_email": false,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": true,
+      "live_chat": true,
+      "phone": true
+    },
+    "verdict": "ActiveCampaign is best for businesses needing advanced automation and CRM.",
+    "free_plan": false,
+    "rating": 4.5,
+    "starting_at": "$15/mo",
+    "affiliate_url": "https://www.activecampaign.com/"
   },
   {
     "slug": "brevo",
@@ -153,7 +273,31 @@
     "affiliate_commission": "5 EUR per free signup + 100 EUR per paid",
     "g2_rating": 4.5,
     "trustpilot_rating": 4.3,
-    "generated": true
+    "generated": true,
+    "free_trial": false,
+    "features": {
+      "email_automation": false,
+      "visual_workflow": false,
+      "landing_pages": false,
+      "crm_builtin": true,
+      "sms_marketing": true,
+      "ab_testing": false,
+      "ecommerce": false,
+      "transactional_email": true,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": false,
+      "live_chat": true,
+      "phone": false
+    },
+    "verdict": "Brevo is best for transactional email and multi-channel marketing.",
+    "free_plan": true,
+    "rating": 4.5,
+    "starting_at": "$25/mo",
+    "affiliate_url": "https://www.brevo.com/"
   },
   {
     "slug": "klaviyo",
@@ -179,7 +323,31 @@
     "affiliate_commission": "none",
     "g2_rating": 4.6,
     "trustpilot_rating": 3.8,
-    "generated": true
+    "generated": true,
+    "free_trial": true,
+    "features": {
+      "email_automation": true,
+      "visual_workflow": true,
+      "landing_pages": false,
+      "crm_builtin": false,
+      "sms_marketing": true,
+      "ab_testing": false,
+      "ecommerce": true,
+      "transactional_email": false,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": true,
+      "live_chat": false,
+      "phone": false
+    },
+    "verdict": "Klaviyo is best for e-commerce brands on Shopify or WooCommerce.",
+    "free_plan": true,
+    "rating": 4.6,
+    "starting_at": "$45/mo",
+    "affiliate_url": "https://www.klaviyo.com/"
   },
   {
     "slug": "getresponse",
@@ -205,7 +373,31 @@
     "affiliate_commission": "33% recurring or $100 one-time",
     "g2_rating": 4.2,
     "trustpilot_rating": 3.7,
-    "generated": true
+    "generated": true,
+    "free_trial": true,
+    "features": {
+      "email_automation": true,
+      "visual_workflow": true,
+      "landing_pages": true,
+      "crm_builtin": false,
+      "sms_marketing": false,
+      "ab_testing": false,
+      "ecommerce": false,
+      "transactional_email": false,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": true,
+      "live_chat": true,
+      "phone": true
+    },
+    "verdict": "GetResponse is best for online course creators and webinar hosts.",
+    "free_plan": true,
+    "rating": 4.2,
+    "starting_at": "$19/mo",
+    "affiliate_url": "https://www.getresponse.com/"
   },
   {
     "slug": "substack",
@@ -231,7 +423,31 @@
     "affiliate_commission": "none",
     "g2_rating": 4.0,
     "trustpilot_rating": 2.9,
-    "generated": true
+    "generated": true,
+    "free_trial": false,
+    "features": {
+      "email_automation": false,
+      "visual_workflow": false,
+      "landing_pages": false,
+      "crm_builtin": false,
+      "sms_marketing": false,
+      "ab_testing": false,
+      "ecommerce": false,
+      "transactional_email": false,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": true,
+      "live_chat": false,
+      "phone": false
+    },
+    "verdict": "Substack is best for writers monetising directly from subscribers.",
+    "free_plan": true,
+    "rating": 4.0,
+    "starting_at": "Free",
+    "affiliate_url": "https://substack.com/"
   },
   {
     "slug": "drip",
@@ -257,7 +473,31 @@
     "affiliate_commission": "15% recurring",
     "g2_rating": 4.4,
     "trustpilot_rating": 3.5,
-    "generated": true
+    "generated": true,
+    "free_trial": false,
+    "features": {
+      "email_automation": true,
+      "visual_workflow": true,
+      "landing_pages": false,
+      "crm_builtin": false,
+      "sms_marketing": true,
+      "ab_testing": false,
+      "ecommerce": true,
+      "transactional_email": false,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": true,
+      "live_chat": false,
+      "phone": false
+    },
+    "verdict": "Drip is best for e-commerce businesses wanting deep store integration.",
+    "free_plan": false,
+    "rating": 4.4,
+    "starting_at": "$39/mo",
+    "affiliate_url": "https://www.drip.com/"
   },
   {
     "slug": "buttondown",
@@ -283,7 +523,31 @@
     "affiliate_commission": "none",
     "g2_rating": 4.8,
     "trustpilot_rating": 4.7,
-    "generated": true
+    "generated": true,
+    "free_trial": true,
+    "features": {
+      "email_automation": true,
+      "visual_workflow": false,
+      "landing_pages": false,
+      "crm_builtin": false,
+      "sms_marketing": false,
+      "ab_testing": false,
+      "ecommerce": false,
+      "transactional_email": false,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": true,
+      "live_chat": false,
+      "phone": false
+    },
+    "verdict": "Buttondown is best for developers and technical writers who prefer markdown.",
+    "free_plan": true,
+    "rating": 4.8,
+    "starting_at": "$9/mo",
+    "affiliate_url": "https://buttondown.com/"
   },
   {
     "slug": "campaign-monitor",
@@ -309,7 +573,31 @@
     "affiliate_commission": "varies",
     "g2_rating": 4.1,
     "trustpilot_rating": 3.2,
-    "generated": true
+    "generated": true,
+    "free_trial": false,
+    "features": {
+      "email_automation": true,
+      "visual_workflow": true,
+      "landing_pages": false,
+      "crm_builtin": false,
+      "sms_marketing": false,
+      "ab_testing": false,
+      "ecommerce": false,
+      "transactional_email": true,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": true,
+      "live_chat": false,
+      "phone": false
+    },
+    "verdict": "Campaign Monitor is best for agencies and teams managing multiple brands.",
+    "free_plan": false,
+    "rating": 4.1,
+    "starting_at": "$11/mo",
+    "affiliate_url": "https://www.campaignmonitor.com/"
   },
   {
     "slug": "moosend",
@@ -335,7 +623,31 @@
     "affiliate_commission": "30% recurring",
     "g2_rating": 4.7,
     "trustpilot_rating": 4.4,
-    "generated": true
+    "generated": true,
+    "free_trial": true,
+    "features": {
+      "email_automation": true,
+      "visual_workflow": false,
+      "landing_pages": true,
+      "crm_builtin": false,
+      "sms_marketing": false,
+      "ab_testing": true,
+      "ecommerce": false,
+      "transactional_email": false,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": true,
+      "live_chat": false,
+      "phone": false
+    },
+    "verdict": "Moosend is best for small businesses wanting unlimited emails at low cost.",
+    "free_plan": true,
+    "rating": 4.7,
+    "starting_at": "$9/mo",
+    "affiliate_url": "https://moosend.com/"
   },
   {
     "slug": "aweber",
@@ -361,7 +673,31 @@
     "affiliate_commission": "30% recurring",
     "g2_rating": 4.2,
     "trustpilot_rating": 4.0,
-    "generated": true
+    "generated": true,
+    "free_trial": true,
+    "features": {
+      "email_automation": true,
+      "visual_workflow": false,
+      "landing_pages": true,
+      "crm_builtin": false,
+      "sms_marketing": false,
+      "ab_testing": false,
+      "ecommerce": false,
+      "transactional_email": false,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": true,
+      "live_chat": true,
+      "phone": true
+    },
+    "verdict": "AWeber is best for bloggers and solopreneurs wanting simplicity in their email marketing.",
+    "free_plan": true,
+    "rating": 4.2,
+    "starting_at": "$15/mo",
+    "affiliate_url": "https://www.aweber.com/"
   },
   {
     "slug": "omnisend",
@@ -387,7 +723,31 @@
     "affiliate_commission": "20% recurring",
     "g2_rating": 4.5,
     "trustpilot_rating": 4.6,
-    "generated": true
+    "generated": true,
+    "free_trial": true,
+    "features": {
+      "email_automation": true,
+      "visual_workflow": true,
+      "landing_pages": false,
+      "crm_builtin": false,
+      "sms_marketing": true,
+      "ab_testing": false,
+      "ecommerce": true,
+      "transactional_email": false,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": true,
+      "live_chat": true,
+      "phone": false
+    },
+    "verdict": "Omnisend is best for e-commerce brands wanting email and SMS marketing together.",
+    "free_plan": true,
+    "rating": 4.5,
+    "starting_at": "$16/mo",
+    "affiliate_url": "https://www.omnisend.com/"
   },
   {
     "slug": "flodesk",
@@ -413,7 +773,31 @@
     "affiliate_commission": "50% recurring",
     "g2_rating": 4.8,
     "trustpilot_rating": 4.7,
-    "generated": true
+    "generated": true,
+    "free_trial": false,
+    "features": {
+      "email_automation": true,
+      "visual_workflow": true,
+      "landing_pages": false,
+      "crm_builtin": false,
+      "sms_marketing": false,
+      "ab_testing": false,
+      "ecommerce": false,
+      "transactional_email": false,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": true,
+      "live_chat": false,
+      "phone": false
+    },
+    "verdict": "Flodesk is best for visual brands, photographers, and designers who need stunning email templates and workflows.",
+    "free_plan": false,
+    "rating": 4.8,
+    "starting_at": "$38/mo",
+    "affiliate_url": "https://flodesk.com/"
   },
   {
     "slug": "constant-contact",
@@ -439,7 +823,31 @@
     "affiliate_commission": "$80 per paid signup",
     "g2_rating": 4.0,
     "trustpilot_rating": 2.8,
-    "generated": true
+    "generated": true,
+    "free_trial": false,
+    "features": {
+      "email_automation": false,
+      "visual_workflow": false,
+      "landing_pages": false,
+      "crm_builtin": false,
+      "sms_marketing": true,
+      "ab_testing": false,
+      "ecommerce": true,
+      "transactional_email": false,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": true,
+      "live_chat": true,
+      "phone": true
+    },
+    "verdict": "Constant Contact is best for nonprofits and local businesses.",
+    "free_plan": false,
+    "rating": 4.0,
+    "starting_at": "$12/mo",
+    "affiliate_url": "https://constant-contact.com/"
   },
   {
     "slug": "sendinblue",
@@ -465,6 +873,30 @@
     "affiliate_commission": "5 EUR free + 100 EUR paid",
     "g2_rating": 4.5,
     "trustpilot_rating": 4.3,
-    "generated": true
+    "generated": true,
+    "free_trial": true,
+    "features": {
+      "email_automation": false,
+      "visual_workflow": false,
+      "landing_pages": false,
+      "crm_builtin": true,
+      "sms_marketing": true,
+      "ab_testing": false,
+      "ecommerce": false,
+      "transactional_email": true,
+      "remove_branding": false,
+      "ai_subject_lines": false,
+      "ai_send_time": false
+    },
+    "support": {
+      "email": true,
+      "live_chat": true,
+      "phone": false
+    },
+    "verdict": "Sendinblue is best for transactional email and SMS campaigns.",
+    "free_plan": true,
+    "rating": 4.5,
+    "starting_at": "$25/mo",
+    "affiliate_url": "https://www.brevo.com/"
   }
 ]
