@@ -34,12 +34,12 @@
   <div class="chips">{% for f in entity.key_features %}<span class="chip">{{ f | title }}</span>{% endfor %}</div>
   {% if page.faq %}
   <h2>Frequently asked questions</h2>
-  <div class="faq" itemscope itemtype="https://schema.org/FAQPage">
+  <div class="faq">
     {% for item in page.faq %}
-    <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-      <h3 itemprop="name">{{ item.q }}</h3>
-      <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
-        <p itemprop="text">{{ item.a }}</p>
+    <div class="faq-item">
+      <h3>{{ item.q }}</h3>
+      <div>
+        <p>{{ item.a }}</p>
       </div>
     </div>
     {% endfor %}
