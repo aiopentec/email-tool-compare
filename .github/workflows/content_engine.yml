@@ -50,7 +50,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          AI_PROVIDER: ${{ secrets.GROQ_API_KEY != '' && 'groq' || 'anthropic' }}
+          AI_PROVIDER: groq
         run: |
           SITE="${{ github.event.inputs.site || matrix.site }}"
           LIMIT="${{ github.event.inputs.limit || '50' }}"
