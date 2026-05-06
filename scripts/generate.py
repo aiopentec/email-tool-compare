@@ -310,6 +310,7 @@ def generate_tool_pages(entities, site_cfg, content_dir, demo, client, limit_rem
         out_path.write_text(json.dumps(content, indent=2, ensure_ascii=False))
         entity["generated"] = True
         print("done")
+        time.sleep(4)  # Gemini free tier: 15 req/min
         generated += 1
     return generated
 
@@ -337,6 +338,7 @@ def generate_compare_pages(entities, site_cfg, content_dir, demo, client, limit_
             content = generate_with_api(client, prompt)
         out_path.write_text(json.dumps(content, indent=2, ensure_ascii=False))
         print("done")
+        time.sleep(4)  # Gemini free tier: 15 req/min
         generated += 1
     return generated
 
@@ -363,6 +365,7 @@ def generate_alternatives_pages(entities, site_cfg, content_dir, demo, client, l
             content = generate_with_api(client, prompt)
         out_path.write_text(json.dumps(content, indent=2, ensure_ascii=False))
         print("done")
+        time.sleep(4)  # Gemini free tier: 15 req/min
         generated += 1
     return generated
 
