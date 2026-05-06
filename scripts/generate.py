@@ -259,7 +259,7 @@ def generate_with_api(client, prompt: str, retries: int = 3) -> dict:
                     "contents": [{"parts": [{"text": prompt}]}],
                     "generationConfig": {"maxOutputTokens": 2048, "temperature": 0.3}
                 }).encode()
-                url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={key}"
+                url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={key}"
                 req = urllib.request.Request(url, data=payload,
                     headers={"Content-Type": "application/json"})
                 with urllib.request.urlopen(req, timeout=30) as r:
