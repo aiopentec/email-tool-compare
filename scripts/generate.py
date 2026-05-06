@@ -280,11 +280,16 @@ def generate_with_api(client, prompt: str, retries: int = 3) -> dict:
                 text = text.rsplit("```", 1)[0]
             return json.loads(text)
 
-        except (json.JSONDecodeError, Exception) as e:
+        except Exception as e:
+            err_str = str(e)
             if attempt == retries - 1:
                 raise
-            print(f"  Retry {attempt + 1}/{retries} after error: {e}")
-            time.sleep(2 ** attempt)
+            if "429" in err_str:
+                print(f"  Rate limit hit — waiting 65s before retry {attempt + 1}/{retries}")
+                time.sleep(65)   # wait for Gemini's 1-min window to reset
+            else:
+                print(f"  Retry {attempt + 1}/{retries} after error: {e}")
+                time.sleep(2 ** attempt)
 
 
 # ── Main pipeline ──────────────────────────────────────────────────────────────
@@ -406,7 +411,7 @@ def main():
             if not os.environ.get("GEMINI_API_KEY"):
                 print("Error: GEMINI_API_KEY not set. Get a free key at aistudio.google.com")
                 sys.exit(1)
-            print(f"  Using provider: Gemini (free tier) — gemini-1.5-flash")
+            print(f"  Using provider: Gemini (free tier) — gemini-2.0-flash")
             client = None  # Gemini uses urllib directly
 
         else:
