@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "flodesk-vs-loops",
+  "title": "Flodesk vs Loops (2025): Which Is Better?",
+  "meta_description": "Flodesk vs Loops: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "Flodesk vs Loops: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Flodesk and Loops comes down to your specific use case. Flodesk is built for visual brands, photographers, and designers, while Loops targets SaaS companies sending product and lifecycle emails.",
+  "quick_verdict": {
+    "winner_overall": "Flodesk",
+    "winner_price": "Flodesk",
+    "winner_features": "Flodesk",
+    "winner_beginners": "Loops",
+    "winner_ecommerce": "Flodesk"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$38/mo",
+      "tool_b": "$49/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "No",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Visual Brands, Photographers, And Designers",
+      "tool_b": "Saas Companies Sending Product And Lifecycle Emails"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "N/A",
+      "tool_b": "1000"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.8",
+      "tool_b": "4.7"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on visual brands, photographers, and designers",
+    "You value stunning templates",
+    "You prefer flat-rate pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on SaaS companies sending product and lifecycle emails",
+    "You value transactional email",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Flodesk better than Loops?",
+      "a": "It depends on your use case. Flodesk wins for visual brands, photographers, and designers, while Loops is stronger for SaaS companies sending product and lifecycle emails."
+    },
+    {
+      "q": "Which is cheaper, Flodesk or Loops?",
+      "a": "Flodesk starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Loops to Flodesk?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

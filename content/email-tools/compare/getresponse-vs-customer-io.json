@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "getresponse-vs-customer-io",
+  "title": "GetResponse vs Customer.io (2025): Which Is Better?",
+  "meta_description": "GetResponse vs Customer.io: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "GetResponse vs Customer.io: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between GetResponse and Customer.io comes down to your specific use case. GetResponse is built for online course creators and webinar hosts, while Customer.io targets product and growth teams sending behaviour-triggered messages.",
+  "quick_verdict": {
+    "winner_overall": "Customer.io",
+    "winner_price": "GetResponse",
+    "winner_features": "Customer.io",
+    "winner_beginners": "GetResponse",
+    "winner_ecommerce": "GetResponse"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$19/mo",
+      "tool_b": "$100/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "No"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Online Course Creators And Webinar Hosts",
+      "tool_b": "Product And Growth Teams Sending Behaviour-Triggered Messages"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "500",
+      "tool_b": "N/A"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.2",
+      "tool_b": "4.4"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on online course creators and webinar hosts",
+    "You value email marketing",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on product and growth teams sending behaviour-triggered messages",
+    "You value behavioural triggers",
+    "You prefer paid pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is GetResponse better than Customer.io?",
+      "a": "It depends on your use case. GetResponse wins for online course creators and webinar hosts, while Customer.io is stronger for product and growth teams sending behaviour-triggered messages."
+    },
+    {
+      "q": "Which is cheaper, GetResponse or Customer.io?",
+      "a": "GetResponse starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Customer.io to GetResponse?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

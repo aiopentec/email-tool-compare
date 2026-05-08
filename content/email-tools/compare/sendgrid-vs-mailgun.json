@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "sendgrid-vs-mailgun",
+  "title": "SendGrid vs Mailgun (2025): Which Is Better?",
+  "meta_description": "SendGrid vs Mailgun: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "SendGrid vs Mailgun: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between SendGrid and Mailgun comes down to your specific use case. SendGrid is built for developers and high-volume senders, while Mailgun targets developers sending transactional and bulk email via API.",
+  "quick_verdict": {
+    "winner_overall": "Mailgun",
+    "winner_price": "Mailgun",
+    "winner_features": "SendGrid",
+    "winner_beginners": "SendGrid",
+    "winner_ecommerce": "SendGrid"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$20/mo",
+      "tool_b": "$15/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Developers And High-Volume Senders",
+      "tool_b": "Developers Sending Transactional And Bulk Email Via Api"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "2000",
+      "tool_b": "100"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.0",
+      "tool_b": "4.3"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on developers and high-volume senders",
+    "You value transactional email",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on developers sending transactional and bulk email via API",
+    "You value email api",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is SendGrid better than Mailgun?",
+      "a": "It depends on your use case. SendGrid wins for developers and high-volume senders, while Mailgun is stronger for developers sending transactional and bulk email via API."
+    },
+    {
+      "q": "Which is cheaper, SendGrid or Mailgun?",
+      "a": "Mailgun starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Mailgun to SendGrid?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

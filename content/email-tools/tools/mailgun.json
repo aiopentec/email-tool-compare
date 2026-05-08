@@ -1,0 +1,40 @@
+{
+  "type": "tool",
+  "slug": "mailgun",
+  "title": "Mailgun Review 2025: Features, Pricing & Honest Verdict",
+  "meta_description": "Is Mailgun worth it in 2025? We break down pricing, features, pros and cons so you can decide.",
+  "h1": "Mailgun Review 2025: Everything You Need to Know",
+  "intro": "Mailgun is email api service built for developers that positions itself for developers sending transactional and bulk email via API. Founded in 2010, it has become one of the most recognised platforms in the email marketing space. In this review we cover what it does well, where it falls short, and who should actually use it.",
+  "verdict": "Mailgun is a solid choice for developers sending transactional and bulk email via API. Its free tier is genuinely useful. The main trade-off is between its particular strengths and the limitations that make alternatives worth considering for some users.",
+  "pros": [
+    "Good fit for developers sending transactional and bulk email via API",
+    "Competitive pricing starting at $15/mo",
+    "Key feature: Email Api",
+    "Free tier available"
+  ],
+  "cons": [
+    "Can get expensive at higher subscriber counts",
+    "Learning curve for advanced automations",
+    "Some features locked to higher tiers"
+  ],
+  "pricing_summary": "Mailgun offers a free plan, with paid plans from $15/month. Pricing typically scales with subscriber count.",
+  "best_for_detail": "Mailgun works best for developers sending transactional and bulk email via API. If you fit that profile, the feature set aligns well.",
+  "faq": [
+    {
+      "q": "Is Mailgun free?",
+      "a": "Yes, Mailgun has a free plan supporting up to 100 subscribers."
+    },
+    {
+      "q": "What is Mailgun best used for?",
+      "a": "Mailgun is best for developers sending transactional and bulk email via API. Its standout features include email api, transactional email, analytics."
+    },
+    {
+      "q": "Is Mailgun good for beginners?",
+      "a": "Mailgun is generally beginner-friendly."
+    },
+    {
+      "q": "Does Mailgun have an affiliate program?",
+      "a": "Yes, Mailgun runs an affiliate program paying flat rate."
+    }
+  ]
+}

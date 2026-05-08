@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "buttondown-vs-benchmark-email",
+  "title": "Buttondown vs Benchmark Email (2025): Which Is Better?",
+  "meta_description": "Buttondown vs Benchmark Email: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "Buttondown vs Benchmark Email: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Buttondown and Benchmark Email comes down to your specific use case. Buttondown is built for developers and technical writers who prefer markdown, while Benchmark Email targets small businesses wanting an easy-to-use email platform.",
+  "quick_verdict": {
+    "winner_overall": "Buttondown",
+    "winner_price": "Buttondown",
+    "winner_features": "Buttondown",
+    "winner_beginners": "Buttondown",
+    "winner_ecommerce": "Buttondown"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$9/mo",
+      "tool_b": "$13/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Developers And Technical Writers Who Prefer Markdown",
+      "tool_b": "Small Businesses Wanting An Easy-To-Use Email Platform"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "100",
+      "tool_b": "500"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.8",
+      "tool_b": "4.2"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on developers and technical writers who prefer markdown",
+    "You value markdown writing",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on small businesses wanting an easy-to-use email platform",
+    "You value drag-drop editor",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Buttondown better than Benchmark Email?",
+      "a": "It depends on your use case. Buttondown wins for developers and technical writers who prefer markdown, while Benchmark Email is stronger for small businesses wanting an easy-to-use email platform."
+    },
+    {
+      "q": "Which is cheaper, Buttondown or Benchmark Email?",
+      "a": "Buttondown starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Benchmark Email to Buttondown?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

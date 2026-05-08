@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "sender-vs-mailgun",
+  "title": "Sender vs Mailgun (2025): Which Is Better?",
+  "meta_description": "Sender vs Mailgun: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "Sender vs Mailgun: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Sender and Mailgun comes down to your specific use case. Sender is built for small businesses wanting a generous free plan, while Mailgun targets developers sending transactional and bulk email via API.",
+  "quick_verdict": {
+    "winner_overall": "Sender",
+    "winner_price": "Sender",
+    "winner_features": "Sender",
+    "winner_beginners": "Sender",
+    "winner_ecommerce": "Sender"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$15/mo",
+      "tool_b": "$15/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Small Businesses Wanting A Generous Free Plan",
+      "tool_b": "Developers Sending Transactional And Bulk Email Via Api"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "2500",
+      "tool_b": "100"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.4",
+      "tool_b": "4.3"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on small businesses wanting a generous free plan",
+    "You value drag-drop editor",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on developers sending transactional and bulk email via API",
+    "You value email api",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Sender better than Mailgun?",
+      "a": "It depends on your use case. Sender wins for small businesses wanting a generous free plan, while Mailgun is stronger for developers sending transactional and bulk email via API."
+    },
+    {
+      "q": "Which is cheaper, Sender or Mailgun?",
+      "a": "Sender starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Mailgun to Sender?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

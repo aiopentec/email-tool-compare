@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "mailchimp-vs-privy",
+  "title": "Mailchimp vs Privy (2025): Which Is Better?",
+  "meta_description": "Mailchimp vs Privy: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "Mailchimp vs Privy: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Mailchimp and Privy comes down to your specific use case. Mailchimp is built for beginners and small businesses, while Privy targets Shopify stores wanting email, SMS, and popups in one tool.",
+  "quick_verdict": {
+    "winner_overall": "Privy",
+    "winner_price": "Mailchimp",
+    "winner_features": "Mailchimp",
+    "winner_beginners": "Mailchimp",
+    "winner_ecommerce": "Mailchimp"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$13/mo",
+      "tool_b": "$30/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Beginners And Small Businesses",
+      "tool_b": "Shopify Stores Wanting Email, Sms, And Popups In One Tool"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "500",
+      "tool_b": "100"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.3",
+      "tool_b": "4.6"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on beginners and small businesses",
+    "You value drag-drop editor",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on Shopify stores wanting email, SMS, and popups in one tool",
+    "You value popups",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Mailchimp better than Privy?",
+      "a": "It depends on your use case. Mailchimp wins for beginners and small businesses, while Privy is stronger for Shopify stores wanting email, SMS, and popups in one tool."
+    },
+    {
+      "q": "Which is cheaper, Mailchimp or Privy?",
+      "a": "Mailchimp starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Privy to Mailchimp?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "buttondown-vs-zoho-campaigns",
+  "title": "Buttondown vs Zoho Campaigns (2025): Which Is Better?",
+  "meta_description": "Buttondown vs Zoho Campaigns: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "Buttondown vs Zoho Campaigns: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Buttondown and Zoho Campaigns comes down to your specific use case. Buttondown is built for developers and technical writers who prefer markdown, while Zoho Campaigns targets Zoho users and budget-conscious businesses.",
+  "quick_verdict": {
+    "winner_overall": "Buttondown",
+    "winner_price": "Zoho Campaigns",
+    "winner_features": "Buttondown",
+    "winner_beginners": "Buttondown",
+    "winner_ecommerce": "Buttondown"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$9/mo",
+      "tool_b": "$4/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Developers And Technical Writers Who Prefer Markdown",
+      "tool_b": "Zoho Users And Budget-Conscious Businesses"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "100",
+      "tool_b": "2000"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.8",
+      "tool_b": "4.3"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on developers and technical writers who prefer markdown",
+    "You value markdown writing",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on Zoho users and budget-conscious businesses",
+    "You value drag-drop editor",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Buttondown better than Zoho Campaigns?",
+      "a": "It depends on your use case. Buttondown wins for developers and technical writers who prefer markdown, while Zoho Campaigns is stronger for Zoho users and budget-conscious businesses."
+    },
+    {
+      "q": "Which is cheaper, Buttondown or Zoho Campaigns?",
+      "a": "Zoho Campaigns starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Zoho Campaigns to Buttondown?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

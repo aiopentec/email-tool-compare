@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "customer-io-vs-mailgun",
+  "title": "Customer.io vs Mailgun (2025): Which Is Better?",
+  "meta_description": "Customer.io vs Mailgun: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "Customer.io vs Mailgun: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Customer.io and Mailgun comes down to your specific use case. Customer.io is built for product and growth teams sending behaviour-triggered messages, while Mailgun targets developers sending transactional and bulk email via API.",
+  "quick_verdict": {
+    "winner_overall": "Customer.io",
+    "winner_price": "Mailgun",
+    "winner_features": "Customer.io",
+    "winner_beginners": "Mailgun",
+    "winner_ecommerce": "Customer.io"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$100/mo",
+      "tool_b": "$15/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "No",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Product And Growth Teams Sending Behaviour-Triggered Messages",
+      "tool_b": "Developers Sending Transactional And Bulk Email Via Api"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "N/A",
+      "tool_b": "100"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.4",
+      "tool_b": "4.3"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on product and growth teams sending behaviour-triggered messages",
+    "You value behavioural triggers",
+    "You prefer paid pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on developers sending transactional and bulk email via API",
+    "You value email api",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Customer.io better than Mailgun?",
+      "a": "It depends on your use case. Customer.io wins for product and growth teams sending behaviour-triggered messages, while Mailgun is stronger for developers sending transactional and bulk email via API."
+    },
+    {
+      "q": "Which is cheaper, Customer.io or Mailgun?",
+      "a": "Mailgun starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Mailgun to Customer.io?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

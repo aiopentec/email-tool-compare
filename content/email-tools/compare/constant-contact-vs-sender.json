@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "constant-contact-vs-sender",
+  "title": "Constant Contact vs Sender (2025): Which Is Better?",
+  "meta_description": "Constant Contact vs Sender: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "Constant Contact vs Sender: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Constant Contact and Sender comes down to your specific use case. Constant Contact is built for nonprofits and local businesses, while Sender targets small businesses wanting a generous free plan.",
+  "quick_verdict": {
+    "winner_overall": "Sender",
+    "winner_price": "Constant Contact",
+    "winner_features": "Constant Contact",
+    "winner_beginners": "Sender",
+    "winner_ecommerce": "Constant Contact"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$12/mo",
+      "tool_b": "$15/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "No",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Nonprofits And Local Businesses",
+      "tool_b": "Small Businesses Wanting A Generous Free Plan"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "N/A",
+      "tool_b": "2500"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.0",
+      "tool_b": "4.4"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on nonprofits and local businesses",
+    "You value event management",
+    "You prefer paid pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on small businesses wanting a generous free plan",
+    "You value drag-drop editor",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Constant Contact better than Sender?",
+      "a": "It depends on your use case. Constant Contact wins for nonprofits and local businesses, while Sender is stronger for small businesses wanting a generous free plan."
+    },
+    {
+      "q": "Which is cheaper, Constant Contact or Sender?",
+      "a": "Constant Contact starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Sender to Constant Contact?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

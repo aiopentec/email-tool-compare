@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "emailoctopus-vs-mailgun",
+  "title": "EmailOctopus vs Mailgun (2025): Which Is Better?",
+  "meta_description": "EmailOctopus vs Mailgun: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "EmailOctopus vs Mailgun: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between EmailOctopus and Mailgun comes down to your specific use case. EmailOctopus is built for budget-conscious creators and small businesses, while Mailgun targets developers sending transactional and bulk email via API.",
+  "quick_verdict": {
+    "winner_overall": "Mailgun",
+    "winner_price": "EmailOctopus",
+    "winner_features": "EmailOctopus",
+    "winner_beginners": "EmailOctopus",
+    "winner_ecommerce": "EmailOctopus"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$9/mo",
+      "tool_b": "$15/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Budget-Conscious Creators And Small Businesses",
+      "tool_b": "Developers Sending Transactional And Bulk Email Via Api"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "2500",
+      "tool_b": "100"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.2",
+      "tool_b": "4.3"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on budget-conscious creators and small businesses",
+    "You value drag-drop editor",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on developers sending transactional and bulk email via API",
+    "You value email api",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is EmailOctopus better than Mailgun?",
+      "a": "It depends on your use case. EmailOctopus wins for budget-conscious creators and small businesses, while Mailgun is stronger for developers sending transactional and bulk email via API."
+    },
+    {
+      "q": "Which is cheaper, EmailOctopus or Mailgun?",
+      "a": "EmailOctopus starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Mailgun to EmailOctopus?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

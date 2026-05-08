@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "getresponse-vs-privy",
+  "title": "GetResponse vs Privy (2025): Which Is Better?",
+  "meta_description": "GetResponse vs Privy: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "GetResponse vs Privy: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between GetResponse and Privy comes down to your specific use case. GetResponse is built for online course creators and webinar hosts, while Privy targets Shopify stores wanting email, SMS, and popups in one tool.",
+  "quick_verdict": {
+    "winner_overall": "Privy",
+    "winner_price": "GetResponse",
+    "winner_features": "GetResponse",
+    "winner_beginners": "GetResponse",
+    "winner_ecommerce": "GetResponse"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$19/mo",
+      "tool_b": "$30/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Online Course Creators And Webinar Hosts",
+      "tool_b": "Shopify Stores Wanting Email, Sms, And Popups In One Tool"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "500",
+      "tool_b": "100"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.2",
+      "tool_b": "4.6"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on online course creators and webinar hosts",
+    "You value email marketing",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on Shopify stores wanting email, SMS, and popups in one tool",
+    "You value popups",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is GetResponse better than Privy?",
+      "a": "It depends on your use case. GetResponse wins for online course creators and webinar hosts, while Privy is stronger for Shopify stores wanting email, SMS, and popups in one tool."
+    },
+    {
+      "q": "Which is cheaper, GetResponse or Privy?",
+      "a": "GetResponse starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Privy to GetResponse?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

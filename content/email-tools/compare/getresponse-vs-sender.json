@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "getresponse-vs-sender",
+  "title": "GetResponse vs Sender (2025): Which Is Better?",
+  "meta_description": "GetResponse vs Sender: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "GetResponse vs Sender: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between GetResponse and Sender comes down to your specific use case. GetResponse is built for online course creators and webinar hosts, while Sender targets small businesses wanting a generous free plan.",
+  "quick_verdict": {
+    "winner_overall": "Sender",
+    "winner_price": "Sender",
+    "winner_features": "GetResponse",
+    "winner_beginners": "GetResponse",
+    "winner_ecommerce": "GetResponse"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$19/mo",
+      "tool_b": "$15/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Online Course Creators And Webinar Hosts",
+      "tool_b": "Small Businesses Wanting A Generous Free Plan"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "500",
+      "tool_b": "2500"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.2",
+      "tool_b": "4.4"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on online course creators and webinar hosts",
+    "You value email marketing",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on small businesses wanting a generous free plan",
+    "You value drag-drop editor",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is GetResponse better than Sender?",
+      "a": "It depends on your use case. GetResponse wins for online course creators and webinar hosts, while Sender is stronger for small businesses wanting a generous free plan."
+    },
+    {
+      "q": "Which is cheaper, GetResponse or Sender?",
+      "a": "Sender starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Sender to GetResponse?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

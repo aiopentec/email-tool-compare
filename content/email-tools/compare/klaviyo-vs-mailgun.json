@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "klaviyo-vs-mailgun",
+  "title": "Klaviyo vs Mailgun (2025): Which Is Better?",
+  "meta_description": "Klaviyo vs Mailgun: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "Klaviyo vs Mailgun: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Klaviyo and Mailgun comes down to your specific use case. Klaviyo is built for e-commerce brands on Shopify or WooCommerce, while Mailgun targets developers sending transactional and bulk email via API.",
+  "quick_verdict": {
+    "winner_overall": "Klaviyo",
+    "winner_price": "Mailgun",
+    "winner_features": "Klaviyo",
+    "winner_beginners": "Klaviyo",
+    "winner_ecommerce": "Klaviyo"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$45/mo",
+      "tool_b": "$15/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "E-Commerce Brands On Shopify Or Woocommerce",
+      "tool_b": "Developers Sending Transactional And Bulk Email Via Api"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "500",
+      "tool_b": "100"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.6",
+      "tool_b": "4.3"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on e-commerce brands on Shopify or WooCommerce",
+    "You value e-commerce integrations",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on developers sending transactional and bulk email via API",
+    "You value email api",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Klaviyo better than Mailgun?",
+      "a": "It depends on your use case. Klaviyo wins for e-commerce brands on Shopify or WooCommerce, while Mailgun is stronger for developers sending transactional and bulk email via API."
+    },
+    {
+      "q": "Which is cheaper, Klaviyo or Mailgun?",
+      "a": "Mailgun starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Mailgun to Klaviyo?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

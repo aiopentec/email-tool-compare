@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "loops-vs-customer-io",
+  "title": "Loops vs Customer.io (2025): Which Is Better?",
+  "meta_description": "Loops vs Customer.io: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "Loops vs Customer.io: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Loops and Customer.io comes down to your specific use case. Loops is built for SaaS companies sending product and lifecycle emails, while Customer.io targets product and growth teams sending behaviour-triggered messages.",
+  "quick_verdict": {
+    "winner_overall": "Loops",
+    "winner_price": "Loops",
+    "winner_features": "Customer.io",
+    "winner_beginners": "Loops",
+    "winner_ecommerce": "Loops"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$49/mo",
+      "tool_b": "$100/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "No"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Saas Companies Sending Product And Lifecycle Emails",
+      "tool_b": "Product And Growth Teams Sending Behaviour-Triggered Messages"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "1000",
+      "tool_b": "N/A"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.7",
+      "tool_b": "4.4"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on SaaS companies sending product and lifecycle emails",
+    "You value transactional email",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on product and growth teams sending behaviour-triggered messages",
+    "You value behavioural triggers",
+    "You prefer paid pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Loops better than Customer.io?",
+      "a": "It depends on your use case. Loops wins for SaaS companies sending product and lifecycle emails, while Customer.io is stronger for product and growth teams sending behaviour-triggered messages."
+    },
+    {
+      "q": "Which is cheaper, Loops or Customer.io?",
+      "a": "Loops starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Customer.io to Loops?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

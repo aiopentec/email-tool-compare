@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "buttondown-vs-postmark",
+  "title": "Buttondown vs Postmark (2025): Which Is Better?",
+  "meta_description": "Buttondown vs Postmark: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "Buttondown vs Postmark: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Buttondown and Postmark comes down to your specific use case. Buttondown is built for developers and technical writers who prefer markdown, while Postmark targets developers who need fast, reliable transactional email.",
+  "quick_verdict": {
+    "winner_overall": "Buttondown",
+    "winner_price": "Buttondown",
+    "winner_features": "Buttondown",
+    "winner_beginners": "Buttondown",
+    "winner_ecommerce": "Buttondown"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$9/mo",
+      "tool_b": "$15/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "No"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Developers And Technical Writers Who Prefer Markdown",
+      "tool_b": "Developers Who Need Fast, Reliable Transactional Email"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "100",
+      "tool_b": "N/A"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.8",
+      "tool_b": "4.6"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on developers and technical writers who prefer markdown",
+    "You value markdown writing",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on developers who need fast, reliable transactional email",
+    "You value transactional email",
+    "You prefer paid pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Buttondown better than Postmark?",
+      "a": "It depends on your use case. Buttondown wins for developers and technical writers who prefer markdown, while Postmark is stronger for developers who need fast, reliable transactional email."
+    },
+    {
+      "q": "Which is cheaper, Buttondown or Postmark?",
+      "a": "Buttondown starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Postmark to Buttondown?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

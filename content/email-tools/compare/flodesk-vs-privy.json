@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "flodesk-vs-privy",
+  "title": "Flodesk vs Privy (2025): Which Is Better?",
+  "meta_description": "Flodesk vs Privy: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "Flodesk vs Privy: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Flodesk and Privy comes down to your specific use case. Flodesk is built for visual brands, photographers, and designers, while Privy targets Shopify stores wanting email, SMS, and popups in one tool.",
+  "quick_verdict": {
+    "winner_overall": "Flodesk",
+    "winner_price": "Privy",
+    "winner_features": "Flodesk",
+    "winner_beginners": "Privy",
+    "winner_ecommerce": "Flodesk"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$38/mo",
+      "tool_b": "$30/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "No",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Visual Brands, Photographers, And Designers",
+      "tool_b": "Shopify Stores Wanting Email, Sms, And Popups In One Tool"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "N/A",
+      "tool_b": "100"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.8",
+      "tool_b": "4.6"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on visual brands, photographers, and designers",
+    "You value stunning templates",
+    "You prefer flat-rate pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on Shopify stores wanting email, SMS, and popups in one tool",
+    "You value popups",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Flodesk better than Privy?",
+      "a": "It depends on your use case. Flodesk wins for visual brands, photographers, and designers, while Privy is stronger for Shopify stores wanting email, SMS, and popups in one tool."
+    },
+    {
+      "q": "Which is cheaper, Flodesk or Privy?",
+      "a": "Privy starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Privy to Flodesk?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

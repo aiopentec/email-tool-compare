@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "loops-vs-privy",
+  "title": "Loops vs Privy (2025): Which Is Better?",
+  "meta_description": "Loops vs Privy: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "Loops vs Privy: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Loops and Privy comes down to your specific use case. Loops is built for SaaS companies sending product and lifecycle emails, while Privy targets Shopify stores wanting email, SMS, and popups in one tool.",
+  "quick_verdict": {
+    "winner_overall": "Loops",
+    "winner_price": "Privy",
+    "winner_features": "Loops",
+    "winner_beginners": "Loops",
+    "winner_ecommerce": "Loops"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$49/mo",
+      "tool_b": "$30/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Saas Companies Sending Product And Lifecycle Emails",
+      "tool_b": "Shopify Stores Wanting Email, Sms, And Popups In One Tool"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "1000",
+      "tool_b": "100"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.7",
+      "tool_b": "4.6"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on SaaS companies sending product and lifecycle emails",
+    "You value transactional email",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on Shopify stores wanting email, SMS, and popups in one tool",
+    "You value popups",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Loops better than Privy?",
+      "a": "It depends on your use case. Loops wins for SaaS companies sending product and lifecycle emails, while Privy is stronger for Shopify stores wanting email, SMS, and popups in one tool."
+    },
+    {
+      "q": "Which is cheaper, Loops or Privy?",
+      "a": "Privy starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Privy to Loops?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "mailerlite-vs-mailgun",
+  "title": "MailerLite vs Mailgun (2025): Which Is Better?",
+  "meta_description": "MailerLite vs Mailgun: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "MailerLite vs Mailgun: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between MailerLite and Mailgun comes down to your specific use case. MailerLite is built for small businesses and freelancers on a budget, while Mailgun targets developers sending transactional and bulk email via API.",
+  "quick_verdict": {
+    "winner_overall": "MailerLite",
+    "winner_price": "MailerLite",
+    "winner_features": "MailerLite",
+    "winner_beginners": "MailerLite",
+    "winner_ecommerce": "MailerLite"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$9/mo",
+      "tool_b": "$15/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Small Businesses And Freelancers On A Budget",
+      "tool_b": "Developers Sending Transactional And Bulk Email Via Api"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "1000",
+      "tool_b": "100"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.6",
+      "tool_b": "4.3"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on small businesses and freelancers on a budget",
+    "You value drag-drop editor",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on developers sending transactional and bulk email via API",
+    "You value email api",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is MailerLite better than Mailgun?",
+      "a": "It depends on your use case. MailerLite wins for small businesses and freelancers on a budget, while Mailgun is stronger for developers sending transactional and bulk email via API."
+    },
+    {
+      "q": "Which is cheaper, MailerLite or Mailgun?",
+      "a": "MailerLite starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Mailgun to MailerLite?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "activecampaign-vs-privy",
+  "title": "ActiveCampaign vs Privy (2025): Which Is Better?",
+  "meta_description": "ActiveCampaign vs Privy: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "ActiveCampaign vs Privy: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between ActiveCampaign and Privy comes down to your specific use case. ActiveCampaign is built for businesses needing advanced automation and CRM, while Privy targets Shopify stores wanting email, SMS, and popups in one tool.",
+  "quick_verdict": {
+    "winner_overall": "Privy",
+    "winner_price": "ActiveCampaign",
+    "winner_features": "ActiveCampaign",
+    "winner_beginners": "Privy",
+    "winner_ecommerce": "ActiveCampaign"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$15/mo",
+      "tool_b": "$30/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "No",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Businesses Needing Advanced Automation And Crm",
+      "tool_b": "Shopify Stores Wanting Email, Sms, And Popups In One Tool"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "N/A",
+      "tool_b": "100"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.5",
+      "tool_b": "4.6"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on businesses needing advanced automation and CRM",
+    "You value advanced automation",
+    "You prefer paid pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on Shopify stores wanting email, SMS, and popups in one tool",
+    "You value popups",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is ActiveCampaign better than Privy?",
+      "a": "It depends on your use case. ActiveCampaign wins for businesses needing advanced automation and CRM, while Privy is stronger for Shopify stores wanting email, SMS, and popups in one tool."
+    },
+    {
+      "q": "Which is cheaper, ActiveCampaign or Privy?",
+      "a": "ActiveCampaign starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Privy to ActiveCampaign?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

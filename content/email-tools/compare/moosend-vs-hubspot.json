@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "moosend-vs-hubspot",
+  "title": "Moosend vs HubSpot (2025): Which Is Better?",
+  "meta_description": "Moosend vs HubSpot: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "Moosend vs HubSpot: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Moosend and HubSpot comes down to your specific use case. Moosend is built for small businesses wanting unlimited emails at low cost, while HubSpot targets businesses that want email and CRM in one platform.",
+  "quick_verdict": {
+    "winner_overall": "Moosend",
+    "winner_price": "Moosend",
+    "winner_features": "HubSpot",
+    "winner_beginners": "Moosend",
+    "winner_ecommerce": "Moosend"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$9/mo",
+      "tool_b": "$15/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Small Businesses Wanting Unlimited Emails At Low Cost",
+      "tool_b": "Businesses That Want Email And Crm In One Platform"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "1000",
+      "tool_b": "1000"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.7",
+      "tool_b": "4.4"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on small businesses wanting unlimited emails at low cost",
+    "You value unlimited emails",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on businesses that want email and CRM in one platform",
+    "You value drag-drop editor",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Moosend better than HubSpot?",
+      "a": "It depends on your use case. Moosend wins for small businesses wanting unlimited emails at low cost, while HubSpot is stronger for businesses that want email and CRM in one platform."
+    },
+    {
+      "q": "Which is cheaper, Moosend or HubSpot?",
+      "a": "Moosend starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from HubSpot to Moosend?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

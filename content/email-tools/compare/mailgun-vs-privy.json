@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "mailgun-vs-privy",
+  "title": "Mailgun vs Privy (2025): Which Is Better?",
+  "meta_description": "Mailgun vs Privy: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "Mailgun vs Privy: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Mailgun and Privy comes down to your specific use case. Mailgun is built for developers sending transactional and bulk email via API, while Privy targets Shopify stores wanting email, SMS, and popups in one tool.",
+  "quick_verdict": {
+    "winner_overall": "Privy",
+    "winner_price": "Mailgun",
+    "winner_features": "Mailgun",
+    "winner_beginners": "Mailgun",
+    "winner_ecommerce": "Mailgun"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$15/mo",
+      "tool_b": "$30/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Developers Sending Transactional And Bulk Email Via Api",
+      "tool_b": "Shopify Stores Wanting Email, Sms, And Popups In One Tool"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "100",
+      "tool_b": "100"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.3",
+      "tool_b": "4.6"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on developers sending transactional and bulk email via API",
+    "You value email api",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on Shopify stores wanting email, SMS, and popups in one tool",
+    "You value popups",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Mailgun better than Privy?",
+      "a": "It depends on your use case. Mailgun wins for developers sending transactional and bulk email via API, while Privy is stronger for Shopify stores wanting email, SMS, and popups in one tool."
+    },
+    {
+      "q": "Which is cheaper, Mailgun or Privy?",
+      "a": "Mailgun starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Privy to Mailgun?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

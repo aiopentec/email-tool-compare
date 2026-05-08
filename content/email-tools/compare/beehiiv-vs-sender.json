@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "beehiiv-vs-sender",
+  "title": "Beehiiv vs Sender (2025): Which Is Better?",
+  "meta_description": "Beehiiv vs Sender: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "Beehiiv vs Sender: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Beehiiv and Sender comes down to your specific use case. Beehiiv is built for newsletter publishers and media operators, while Sender targets small businesses wanting a generous free plan.",
+  "quick_verdict": {
+    "winner_overall": "Beehiiv",
+    "winner_price": "Sender",
+    "winner_features": "Beehiiv",
+    "winner_beginners": "Beehiiv",
+    "winner_ecommerce": "Beehiiv"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$39/mo",
+      "tool_b": "$15/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Newsletter Publishers And Media Operators",
+      "tool_b": "Small Businesses Wanting A Generous Free Plan"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "2500",
+      "tool_b": "2500"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.7",
+      "tool_b": "4.4"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on newsletter publishers and media operators",
+    "You value newsletter monetisation",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on small businesses wanting a generous free plan",
+    "You value drag-drop editor",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Beehiiv better than Sender?",
+      "a": "It depends on your use case. Beehiiv wins for newsletter publishers and media operators, while Sender is stronger for small businesses wanting a generous free plan."
+    },
+    {
+      "q": "Which is cheaper, Beehiiv or Sender?",
+      "a": "Sender starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Sender to Beehiiv?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

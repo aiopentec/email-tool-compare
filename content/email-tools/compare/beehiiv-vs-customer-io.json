@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "beehiiv-vs-customer-io",
+  "title": "Beehiiv vs Customer.io (2025): Which Is Better?",
+  "meta_description": "Beehiiv vs Customer.io: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "Beehiiv vs Customer.io: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Beehiiv and Customer.io comes down to your specific use case. Beehiiv is built for newsletter publishers and media operators, while Customer.io targets product and growth teams sending behaviour-triggered messages.",
+  "quick_verdict": {
+    "winner_overall": "Beehiiv",
+    "winner_price": "Beehiiv",
+    "winner_features": "Customer.io",
+    "winner_beginners": "Beehiiv",
+    "winner_ecommerce": "Beehiiv"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$39/mo",
+      "tool_b": "$100/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "No"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "Newsletter Publishers And Media Operators",
+      "tool_b": "Product And Growth Teams Sending Behaviour-Triggered Messages"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "2500",
+      "tool_b": "N/A"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.7",
+      "tool_b": "4.4"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on newsletter publishers and media operators",
+    "You value newsletter monetisation",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on product and growth teams sending behaviour-triggered messages",
+    "You value behavioural triggers",
+    "You prefer paid pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Beehiiv better than Customer.io?",
+      "a": "It depends on your use case. Beehiiv wins for newsletter publishers and media operators, while Customer.io is stronger for product and growth teams sending behaviour-triggered messages."
+    },
+    {
+      "q": "Which is cheaper, Beehiiv or Customer.io?",
+      "a": "Beehiiv starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Customer.io to Beehiiv?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}

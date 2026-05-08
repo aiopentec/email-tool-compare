@@ -1,0 +1,66 @@
+{
+  "type": "compare",
+  "slug": "klaviyo-vs-loops",
+  "title": "Klaviyo vs Loops (2025): Which Is Better?",
+  "meta_description": "Klaviyo vs Loops: compare pricing, features, and real use cases to find the right email tool.",
+  "h1": "Klaviyo vs Loops: Side-by-Side Comparison (2025)",
+  "intro": "Choosing between Klaviyo and Loops comes down to your specific use case. Klaviyo is built for e-commerce brands on Shopify or WooCommerce, while Loops targets SaaS companies sending product and lifecycle emails.",
+  "quick_verdict": {
+    "winner_overall": "Loops",
+    "winner_price": "Klaviyo",
+    "winner_features": "Klaviyo",
+    "winner_beginners": "Klaviyo",
+    "winner_ecommerce": "Klaviyo"
+  },
+  "comparison_table": [
+    {
+      "feature": "Starting price",
+      "tool_a": "$45/mo",
+      "tool_b": "$49/mo"
+    },
+    {
+      "feature": "Free plan",
+      "tool_a": "Yes",
+      "tool_b": "Yes"
+    },
+    {
+      "feature": "Best for",
+      "tool_a": "E-Commerce Brands On Shopify Or Woocommerce",
+      "tool_b": "Saas Companies Sending Product And Lifecycle Emails"
+    },
+    {
+      "feature": "Free subscriber limit",
+      "tool_a": "500",
+      "tool_b": "1000"
+    },
+    {
+      "feature": "G2 rating",
+      "tool_a": "4.6",
+      "tool_b": "4.7"
+    }
+  ],
+  "choose_a_if": [
+    "You are primarily focused on e-commerce brands on Shopify or WooCommerce",
+    "You value e-commerce integrations",
+    "You prefer freemium pricing"
+  ],
+  "choose_b_if": [
+    "You are primarily focused on SaaS companies sending product and lifecycle emails",
+    "You value transactional email",
+    "You prefer freemium pricing"
+  ],
+  "faq": [
+    {
+      "q": "Is Klaviyo better than Loops?",
+      "a": "It depends on your use case. Klaviyo wins for e-commerce brands on Shopify or WooCommerce, while Loops is stronger for SaaS companies sending product and lifecycle emails."
+    },
+    {
+      "q": "Which is cheaper, Klaviyo or Loops?",
+      "a": "Klaviyo starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."
+    },
+    {
+      "q": "Can I switch from Loops to Klaviyo?",
+      "a": "Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."
+    }
+  ]
+}
