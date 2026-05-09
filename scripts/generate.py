@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
 generate.py — AI content generation pipeline
-Reads entities.json, calls Claude API for each unprocessed entity,
+Reads entities.json, calls Gemini API for each unprocessed entity,
 writes structured JSON content files ready for static site build.
 
 Usage:
   python scripts/generate.py --site email-tools --limit 50
-  python scripts/generate.py --site email-tools --limit 10 --demo   # no API calls
-  python scripts/generate.py --site email-tools --type compare       # only compare pages
+  python scripts/generate.py --site email-tools --limit 10 --demo
+  python scripts/generate.py --site email-tools --type compare
+  python scripts/generate.py --site email-tools --batch-index 1 --batch-total 6
 """
 
 import argparse
@@ -18,7 +19,6 @@ import time
 import itertools
 import random
 
-# ── Paths ──────────────────────────────────────────────────────────────────────
 ROOT = pathlib.Path(__file__).parent.parent
 SITES_DIR = ROOT / "sites"
 CONTENT_DIR = ROOT / "content"
@@ -131,7 +131,7 @@ Return ONLY valid JSON (no markdown, no preamble) with this exact schema:
 }}"""
 
 
-# ── Demo content generator (no API needed) ────────────────────────────────────
+# ── Demo content generator ────────────────────────────────────────────────────
 
 def demo_tool_content(entity: dict) -> dict:
     name = entity["name"]
@@ -146,12 +146,12 @@ def demo_tool_content(entity: dict) -> dict:
         "pros": [f"Good fit for {entity['best_for']}", f"Competitive pricing starting at ${entity['paid_from_usd']}/mo", f"Key feature: {entity['key_features'][0].title()}", f"{'Free tier available' if entity['free_tier'] else 'Mature, well-supported platform'}"],
         "cons": ["Can get expensive at higher subscriber counts", "Learning curve for advanced automations", "Some features locked to higher tiers"],
         "pricing_summary": f"{name} {'offers a free plan' if entity['free_tier'] else 'starts at $' + str(entity['starting_price_usd']) + '/month'}, with paid plans from ${entity['paid_from_usd']}/month. Pricing typically scales with subscriber count.",
-        "best_for_detail": f"{name} works best for {entity['best_for']}. If you fit that profile, the feature set aligns well. If you need something different, check the alternatives section.",
+        "best_for_detail": f"{name} works best for {entity['best_for']}. If you fit that profile, the feature set aligns well.",
         "faq": [
-            {"q": f"Is {name} free?", "a": f"{'Yes, ' + name + ' has a free plan supporting up to ' + str(entity['subscribers_limit_free']) + ' subscribers.' if entity['free_tier'] else name + ' does not offer a free plan. Paid plans start at $' + str(entity['paid_from_usd']) + '/month.'} This makes it {'accessible for new senders testing the platform' if entity['free_tier'] else 'more suited to established senders with a budget'}."},
-            {"q": f"What is {name} best used for?", "a": f"{name} is best for {entity['best_for']}. Its standout features include {', '.join(entity['key_features'][:3])}, which suit this use case well."},
-            {"q": f"Is {name} good for beginners?", "a": f"{name} is {'generally beginner-friendly' if entity['pricing_model'] == 'freemium' else 'aimed at users with some email marketing experience'}. The interface is straightforward for basic campaigns, though advanced automation features have a learning curve."},
-            {"q": f"Does {name} have an affiliate program?", "a": f"{'Yes, ' + name + ' runs an affiliate program paying ' + entity['affiliate_commission'] + '.' if entity['affiliate_program'] else name + ' does not currently offer an affiliate program.'} This is worth considering if you plan to recommend the platform to your audience."}
+            {"q": f"Is {name} free?", "a": f"{'Yes, ' + name + ' has a free plan supporting up to ' + str(entity['subscribers_limit_free']) + ' subscribers.' if entity['free_tier'] else name + ' does not offer a free plan. Paid plans start at $' + str(entity['paid_from_usd']) + '/month.'}"},
+            {"q": f"What is {name} best used for?", "a": f"{name} is best for {entity['best_for']}. Its standout features include {', '.join(entity['key_features'][:3])}."},
+            {"q": f"Is {name} good for beginners?", "a": f"{name} is {'generally beginner-friendly' if entity['pricing_model'] == 'freemium' else 'aimed at users with some email marketing experience'}."},
+            {"q": f"Does {name} have an affiliate program?", "a": f"{'Yes, ' + name + ' runs an affiliate program paying ' + str(entity['affiliate_commission']) + '.' if entity['affiliate_program'] else name + ' does not currently offer an affiliate program.'}"}
         ]
     }
 
@@ -164,12 +164,11 @@ def demo_compare_content(entity_a: dict, entity_b: dict) -> dict:
         "type": "compare",
         "slug": f"{entity_a['slug']}-vs-{entity_b['slug']}",
         "title": f"{a} vs {b} (2025): Which Is Better?",
-        "meta_description": f"{a} vs {b}: compare pricing, features, and real use cases to find the right email tool for your needs.",
+        "meta_description": f"{a} vs {b}: compare pricing, features, and real use cases to find the right email tool.",
         "h1": f"{a} vs {b}: Side-by-Side Comparison (2025)",
-        "intro": f"Choosing between {a} and {b} comes down to your specific use case. Both are legitimate email marketing platforms, but they serve different audiences. {a} is built for {entity_a['best_for']}, while {b} targets {entity_b['best_for']}. This comparison covers the key differences so you can decide quickly.",
+        "intro": f"Choosing between {a} and {b} comes down to your specific use case. {a} is built for {entity_a['best_for']}, while {b} targets {entity_b['best_for']}.",
         "quick_verdict": {
-            "winner_overall": winner,
-            "winner_price": cheaper,
+            "winner_overall": winner, "winner_price": cheaper,
             "winner_features": a if len(entity_a["key_features"]) >= len(entity_b["key_features"]) else b,
             "winner_beginners": a if entity_a["free_tier"] else b,
             "winner_ecommerce": b if "e-commerce" in " ".join(entity_b["key_features"]).lower() else a
@@ -184,9 +183,9 @@ def demo_compare_content(entity_a: dict, entity_b: dict) -> dict:
         "choose_a_if": [f"You are primarily focused on {entity_a['best_for']}", f"You value {entity_a['key_features'][0]}", f"You prefer {entity_a['pricing_model']} pricing"],
         "choose_b_if": [f"You are primarily focused on {entity_b['best_for']}", f"You value {entity_b['key_features'][0]}", f"You prefer {entity_b['pricing_model']} pricing"],
         "faq": [
-            {"q": f"Is {a} better than {b}?", "a": f"It depends on your use case. {a} wins for {entity_a['best_for']}, while {b} is stronger for {entity_b['best_for']}. Neither is objectively better — the right choice depends on your specific needs."},
-            {"q": f"Which is cheaper, {a} or {b}?", "a": f"{cheaper} starts at a lower price point (${min(entity_a['paid_from_usd'], entity_b['paid_from_usd'])}/mo vs ${max(entity_a['paid_from_usd'], entity_b['paid_from_usd'])}/mo). However, pricing scales with subscriber count, so the total cost depends on your list size."},
-            {"q": f"Can I switch from {b} to {a}?", "a": f"Yes, switching from {b} to {a} is possible. Most platforms support CSV import/export for subscriber lists. Plan for some time to recreate automations and templates, as these rarely transfer directly between platforms."}
+            {"q": f"Is {a} better than {b}?", "a": f"It depends on your use case. {a} wins for {entity_a['best_for']}, while {b} is stronger for {entity_b['best_for']}."},
+            {"q": f"Which is cheaper, {a} or {b}?", "a": f"{cheaper} starts at a lower price point. Pricing scales with subscriber count so total cost depends on your list size."},
+            {"q": f"Can I switch from {b} to {a}?", "a": f"Yes, switching is possible. Most platforms support CSV import/export. Plan time to recreate automations and templates."}
         ]
     }
 
@@ -200,41 +199,26 @@ def demo_alternatives_content(entity: dict, all_entities: list) -> dict:
         "title": f"7 Best {name} Alternatives in 2025 (Free & Paid)",
         "meta_description": f"Looking for a {name} alternative? We compare the top options by price, features, and use case.",
         "h1": f"Best {name} Alternatives in 2025: Honest Comparison",
-        "intro": f"While {name} is a capable platform, it is not the right fit for everyone. Whether you need a lower price point, a different feature set, or a platform better suited to your audience, there are strong alternatives worth considering. This guide covers the best {name} alternatives in 2025.",
-        "why_switch": [
-            f"You have outgrown {name}'s free tier limits",
-            "You need features that are not available on this plan",
-            "Pricing does not scale well for your subscriber count"
-        ],
-        "alternatives": [
-            {
-                "slug": o["slug"],
-                "name": o["name"],
-                "tagline": o["tagline"],
-                "best_for": o["best_for"],
-                "key_difference": f"{o['name']} is built for {o['best_for']}. It distinguishes itself from {name} through {o['key_features'][0]} and {o['key_features'][1]}, making it a strong choice when those capabilities are a priority."
-            }
-            for o in others
-        ],
+        "intro": f"While {name} is a capable platform, it is not the right fit for everyone. This guide covers the best {name} alternatives in 2025.",
+        "why_switch": [f"You have outgrown {name}'s free tier limits", "You need features not available on this plan", "Pricing does not scale well for your subscriber count"],
+        "alternatives": [{"slug": o["slug"], "name": o["name"], "tagline": o["tagline"], "best_for": o["best_for"], "key_difference": f"{o['name']} is built for {o['best_for']} and distinguishes itself through {o['key_features'][0]} and {o['key_features'][1]}."} for o in others],
         "faq": [
-            {"q": f"What is the best free alternative to {name}?", "a": f"{'MailerLite and Brevo both offer generous free plans that are worth considering as free alternatives to ' + name + '.' if entity['slug'] not in ['mailerlite','brevo'] else 'Moosend and ConvertKit offer strong free alternatives in this space.'} The best choice depends on your list size and the features you need most."},
-            {"q": f"What is the best {name} alternative for small business?", "a": f"For small businesses, MailerLite is frequently recommended as a {name} alternative due to its low cost and ease of use. ActiveCampaign is worth considering if you need CRM features alongside email marketing."},
-            {"q": f"Is there a cheaper alternative to {name}?", "a": f"{'Yes — ' + name + ' is not the cheapest option in the market.' if entity['paid_from_usd'] > 15 else 'Most competitors are similarly priced or higher at scale.'} Moosend and MailerLite consistently rank as the most affordable options with a comparable feature set."}
+            {"q": f"What is the best free alternative to {name}?", "a": "MailerLite and Brevo both offer generous free plans worth considering."},
+            {"q": f"What is the best {name} alternative for small business?", "a": "For small businesses, MailerLite is frequently recommended due to its low cost and ease of use."},
+            {"q": f"Is there a cheaper alternative to {name}?", "a": "Moosend and MailerLite consistently rank as the most affordable options with a comparable feature set."}
         ]
     }
 
 
-# ── Real API generation ────────────────────────────────────────────────────────
+# ── API generation ─────────────────────────────────────────────────────────────
 
 def generate_with_api(client, prompt: str, retries: int = 3) -> dict:
-    """Supports Groq (free), Gemini (free), or Anthropic."""
     import os
     provider = os.environ.get("AI_PROVIDER", "anthropic")
 
     for attempt in range(retries):
         try:
             if provider == "groq":
-                # Groq — free tier, OpenAI-compatible
                 import urllib.request, json as _json
                 key = os.environ["GROQ_API_KEY"]
                 payload = _json.dumps({
@@ -245,14 +229,12 @@ def generate_with_api(client, prompt: str, retries: int = 3) -> dict:
                 req = urllib.request.Request(
                     "https://api.groq.com/openai/v1/chat/completions",
                     data=payload,
-                    headers={"Authorization": f"Bearer {key}",
-                             "Content-Type": "application/json"}
+                    headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"}
                 )
                 with urllib.request.urlopen(req, timeout=30) as r:
                     text = _json.loads(r.read())["choices"][0]["message"]["content"].strip()
 
             elif provider == "gemini":
-                # Gemini — free tier via Google AI Studio
                 import urllib.request, json as _json
                 key = os.environ["GEMINI_API_KEY"]
                 payload = _json.dumps({
@@ -266,7 +248,6 @@ def generate_with_api(client, prompt: str, retries: int = 3) -> dict:
                     text = _json.loads(r.read())["candidates"][0]["content"]["parts"][0]["text"].strip()
 
             else:
-                # Anthropic (default)
                 msg = client.messages.create(
                     model="claude-haiku-4-5-20251001",
                     max_tokens=2048,
@@ -274,7 +255,6 @@ def generate_with_api(client, prompt: str, retries: int = 3) -> dict:
                 )
                 text = msg.content[0].text.strip()
 
-            # Strip markdown fences
             if text.startswith("```"):
                 text = text.split("\n", 1)[1]
                 text = text.rsplit("```", 1)[0]
@@ -285,18 +265,21 @@ def generate_with_api(client, prompt: str, retries: int = 3) -> dict:
             if attempt == retries - 1:
                 raise
             if "429" in err_str:
-                print(f"  Rate limit hit — waiting 65s before retry {attempt + 1}/{retries}")
-                time.sleep(65)   # wait for Gemini's 1-min window to reset
+                wait = 65
+                print(f"  Rate limit — waiting {wait}s before retry {attempt+1}/{retries}")
+                time.sleep(wait)
             else:
-                print(f"  Retry {attempt + 1}/{retries} after error: {e}")
+                print(f"  Retry {attempt+1}/{retries} after error: {e}")
                 time.sleep(2 ** attempt)
 
 
-# ── Main pipeline ──────────────────────────────────────────────────────────────
+# ── Generator functions (batch-aware) ────────────────────────────────────────
 
-def generate_tool_pages(entities, site_cfg, content_dir, demo, client, limit_remaining):
+def generate_tool_pages(entities, site_cfg, content_dir, demo, client, limit_remaining,
+                        batch_index=1, batch_total=1):
     generated = 0
-    for entity in entities:
+    batch_entities = [e for i, e in enumerate(entities) if i % batch_total == batch_index - 1]
+    for entity in batch_entities:
         if generated >= limit_remaining:
             break
         out_path = content_dir / "tools" / f"{entity['slug']}.json"
@@ -315,16 +298,19 @@ def generate_tool_pages(entities, site_cfg, content_dir, demo, client, limit_rem
         out_path.write_text(json.dumps(content, indent=2, ensure_ascii=False))
         entity["generated"] = True
         print("done")
-        time.sleep(4)  # Gemini free tier: 15 req/min
+        time.sleep(4)
         generated += 1
     return generated
 
 
-def generate_compare_pages(entities, site_cfg, content_dir, demo, client, limit_remaining):
+def generate_compare_pages(entities, site_cfg, content_dir, demo, client, limit_remaining,
+                           batch_index=1, batch_total=1):
     generated = 0
     pairs = list(itertools.combinations(entities, 2))
-    random.shuffle(pairs)  # vary what gets generated each run
-    for a, b in pairs:
+    # Deterministic slice — no shuffle, so each batch always owns the same pairs.
+    # Prevents two runners generating the same pair and wasting quota.
+    batch_pairs = [p for i, p in enumerate(pairs) if i % batch_total == batch_index - 1]
+    for a, b in batch_pairs:
         if generated >= limit_remaining:
             break
         slug = f"{a['slug']}-vs-{b['slug']}"
@@ -343,14 +329,16 @@ def generate_compare_pages(entities, site_cfg, content_dir, demo, client, limit_
             content = generate_with_api(client, prompt)
         out_path.write_text(json.dumps(content, indent=2, ensure_ascii=False))
         print("done")
-        time.sleep(4)  # Gemini free tier: 15 req/min
+        time.sleep(4)
         generated += 1
     return generated
 
 
-def generate_alternatives_pages(entities, site_cfg, content_dir, demo, client, limit_remaining):
+def generate_alternatives_pages(entities, site_cfg, content_dir, demo, client, limit_remaining,
+                                batch_index=1, batch_total=1):
     generated = 0
-    for entity in entities:
+    batch_entities = [e for i, e in enumerate(entities) if i % batch_total == batch_index - 1]
+    for entity in batch_entities:
         if generated >= limit_remaining:
             break
         out_path = content_dir / "alternatives" / f"{entity['slug']}-alternatives.json"
@@ -370,29 +358,35 @@ def generate_alternatives_pages(entities, site_cfg, content_dir, demo, client, l
             content = generate_with_api(client, prompt)
         out_path.write_text(json.dumps(content, indent=2, ensure_ascii=False))
         print("done")
-        time.sleep(4)  # Gemini free tier: 15 req/min
+        time.sleep(4)
         generated += 1
     return generated
 
 
+# ── Main ──────────────────────────────────────────────────────────────────────
+
 def main():
     parser = argparse.ArgumentParser(description="Generate programmatic SEO content")
-    parser.add_argument("--site", required=True, help="Site ID (e.g. email-tools)")
-    parser.add_argument("--limit", type=int, default=50, help="Max pages to generate per run")
-    parser.add_argument("--type", choices=["all", "tool", "compare", "alternatives"], default="all")
-    parser.add_argument("--demo", action="store_true", help="Run without API calls (uses template content)")
+    parser.add_argument("--site",        required=True, help="Site ID (e.g. email-tools)")
+    parser.add_argument("--limit",       type=int, default=50, help="Max pages per batch")
+    parser.add_argument("--type",        choices=["all", "tool", "compare", "alternatives"], default="all")
+    parser.add_argument("--demo",        action="store_true", help="Run without API calls")
+    parser.add_argument("--batch-index", type=int, default=1,
+                        help="Which batch this runner handles (1-based, default 1)")
+    parser.add_argument("--batch-total", type=int, default=1,
+                        help="Total number of parallel batches (default 1 = no batching)")
     args = parser.parse_args()
 
-    site_dir = SITES_DIR / args.site
+    site_dir      = SITES_DIR / args.site
     entities_path = site_dir / "data" / "entities.json"
-    config_path = site_dir / "config.json"
+    config_path   = site_dir / "config.json"
 
     if not entities_path.exists():
         print(f"Error: {entities_path} not found")
         sys.exit(1)
 
-    entities = json.loads(entities_path.read_text())
-    site_cfg = json.loads(config_path.read_text())
+    entities = json.loads(entities_path.read_text(encoding="utf-8"))
+    site_cfg = json.loads(config_path.read_text(encoding="utf-8"))
     content_dir = ROOT / "content" / args.site
 
     client = None
@@ -402,31 +396,32 @@ def main():
 
         if provider == "groq":
             if not os.environ.get("GROQ_API_KEY"):
-                print("Error: GROQ_API_KEY not set. Get a free key at console.groq.com")
+                print("Error: GROQ_API_KEY not set.")
                 sys.exit(1)
             print(f"  Using provider: Groq (free tier) — llama-3.1-8b-instant")
-            client = None  # Groq uses urllib directly
+            client = None
 
         elif provider == "gemini":
             if not os.environ.get("GEMINI_API_KEY"):
                 print("Error: GEMINI_API_KEY not set. Get a free key at aistudio.google.com")
                 sys.exit(1)
             print(f"  Using provider: Gemini (free tier) — gemini-2.0-flash")
-            client = None  # Gemini uses urllib directly
+            client = None
 
         else:
             import anthropic
             api_key = os.environ.get("ANTHROPIC_API_KEY")
             if not api_key:
-                print("Error: ANTHROPIC_API_KEY not set. Run with --demo to test without API.")
+                print("Error: ANTHROPIC_API_KEY not set.")
                 sys.exit(1)
             client = anthropic.Anthropic(api_key=api_key)
             print(f"  Using provider: Anthropic — claude-haiku")
 
-    mode = "DEMO (no API)" if args.demo else "LIVE (Claude API)"
+    batch_info = f" | Batch {args.batch_index}/{args.batch_total}" if args.batch_total > 1 else ""
+    mode = "DEMO" if args.demo else "LIVE"
     print(f"\n{'='*55}")
     print(f"  PSEO Engine — {site_cfg['site_name']}")
-    print(f"  Mode: {mode} | Limit: {args.limit} pages")
+    print(f"  Mode: {mode} | Limit: {args.limit} pages{batch_info}")
     print(f"{'='*55}\n")
 
     remaining = args.limit
@@ -434,21 +429,23 @@ def main():
 
     if args.type in ("all", "tool"):
         print("Generating tool pages...")
-        n = generate_tool_pages(entities, site_cfg, content_dir, args.demo, client, remaining)
+        n = generate_tool_pages(entities, site_cfg, content_dir, args.demo, client, remaining,
+                                args.batch_index, args.batch_total)
         total += n; remaining -= n
 
     if args.type in ("all", "alternatives") and remaining > 0:
         print("\nGenerating alternatives pages...")
-        n = generate_alternatives_pages(entities, site_cfg, content_dir, args.demo, client, remaining)
+        n = generate_alternatives_pages(entities, site_cfg, content_dir, args.demo, client, remaining,
+                                        args.batch_index, args.batch_total)
         total += n; remaining -= n
 
     if args.type in ("all", "compare") and remaining > 0:
         print("\nGenerating compare pages...")
-        n = generate_compare_pages(entities, site_cfg, content_dir, args.demo, client, remaining)
+        n = generate_compare_pages(entities, site_cfg, content_dir, args.demo, client, remaining,
+                                   args.batch_index, args.batch_total)
         total += n; remaining -= n
 
-    # Save updated entity flags back to disk
-    entities_path.write_text(json.dumps(entities, indent=2, ensure_ascii=False))
+    entities_path.write_text(json.dumps(entities, indent=2, ensure_ascii=False), encoding="utf-8")
 
     print(f"\n{'='*55}")
     print(f"  Done. Generated {total} pages.")
