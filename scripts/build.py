@@ -28,12 +28,8 @@ TEMPLATES_DIR = ROOT / "templates"
 STATIC_DIR = ROOT / "static"
 
 
-# ── NEW: Sendinblue → Brevo redirect map ────────────────────────────────────
-# Keys   = old Sendinblue slugs to retire (both orderings)
-# Values = replacement Brevo page path (relative, no leading slash)
-# Add a row for every Sendinblue compare/tool page you currently publish.
+# ── Sendinblue → Brevo redirect map ─────────────────────────────────────────
 SENDINBLUE_REDIRECTS = {
-    # compare pages — canonical ordering
     "sendinblue-vs-mailchimp":       "compare/brevo-vs-mailchimp",
     "sendinblue-vs-activecampaign":  "compare/brevo-vs-activecampaign",
     "sendinblue-vs-klaviyo":         "compare/brevo-vs-klaviyo",
@@ -42,7 +38,6 @@ SENDINBLUE_REDIRECTS = {
     "sendinblue-vs-moosend":         "compare/brevo-vs-moosend",
     "sendinblue-vs-mailerlite":      "compare/brevo-vs-mailerlite",
     "sendinblue-vs-convertkit":      "compare/brevo-vs-convertkit",
-    # compare pages — reversed ordering (both must redirect)
     "mailchimp-vs-sendinblue":       "compare/brevo-vs-mailchimp",
     "activecampaign-vs-sendinblue":  "compare/brevo-vs-activecampaign",
     "klaviyo-vs-sendinblue":         "compare/brevo-vs-klaviyo",
@@ -51,10 +46,8 @@ SENDINBLUE_REDIRECTS = {
     "moosend-vs-sendinblue":         "compare/brevo-vs-moosend",
     "mailerlite-vs-sendinblue":      "compare/brevo-vs-mailerlite",
     "convertkit-vs-sendinblue":      "compare/brevo-vs-convertkit",
-    # tool page
     "tools/sendinblue":              "tools/brevo",
 }
-# ── END NEW ──────────────────────────────────────────────────────────────────
 
 
 def schema_article(title, description, url, site_name):
@@ -69,7 +62,8 @@ def schema_article(title, description, url, site_name):
 
 
 def schema_faq(faq_items):
-    if not faq_items: return "{}"
+    if not faq_items:
+        return "{}"
     return json.dumps({
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -81,7 +75,6 @@ def schema_faq(faq_items):
     })
 
 
-# ── NEW: canonical URL helper ────────────────────────────────────────────────
 def get_canonical_slug(slug_a: str, slug_b: str) -> str:
     """
     Returns the canonical compare slug using alphabetical ordering.
@@ -90,20 +83,7 @@ def get_canonical_slug(slug_a: str, slug_b: str) -> str:
     """
     ordered = sorted([slug_a.lower(), slug_b.lower()])
     return f"{ordered[0]}-vs-{ordered[1]}"
-# ── END NEW ──────────────────────────────────────────────────────────────────
 
-
-# ── DROP-IN REPLACEMENT for generate_comparison_table() in scripts/build.py ──
-#
-# Paste this over the existing function (search for "def generate_comparison_table").
-# Changes from previous version:
-#   - Reads free_tier as fallback for free_plan
-#   - Reads g2_rating as fallback for rating
-#   - Reads paid_from_usd as fallback for starting_at
-#   - Infers feature flags from key_features[] array as last-resort fallback
-#   - affiliate_url falls back to affiliate_program homepage pattern
-#
-# Everything else (HTML output, CSS) is identical.
 
 def generate_comparison_table(entity_a: dict, entity_b: dict, page_data: dict) -> str:
     def yes(val):
@@ -116,10 +96,6 @@ def generate_comparison_table(entity_a: dict, entity_b: dict, page_data: dict) -
         return "★" * full + "☆" * (5 - full) + f"<small> {r}/5</small>"
 
     def get_bool(entity, *keys):
-        """
-        Try multiple keys in order, return bool.
-        Last arg can be a fallback bool (default False).
-        """
         fallback = False
         check_keys = list(keys)
         if isinstance(check_keys[-1], bool):
@@ -130,18 +106,11 @@ def generate_comparison_table(entity_a: dict, entity_b: dict, page_data: dict) -
         return fallback
 
     def feat(entity, key):
-        """
-        Look up a feature flag. Priority:
-        1. entity['features'][key]        — populated by enrich_entities.py
-        2. entity[key]                    — direct field
-        3. key_features array inference   — e.g. 'ab_testing' ← 'A/B testing' in list
-        """
         features = entity.get("features", {})
         if key in features:
             return bool(features[key])
         if key in entity:
             return bool(entity[key])
-        # Infer from key_features string list
         kf = [k.lower() for k in entity.get("key_features", [])]
         inference_map = {
             "email_automation":    ["automation", "email automation"],
@@ -173,7 +142,7 @@ def generate_comparison_table(entity_a: dict, entity_b: dict, page_data: dict) -
         if "affiliate_url" in entity:
             return entity["affiliate_url"]
         slug = entity.get("slug", "")
-        return f"https://{slug}.com/"   # safe fallback until AFFILIATE_URLS are set
+        return f"https://{slug}.com/"
 
     a, b = entity_a, entity_b
 
@@ -247,8 +216,8 @@ def generate_comparison_table(entity_a: dict, entity_b: dict, page_data: dict) -
             tbody += (f'<tr><td class="lbl">{label}</td>'
                       f'<td>{cell_a}</td><td>{cell_b}</td></tr>\n')
 
-    aff_a    = get_affiliate_url(a)
-    aff_b    = get_affiliate_url(b)
+    aff_a     = get_affiliate_url(a)
+    aff_b     = get_affiliate_url(b)
     verdict_a = a.get("verdict") or page_data.get("verdict_a") or a.get("tagline", "")
     verdict_b = b.get("verdict") or page_data.get("verdict_b") or b.get("tagline", "")
     rating_a  = get_rating(a)
@@ -325,12 +294,10 @@ def generate_comparison_table(entity_a: dict, entity_b: dict, page_data: dict) -
 .cta-btn:hover{{background:#1444b8;text-decoration:none}}
 @media(max-width:560px){{.verdict-row,.rating-row{{flex-direction:column}}}}
 </style>"""
-# ── END NEW ──────────────────────────────────────────────────────────────────
 
 
-# ── NEW: redirect page generator ─────────────────────────────────────────────
 def generate_redirect_page(from_slug: str, to_url: str) -> str:
-    """Generates a JS + meta-refresh redirect page for retired Sendinblue URLs."""
+    """Generates a JS + meta-refresh redirect page."""
     display = from_slug.replace("-", " ").replace("/", " › ").title()
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -343,11 +310,10 @@ def generate_redirect_page(from_slug: str, to_url: str) -> str:
   <script>window.location.replace("{to_url}");</script>
 </head>
 <body>
-  <p>Sendinblue is now Brevo.
+  <p>This page has moved.
      <a href="{to_url}">Click here if you are not redirected.</a></p>
 </body>
 </html>"""
-# ── END NEW ──────────────────────────────────────────────────────────────────
 
 
 def load_entities(site_id):
@@ -390,10 +356,9 @@ def build(site_id):
     sitemap_urls = []
     page_count = 0
 
-    # ── Homepage ────────────────────────────────────────────────────────────────
+    # ── Homepage ─────────────────────────────────────────────────────────────
     home_tmpl = env.get_template("home.html")
 
-    # Sample 12 compare pages for featured section
     all_pairs = list(itertools.combinations(entities, 2))
     featured_compares = [
         {"slug": f"{a['slug']}-vs-{b['slug']}",
@@ -401,7 +366,6 @@ def build(site_id):
         for a, b in all_pairs[:12]
     ]
 
-    # Build richer compare card data for homepage
     LOGO_PALETTE = [
         "#1F5C99","#2ECC71","#E74C3C","#9B59B6","#F39C12",
         "#1ABC9C","#E91E63","#3498DB","#FF5722","#607D8B",
@@ -414,28 +378,27 @@ def build(site_id):
     }
     CAT_ICONS = {"freemium":"📧","paid":"💼","flat-rate":"📬","revenue-share":"✍️"}
 
-    # Assign a unique colour to each entity for its logo avatar
     for i, e in enumerate(entities):
         e["color"] = LOGO_PALETTE[i % len(LOGO_PALETTE)]
 
     rich_compares = []
-    for idx, (a, b) in enumerate(list(__import__('itertools').combinations(entities, 2))[:12]):
-        color = CAT_COLORS.get(a.get("pricing_model","freemium"), "#3498DB")
+    for idx, (a, b) in enumerate(list(itertools.combinations(entities, 2))[:12]):
+        color = CAT_COLORS.get(a.get("pricing_model", "freemium"), "#3498DB")
         rich_compares.append({
             "slug": f"{a['slug']}-vs-{b['slug']}",
             "slug_a": a["slug"], "slug_b": b["slug"],
             "tool_a": a["name"], "tool_b": b["name"],
             "init_a": a["name"][0].upper(),
             "init_b": b["name"][0].upper(),
-            "color_a": a.get("color","#1F5C99"),
-            "color_b": b.get("color","#2ECC71"),
+            "color_a": a.get("color", "#1F5C99"),
+            "color_b": b.get("color", "#2ECC71"),
             "color": color,
-            "icon": CAT_ICONS.get(a.get("pricing_model","freemium"), "📧"),
-            "label": a.get("pricing_model","freemium").replace("-"," ").title(),
-            "cat": a.get("pricing_model","freemium"),
-            "pricing_a": f"${a.get('paid_from_usd',0)}/mo",
-            "pricing_b": f"${b.get('paid_from_usd',0)}/mo",
-            "best_for": a.get("best_for","all users")[:40],
+            "icon": CAT_ICONS.get(a.get("pricing_model", "freemium"), "📧"),
+            "label": a.get("pricing_model", "freemium").replace("-", " ").title(),
+            "cat": a.get("pricing_model", "freemium"),
+            "pricing_a": f"${a.get('paid_from_usd', 0)}/mo",
+            "pricing_b": f"${b.get('paid_from_usd', 0)}/mo",
+            "best_for": a.get("best_for", "all users")[:40],
         })
 
     home_html = home_tmpl.render(
@@ -444,14 +407,22 @@ def build(site_id):
         featured_compares=rich_compares,
         compare_count=153,
         entity_count=len(entities),
-        page={"title": site_cfg["site_name"], "meta_description": site_cfg["site_description"],
-              "url_path": "", "schema_json": "{}"}
+        page={
+            "title": site_cfg["site_name"],
+            "meta_description": site_cfg["site_description"],
+            "url_path": "",
+            "schema_json": "{}"
+        }
     )
     (dist_dir / "index.html").write_text(home_html, encoding="utf-8")
-    sitemap_urls.append({"url": f"{site_cfg['base_url']}/", "priority": "1.0", "changefreq": "weekly"})
+    sitemap_urls.append({
+        "url": f"{site_cfg['base_url']}/",
+        "priority": "1.0",
+        "changefreq": "weekly"
+    })
     page_count += 1
 
-    # ── Tool pages ──────────────────────────────────────────────────────────────
+    # ── Tool pages ───────────────────────────────────────────────────────────
     tool_tmpl = env.get_template("tool.html")
     tools_dir = content_dir / "tools"
     if tools_dir.exists():
@@ -475,10 +446,18 @@ def build(site_id):
             page_out = out_dir / slug
             page_out.mkdir(exist_ok=True)
             (page_out / "index.html").write_text(html, encoding="utf-8")
-            sitemap_urls.append({"url": full_url, "priority": "0.8", "changefreq": "monthly"})
+            sitemap_urls.append({
+                "url": full_url,
+                "priority": "0.8",
+                "changefreq": "monthly"
+            })
             page_count += 1
 
-    # ── Compare pages (both orderings so A-vs-B and B-vs-A both work) ──────────
+    # ── Compare pages ────────────────────────────────────────────────────────
+    # One canonical page per pair (alphabetical ordering).
+    # The reverse ordering gets a lightweight redirect — not a real page,
+    # and not added to the sitemap. This eliminates the 122-page
+    # "Alternate page with proper canonical tag" issue in Search Console.
     compare_tmpl = env.get_template("compare.html")
     compare_dir = content_dir / "compare"
     if compare_dir.exists():
@@ -488,58 +467,71 @@ def build(site_id):
             page_data = json.loads(json_file.read_text())
             slug = json_file.stem
             parts = slug.split("-vs-", 1)
-            entity_a = entity_map.get(parts[0], {}) if len(parts) == 2 else {}
-            entity_b = entity_map.get(parts[1], {}) if len(parts) == 2 else {}
+            if len(parts) != 2:
+                continue
+
+            slug_a, slug_b = parts[0], parts[1]
+            entity_a = entity_map.get(slug_a, {})
+            entity_b = entity_map.get(slug_b, {})
+
+            # Canonical slug is always alphabetical ordering
+            canonical_slug = get_canonical_slug(slug_a, slug_b)
+            canonical_url = f"{site_cfg['base_url']}/compare/{canonical_slug}/"
+
+            # Resolve entities in canonical order
+            canonical_parts = canonical_slug.split("-vs-", 1)
+            canon_a = entity_map.get(canonical_parts[0], entity_a)
+            canon_b = entity_map.get(canonical_parts[1], entity_b)
 
             related = [
-                {"slug": f"{entity_a.get('slug','')}-vs-{e['slug']}",
-                 "label": f"{entity_a.get('name','')} vs {e['name']}"}
+                {
+                    "slug": f"{slug_a}-vs-{e['slug']}",
+                    "label": f"{entity_a.get('name', '')} vs {e['name']}"
+                }
                 for e in entities
-                if e["slug"] not in (entity_a.get("slug"), entity_b.get("slug"))
+                if e["slug"] not in (slug_a, slug_b)
             ][:4]
 
             page_data["schema_json"] = schema_faq(page_data.get("faq", []))
+            page_data["canonical_url"] = canonical_url
+            page_data["url_path"] = f"compare/{canonical_slug}/"
 
-            # ── NEW: pre-generate comparison table once per file ─────────────
-            table_html = generate_comparison_table(entity_a, entity_b, page_data)
-            # ── END NEW ──────────────────────────────────────────────────────
+            table_html = generate_comparison_table(canon_a, canon_b, page_data)
 
-            # ── NEW: compute canonical slug (alphabetical ordering) ──────────
-            canonical_slug = get_canonical_slug(
-                parts[0], parts[1] if len(parts) == 2 else parts[0]
+            # 1. Write the CANONICAL page (alphabetical ordering only)
+            canon_dir = out_dir / canonical_slug
+            canon_dir.mkdir(exist_ok=True)
+            html = compare_tmpl.render(
+                site=site_cfg,
+                page=page_data,
+                entity_a=canon_a,
+                entity_b=canon_b,
+                related_pages=related,
+                table_html=table_html,
             )
-            # ── END NEW ──────────────────────────────────────────────────────
+            (canon_dir / "index.html").write_text(html, encoding="utf-8")
 
-            # Build BOTH orderings: a-vs-b AND b-vs-a
-            for s_a, s_b, ea, eb in [
-                (parts[0], parts[1] if len(parts)==2 else "", entity_a, entity_b),
-                (parts[1] if len(parts)==2 else "", parts[0], entity_b, entity_a),
-            ]:
-                rev_slug = f"{s_a}-vs-{s_b}"
-                url_path = f"compare/{rev_slug}/"
-                full_url = f"{site_cfg['base_url']}/{url_path}"
+            # Only the canonical URL goes into the sitemap
+            sitemap_urls.append({
+                "url": canonical_url,
+                "priority": "0.9",
+                "changefreq": "monthly"
+            })
+            page_count += 1
 
-                # ── NEW: canonical URL always points to alphabetical ordering ─
-                canonical_url = f"{site_cfg['base_url']}/compare/{canonical_slug}/"
-                page_data["url_path"]     = url_path
-                page_data["canonical_url"] = canonical_url           # ← NEW
-                # ── END NEW ──────────────────────────────────────────────────
-
-                html = compare_tmpl.render(
-                    site=site_cfg, page=page_data,
-                    entity_a=ea, entity_b=eb,
-                    related_pages=related,
-                    table_html=table_html,                            # ← NEW
+            # 2. Write the REVERSE page as a redirect only (not in sitemap)
+            reverse_slug = f"{canonical_parts[1]}-vs-{canonical_parts[0]}"
+            if reverse_slug != canonical_slug:
+                reverse_dir = out_dir / reverse_slug
+                reverse_dir.mkdir(exist_ok=True)
+                redirect_html = generate_redirect_page(
+                    f"compare/{reverse_slug}", canonical_url
                 )
-                page_out = out_dir / rev_slug
-                page_out.mkdir(exist_ok=True)
-                (page_out / "index.html").write_text(html, encoding="utf-8")
-                sitemap_urls.append({"url": full_url, "priority": "0.9", "changefreq": "monthly"})
-                page_count += 1
+                (reverse_dir / "index.html").write_text(
+                    redirect_html, encoding="utf-8"
+                )
 
-    # ── NEW: Sendinblue → Brevo redirect pages ───────────────────────────────
-    # Generates a lightweight redirect at every retired Sendinblue URL.
-    # Canonical tag on each redirect page transfers link equity to the Brevo page.
+    # ── Sendinblue → Brevo redirect pages ────────────────────────────────────
     redirect_count = 0
     for from_slug, to_path in SENDINBLUE_REDIRECTS.items():
         to_url = f"{site_cfg['base_url']}/{to_path}/"
@@ -548,11 +540,9 @@ def build(site_id):
         redirect_html = generate_redirect_page(from_slug, to_url)
         (page_out / "index.html").write_text(redirect_html, encoding="utf-8")
         redirect_count += 1
-        # Note: redirect pages are intentionally excluded from sitemap
     print(f"  Redirects: {redirect_count} Sendinblue → Brevo pages generated")
-    # ── END NEW ──────────────────────────────────────────────────────────────
 
-    # ── Alternatives pages ──────────────────────────────────────────────────────
+    # ── Alternatives pages ───────────────────────────────────────────────────
     alt_tmpl = env.get_template("alternatives.html")
     alt_content_dir = content_dir / "alternatives"
     if alt_content_dir.exists():
@@ -560,7 +550,7 @@ def build(site_id):
         out_dir.mkdir(exist_ok=True)
         for json_file in alt_content_dir.glob("*.json"):
             page_data = json.loads(json_file.read_text())
-            slug = json_file.stem  # e.g. "mailchimp-alternatives"
+            slug = json_file.stem
             base_slug = slug.replace("-alternatives", "")
             entity = entity_map.get(base_slug, {})
             url_path = f"alternatives/{slug}/"
@@ -575,61 +565,78 @@ def build(site_id):
             page_out = out_dir / slug
             page_out.mkdir(exist_ok=True)
             (page_out / "index.html").write_text(html, encoding="utf-8")
-            sitemap_urls.append({"url": full_url, "priority": "0.85", "changefreq": "monthly"})
+            sitemap_urls.append({
+                "url": full_url,
+                "priority": "0.85",
+                "changefreq": "monthly"
+            })
             page_count += 1
 
-    # ── Section index pages (built from entities, not content files) ─────────
-    import itertools as _it
-
+    # ── Section index pages ──────────────────────────────────────────────────
     base = site_cfg["base_url"]
     name = site_cfg["site_name"]
 
     def _nav():
-        return (f"<header class='site-header'><div class='container'>"
-                f"<a href='{base}/' class='logo'>Email Tool <span>Compare</span></a>"
-                f"<nav><a href='{base}/compare/'>Compare Tools</a> "
-                f"<a href='{base}/alternatives/'>Alternatives</a> "
-                f"<a href='{base}/tools/'>All Tools</a></nav></div></header>")
+        return (
+            f"<header class='site-header'><div class='container'>"
+            f"<a href='{base}/' class='logo'>Email Tool <span>Compare</span></a>"
+            f"<nav><a href='{base}/compare/'>Compare Tools</a> "
+            f"<a href='{base}/alternatives/'>Alternatives</a> "
+            f"<a href='{base}/tools/'>All Tools</a></nav></div></header>"
+        )
 
-    def _pg(title, h1, desc, body, canonical=None):       # ← NEW: canonical param
-        canon_tag = f"<link rel='canonical' href='{canonical}'>" if canonical else ""  # ← NEW
-        return (f"<!DOCTYPE html><html lang=en data-theme=light><head>"
-                f"<meta charset=UTF-8><meta name=viewport content='width=device-width,initial-scale=1'>"
-                f"<title>{title} | {name}</title>"
-                f"<meta name=description content='{desc}'>"
-                f"{canon_tag}"                                        # ← NEW
-                f"<link rel=stylesheet href='{base}/static/style.css'>"
-                f"<script>(function(){{var t=localStorage.getItem('theme')||'light';"
-                f"document.documentElement.setAttribute('data-theme',t);}})();</script>"
-                f"</head><body>{_nav()}"
-                f"<div class='page-wrap'><h1 class='page-h1'>{h1}</h1>"
-                f"<p class='page-intro'>{desc}</p>{body}</div></body></html>")
+    def _pg(title, h1, desc, body, canonical=None):
+        canon_tag = f"<link rel='canonical' href='{canonical}'>" if canonical else ""
+        return (
+            f"<!DOCTYPE html><html lang=en data-theme=light><head>"
+            f"<meta charset=UTF-8>"
+            f"<meta name=viewport content='width=device-width,initial-scale=1'>"
+            f"<title>{title} | {name}</title>"
+            f"<meta name=description content='{desc}'>"
+            f"{canon_tag}"
+            f"<link rel=stylesheet href='{base}/static/style.css'>"
+            f"<script>(function(){{var t=localStorage.getItem('theme')||'light';"
+            f"document.documentElement.setAttribute('data-theme',t);}})();</script>"
+            f"</head><body>{_nav()}"
+            f"<div class='page-wrap'><h1 class='page-h1'>{h1}</h1>"
+            f"<p class='page-intro'>{desc}</p>{body}</div></body></html>"
+        )
 
     # Compare index
     (dist_dir / "compare").mkdir(exist_ok=True)
     clinks = "".join(
-        f"<li><a href='{base}/compare/{a['slug']}-vs-{b['slug']}/'>{a['name']} vs {b['name']}</a></li>"
-        for a, b in _it.combinations(entities, 2)
+        f"<li><a href='{base}/compare/{a['slug']}-vs-{b['slug']}/'>"
+        f"{a['name']} vs {b['name']}</a></li>"
+        for a, b in itertools.combinations(entities, 2)
     )
     (dist_dir / "compare" / "index.html").write_text(
-        _pg("All Comparisons", "All Email Tool Comparisons",
+        _pg(
+            "All Comparisons",
+            "All Email Tool Comparisons",
             f"Side-by-side comparisons across {len(entities)} email marketing platforms.",
             f"<ul style='columns:2;padding-left:1.5rem;line-height:2'>{clinks}</ul>",
-            canonical=f"{base}/compare/"),                            # ← NEW
-        encoding="utf-8")
+            canonical=f"{base}/compare/",
+        ),
+        encoding="utf-8"
+    )
 
     # Alternatives index
     (dist_dir / "alternatives").mkdir(exist_ok=True)
     alinks = "".join(
-        f"<li><a href='{base}/alternatives/{e['slug']}-alternatives/'>Best {e['name']} Alternatives</a></li>"
+        f"<li><a href='{base}/alternatives/{e['slug']}-alternatives/'>"
+        f"Best {e['name']} Alternatives</a></li>"
         for e in entities
     )
     (dist_dir / "alternatives" / "index.html").write_text(
-        _pg("All Alternatives", "Best Email Tool Alternatives",
+        _pg(
+            "All Alternatives",
+            "Best Email Tool Alternatives",
             "Find the best alternative for every major email marketing platform.",
             f"<ul style='columns:2;padding-left:1.5rem;line-height:2'>{alinks}</ul>",
-            canonical=f"{base}/alternatives/"),                       # ← NEW
-        encoding="utf-8")
+            canonical=f"{base}/alternatives/",
+        ),
+        encoding="utf-8"
+    )
 
     # Tools index
     (dist_dir / "tools").mkdir(exist_ok=True)
@@ -638,16 +645,22 @@ def build(site_id):
         for e in entities
     )
     (dist_dir / "tools" / "index.html").write_text(
-        _pg("All Tools", "All 18 Email Marketing Tools Reviewed",
+        _pg(
+            "All Tools",
+            "All 18 Email Marketing Tools Reviewed",
             f"Honest reviews of {len(entities)} email marketing platforms.",
             f"<ul style='padding-left:1.5rem;line-height:2'>{tlinks}</ul>",
-            canonical=f"{base}/tools/"),                              # ← NEW
-        encoding="utf-8")
+            canonical=f"{base}/tools/",
+        ),
+        encoding="utf-8"
+    )
 
-    # ── Sitemap ─────────────────────────────────────────────────────────────────
+    # ── Sitemap ──────────────────────────────────────────────────────────────
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    sitemap_lines = ['<?xml version="1.0" encoding="UTF-8"?>',
-                     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    sitemap_lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+    ]
     for u in sitemap_urls:
         sitemap_lines += [
             "  <url>",
@@ -660,7 +673,7 @@ def build(site_id):
     sitemap_lines.append("</urlset>")
     (dist_dir / "sitemap.xml").write_text("\n".join(sitemap_lines), encoding="utf-8")
 
-    # ── robots.txt ──────────────────────────────────────────────────────────────
+    # ── robots.txt ───────────────────────────────────────────────────────────
     (dist_dir / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {site_cfg['base_url']}/sitemap.xml\n",
         encoding="utf-8"
